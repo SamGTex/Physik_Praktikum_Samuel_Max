@@ -1,0 +1,58 @@
+\input{header.tex}
+
+\subject{802}
+\title{Fourier Synthese}
+\date{%
+  Durchführung: 22.10.2019
+  \hspace{3em}
+  Abgabe: 29.10.2019
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+%\printbibliography{}
+\newpage
+\section{Theorie}
+Jede periodische Funktion läßt sich in eine Reihe aus sin- und cos-Termen entwickeln (Fourierreihe)
+\begin{equation}
+  f(t)=\sum_{i=0}^\infty (A_k\cdot cos(\omega_k t) + B_k\cdot sin(\omega_k t))
+\end{equation}
+mit
+\begin{equation}
+\omega_k=\frac{2\pi k}{T}
+\end{equation}
+\section{Fourier-Zerlegung der Funktion |sin(x)|}
+Im folgenden soll die Funktion $f(x)=|sin(x)|$ mit einer Fourierreihe angenähert werden.
+Die Koeffizienten sind definiert als
+\begin{equation}
+A_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot cos(\omega_k \cdot t)  dt
+\end{equation}
+\begin{equation}
+B_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot sin(\omega_k \cdot t)  dt
+\end{equation}
+Die Funktion $|sin(x)|$ erfüllt die Eigenschaft $f(-x) = f(x)$ und ist somit eine gerade Funktion.
+Somit ist unser $B_k=0$. 
+Zunächst wählen wir $T=2\pi$. Somit ist $\omega_k =k$.
+Daraus folgt für $A_k$
+\begin{equation}
+A_k=\frac{1}{\pi} \int_{-\pi}^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t) dt
+\end{equation}
+Die Funktion $|sin(x)|$ ist $\pi$-periodisch und hat bei $x = 0$ eine Nullstelle.
+Wir integrieren nun über eine Periode. Damit das Ergebnis weiterhin stimmt,
+erhalten wir zusätlich einen Faktor $2$.
+\begin{equation}
+A_k=\frac{2}{\pi} \int_0^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t)  dt
+\end{equation}
+Es gilt $|sin(x)| = sin(x)$ im Intervall $I=[0,\pi]$, so können wir
+unser Integral vereinfachen
+\begin{equation}
+A_k=\frac{2}{\pi} \int_0^{\pi} sin(t) \cdot cos(\omega_k \cdot t)  dt
+\end{equation}
+\begin{equation}
+\Rightarrow A_k=\left [ \frac{\omega_k sin(t) sin(\omega_k t) + cos(t) cos(\omega_k t)}{\omega_k^2 - 1} \right ]_0^{\pi}
+\end{equation}
+\end{document}

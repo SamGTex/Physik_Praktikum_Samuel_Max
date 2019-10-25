@@ -1,0 +1,4 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Theorie}{3}{section.1}% 
+\contentsline {section}{\numberline {2}Fourier-Zerlegung der Funktion |sin(x)|}{3}{section.2}% 
