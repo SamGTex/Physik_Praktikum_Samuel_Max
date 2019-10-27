@@ -38,15 +38,14 @@ B_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot sin(\omega_k \cdot t)  \, \symup{d}
 \end{equation}
 Die Funktion $|sin(x)|$ erfüllt die Eigenschaft $f(-x) = f(x)$ und ist somit eine gerade Funktion.
 Somit ist unser $B_k=0$. 
-Zunächst wählen wir $T=2\pi$. Somit ist $\omega_k =k$.
-Daraus folgt für $A_k$
+Zunächst wählen wir $T=2\pi$. Daraus folgt für $A_k$
 \begin{equation}
 A_k=\frac{1}{\pi} \int_{-\pi}^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t) \, \symup{d}t
 \end{equation}
 Die Funktion $|sin(x)|$ ist $\pi$-periodisch und hat bei $x = 0$ eine Nullstelle.
 Wir integrieren nun über eine, statt wie zuvor über zwei Perioden. Es gilt 
 $\int_{-\pi}^{0}f(x) \, \symup{d}x = \int_0^{\pi} f(x) \, \symup{d}x$
-erhalten wir zusätlich einen Faktor $2$.
+erhalten wir zusätlich einen Faktor $2$
 \begin{equation}
 A_k=\frac{2}{\pi} \int_0^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t) \, \symup{d}t
 \end{equation}
@@ -58,8 +57,9 @@ A_k=\frac{2}{\pi} \int_0^{\pi} sin(t) \cdot cos(\omega_k \cdot t)  \, \symup{d}t
 \begin{equation}
 \Rightarrow A_k= \frac{2}{\pi} \left [ \frac{cos((\omega_k-1)t)}{2(w-1)} - \frac{cos((\omega_k+1)t)}{2(\omega_k^2+1)} \right ]_0^{\pi}
 \end{equation}
-mit $\omega_k$ und Grenzen eingesetzt erhalten wir
+mit $\omega_k=k$
 \eqref{eqn:omega}
+und Grenzen eingesetzt erhalten wir
 \begin{equation}
 A_k=\frac{2}{\pi}\left ( \frac{cos(2k\pi-\pi)}{4k-2} - \frac{cos(2k\pi+\pi)}{4k+2} - \frac{cos(0)}{4k-2} + \frac{cos(0)}{4k+2} \right )
 \end{equation}
@@ -116,7 +116,7 @@ folgende Grafik
   \label{fig:sin}
 \end{figure}
 \section{Fourier-Zeregung der Funktion f(x)=x}
-    Im folgenden soll die Funktion $f(x)=|x|$ für $-pi < x < pi$ mit einer Fourierreihe angenähert werden.
+    Im folgenden soll die Funktion $f(x)=|x|$ für $-\pi < x < \pi$ mit einer Fourierreihe angenähert werden.
     Die Koeffizienten sind definiert als
 \newpage
 \begin{equation}
@@ -127,7 +127,7 @@ folgende Grafik
 \end{equation}
   Zunächst wird der Koeffizient $A_k$ berechnet, dafür $t$  $-\pi < t < \pi$ gilt, ist $T = 2\pi$
 \begin{equation}
-  A_k = \frac{1}{\pi} \int_{-\pi}^{\pi} t cos(\omega_k\, t) dt
+  A_k = \frac{1}{\pi} \int_{-\pi}^{\pi} t \, cos(\omega_k\, t) dt
 \end{equation}
   Durch eine partielle Integration ergibt sich für $A_k$
 \begin{equation}
