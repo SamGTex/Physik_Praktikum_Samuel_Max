@@ -72,7 +72,7 @@ A_k=\frac{2}{\pi}\left ( \frac{cos(2k\pi-\pi)}{4k-2} - \frac{cos(2k\pi+\pi)}{4k+
 \begin{equation}
 \Leftrightarrow A_k= \frac{4}{-4k^2 \pi + \pi}
 \end{equation}
-\subsection{Tabelle}
+\subsection{Wertetabelle für die Koeffizienten}
 Für das online-Experiment werden 17 Koeffizienten benötigt um die
 Regler einzustellen 
 %tabelle
@@ -106,19 +106,17 @@ Regler einzustellen
 \end{table}
 \newpage
 \subsection{Plot}
-Wir erhalten als Ergebnis auf der
-\href{https://www.j-berkemeier.de/Fouriersynthese.html}{Website}
-folgende Grafik
+Wir erhalten folgenden Plot
 \begin{figure}
   \centering
-  \includegraphics[height=10cm]{content/screenshot_phase90}
-  \caption{Fouriersynthese von $|sin(x)|$}
+  \includegraphics[width=\textwidth]{content/screenshot_phase90}
+  \caption{Fouriersynthese von $|sin(x)|$. (Quelle: \href{https://www.j-berkemeier.de/Fouriersynthese.html}{www.j-berkemeier.de})}
   \label{fig:sin}
 \end{figure}
-\section{Fourier-Zerlegung der Funktion f(x)=x}
+\section{Fourier-Zerlegung der Funktion f(x)=x }
+\subsection{Berechnung der Integrale}
     Im folgenden soll die Funktion $f(x)=|x|$ für $-\pi < x < \pi$ mit einer Fourierreihe angenähert werden.
     Die Koeffizienten sind definiert als
-\newpage
 \begin{equation}
   A_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \, cos(\omega_k \, t) \,  dt
 \end{equation}
@@ -149,6 +147,7 @@ folgende Grafik
 \begin{equation}
   B_k = \frac{-2 \, (-1)^k}{k}
 \end{equation}
+\subsection{Wertetabelle für die Koeffizienten}
 Damit ergeben sich folgende Werte für den Koeffizient $B_k$
 \begin{table}
   \centering
@@ -178,10 +177,12 @@ Damit ergeben sich folgende Werte für den Koeffizient $B_k$
     \bottomrule
   \end{tabular}
 \end{table}
+\newpage
+\subsection{Plot}
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{content/Fourier_x.png}
-  \caption{Die Funktion mit eingesetzten Koeffizienten aud der \href{https://www.j-berkemeier.de/Fouriersynthese.html}{Website}}
+  \caption{Die Funktion mit eingesetzten Koeffizienten auf der \href{https://www.j-berkemeier.de/Fouriersynthese.html}{Website}}
   \label{fig:f(x)=x}
 \end{figure}
 
