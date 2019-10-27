@@ -24,35 +24,95 @@ Jede periodische Funktion läßt sich in eine Reihe aus sin- und cos-Termen entw
 mit
 \begin{equation}
 \omega_k=\frac{2\pi k}{T}
+\label{eqn:omega}
 \end{equation}
 \section{Fourier-Zerlegung der Funktion |sin(x)|}
+\subsection{Berechnung der Integrale}
 Im folgenden soll die Funktion $f(x)=|sin(x)|$ mit einer Fourierreihe angenähert werden.
 Die Koeffizienten sind definiert als
 \begin{equation}
-A_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot cos(\omega_k \cdot t)  dt
+A_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot cos(\omega_k \cdot t)  \, \symup{d}t
 \end{equation}
 \begin{equation}
-B_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot sin(\omega_k \cdot t)  dt
+B_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot sin(\omega_k \cdot t)  \, \symup{d}t
 \end{equation}
 Die Funktion $|sin(x)|$ erfüllt die Eigenschaft $f(-x) = f(x)$ und ist somit eine gerade Funktion.
 Somit ist unser $B_k=0$. 
 Zunächst wählen wir $T=2\pi$. Somit ist $\omega_k =k$.
 Daraus folgt für $A_k$
 \begin{equation}
-A_k=\frac{1}{\pi} \int_{-\pi}^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t) dt
+A_k=\frac{1}{\pi} \int_{-\pi}^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t) \, \symup{d}t
 \end{equation}
 Die Funktion $|sin(x)|$ ist $\pi$-periodisch und hat bei $x = 0$ eine Nullstelle.
-Wir integrieren nun über eine Periode. Damit das Ergebnis weiterhin stimmt,
+Wir integrieren nun über eine, statt wie zuvor über zwei Perioden. Es gilt 
+$\int_{-\pi}^{0}f(x) \, \symup{d}x = \int_0^{\pi} f(x) \, \symup{d}x$
 erhalten wir zusätlich einen Faktor $2$.
 \begin{equation}
-A_k=\frac{2}{\pi} \int_0^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t)  dt
+A_k=\frac{2}{\pi} \int_0^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t) \, \symup{d}t
 \end{equation}
 Es gilt $|sin(x)| = sin(x)$ im Intervall $I=[0,\pi]$, so können wir
 unser Integral vereinfachen
 \begin{equation}
-A_k=\frac{2}{\pi} \int_0^{\pi} sin(t) \cdot cos(\omega_k \cdot t)  dt
+A_k=\frac{2}{\pi} \int_0^{\pi} sin(t) \cdot cos(\omega_k \cdot t)  \, \symup{d}t
 \end{equation}
 \begin{equation}
-\Rightarrow A_k=\left [ \frac{\omega_k sin(t) sin(\omega_k t) + cos(t) cos(\omega_k t)}{\omega_k^2 - 1} \right ]_0^{\pi}
+\Rightarrow A_k= \frac{2}{\pi} \left [ \frac{cos((\omega_k-1)t)}{2(w-1)} - \frac{cos((\omega_k+1)t)}{2(\omega_k^2+1)} \right ]_0^{\pi}
 \end{equation}
+mit $\omega_k$ und Grenzen eingesetzt erhalten wir
+\eqref{eqn:omega}
+\begin{equation}
+A_k=\frac{2}{\pi}\left ( \frac{cos(2k\pi-\pi)}{4k-2} - \frac{cos(2k\pi+\pi)}{4k+2} - \frac{cos(0)}{4k-2} + \frac{cos(0)}{4k+2} \right )
+\end{equation}
+\begin{equation}
+\Leftrightarrow A_k=\frac{2}{\pi}\left ( \frac{-1}{4k-2} + \frac{1}{4k+2} - \frac{1}{4k-2} + \frac{1}{4k+2} \right )
+\end{equation}
+\begin{equation}
+\Leftrightarrow A_k= \frac{2}{\pi} \left ( \frac{-8}{(4k-2)(4k+2)} \right )
+\end{equation}
+\begin{equation}
+\Leftrightarrow A_k= \frac{4}{-4k^2 \pi + \pi}
+\end{equation}
+\subsection{Tabelle}
+Für das online-Experiment werden 17 Koeffizienten benötigt um die
+Regler einzustellen 
+%tabelle
+\begin{table}
+  \centering
+  \label{tab:koeffizienten}
+  \begin{tabular}{c c}
+    \toprule
+    $k$ & $A_k$\\
+    \midrule
+      0 & 1.27323954e+00\\
+      1 & -4.24413182e-01\\ 
+      2 & -8.48826363e-02\\ 
+      3 & -3.63782727e-02\\
+      4 & -2.02101515e-02\\
+      5 & -1.28610055e-02\\ 
+      6 & -8.90377304e-03\\
+      7 & -6.52943356e-03\\
+      8 & -4.99309625e-03\\
+      9 & -3.94191810e-03\\
+      10 & -3.19107655e-03\\
+      11 & -2.63610672e-03\\
+      12 & -2.21432964e-03\\
+      13 & -1.88628081e-03\\
+      14 & -1.62610414e-03\\
+      15 & -1.41628425e-03\\
+      16 & -1.24461344e-03\\
+      17 & -1.10237190e-03\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\newpage
+\subsection{Plot}
+Wir erhalten als Ergebnis auf der
+\href{https://www.j-berkemeier.de/Fouriersynthese.html}{Website}
+folgende Grafik
+\begin{figure}
+  \centering
+  \includegraphics[height=10cm]{content/screenshot_phase90}
+  \caption{Fouriersynthese von $|sin(x)|$}
+  \label{fig:sin}
+\end{figure}
 \end{document}

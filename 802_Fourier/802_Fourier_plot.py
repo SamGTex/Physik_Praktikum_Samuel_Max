@@ -8,7 +8,7 @@ T = np.pi
 w=[]
 ak=[]
 
-for k in range(100):
+for k in range(18):
     a=np.pi
     b=0
     w.append(2*np.pi*k/T)
@@ -17,8 +17,9 @@ for k in range(100):
 wk_np=np.array(w)
 ak_np=np.array(ak)
 
-x_np=np.linspace(0,np.pi,100)
-print(wk_np,ak_np,x_np)
+x_np=np.linspace(0,np.pi,18)
+print(ak_np)
+print(wk_np)
 y_np=f(x_np,ak_np,wk_np)
 plt.plot(x_np,y_np)
 plt.plot(np.sin(x_np))
