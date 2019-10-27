@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.9.21)  25 OCT 2019 08:14
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.9.21)  27 OCT 2019 16:37
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -55,7 +55,7 @@ Lua module: luaotfload-multiscript 2019-09-13 3.00 luaotfload submodule / multis
 cript
 Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.367 seconds
+luaotfload | main : initialization completed in 0.430 seconds
 (./header.tex
 (/home/samuel112110/.local/texlive/2019/texmf-dist/tex/latex/koma-script/scrart
 cl.cls
@@ -1958,53 +1958,69 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = main.toc
  [2
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
+] [3] [4]
+<content/screenshot_phase90.jpg, id=58, 1084.05pt x 722.7pt>
+File: content/screenshot_phase90.jpg Graphic file (type jpg)
+<use content/screenshot_phase90.jpg>
+Package luatex.def Info: content/screenshot_phase90.jpg  used on input line 114.
+
+(luatex.def)             Requested size: 426.79733pt x 284.52756pt.
+
+Overfull \hbox (8.54178pt too wide) in paragraph at lines 114--115
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 115.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 115.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
+[5<./content/screenshot_phase90.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
 
 
 Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `main.aux':
-(rerunfilecheck)             Before: 45AF1D77414F040434672F72BFAA4BF1;1884
-(rerunfilecheck)             After:  64FFF4A092D65BBA5E20A0AEF91BC298;2124.
+(rerunfilecheck)             Before: C6080DE2B63D72DCCC67826FBE415C89;3526
+(rerunfilecheck)             After:  B232DEF56B11C897A3CAB1C9002B6136;3791.
 
 Package rerunfilecheck Warning: File `main.toc' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `main.toc':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  90D2C178250E1508738478D04DC78B60;287.
+(rerunfilecheck)             Before: 0740E4E541DBDB7EC0E49EBEF33434BB;500
+(rerunfilecheck)             After:  932CBDE2114A5C91588A432D9CE62C4B;523.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 43306 strings out of 494291
+ 43378 strings out of 494291
  100000,1977958 words of node,token memory allocated
- 730 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 44 attribute, 76 gl
-ue_spec, 24 attribute_list, 1 write nodes
-   avail lists: 1:2,2:419,3:117,4:10,5:157,6:9,7:1292,8:61,9:193,10:4,11:86
- 46484 multiletter control sequences out of 65536+600000
- 100 fonts using 37088831 bytes
- 57i,6n,109p,9101b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
-</home/samuel112110/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm-math
-/latinmodern-math.otf></home/samuel112110/.local/texlive/2019/texmf-dist/fonts/o
-pentype/public/lm-math/latinmodern-math.otf></home/samuel112110/.local/texlive/2
-019/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/samuel11211
-0/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf>
-</home/samuel112110/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmsa
-ns10-bold.otf></home/samuel112110/.local/texlive/2019/texmf-dist/fonts/opentype/
-public/lm/lmroman12-bold.otf>
-Output written on main.pdf (3 pages, 31565 bytes).
+ 799 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 62 attribute, 79 gl
+ue_spec, 33 attribute_list, 1 write nodes
+   avail lists: 1:2,2:656,3:158,4:11,5:222,6:12,7:1646,8:93,9:350,10:4,11:92
+ 46529 multiletter control sequences out of 65536+600000
+ 113 fonts using 41696463 bytes
+ 57i,9n,109p,9101b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
+</home/samuel112110/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmro
+man10-bold.otf></home/samuel112110/.local/texlive/2019/texmf-dist/fonts/opentype
+/public/lm-math/latinmodern-math.otf></home/samuel112110/.local/texlive/2019/tex
+mf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/samuel112110/.
+local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></h
+ome/samuel112110/.local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman
+12-regular.otf></home/samuel112110/.local/texlive/2019/texmf-dist/fonts/opentype
+/public/lm/lmsans10-bold.otf></home/samuel112110/.local/texlive/2019/texmf-dist/
+fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (5 pages, 328895 bytes).
 
-PDF statistics: 84 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
- 17 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 128 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
+ 26 named destinations out of 1000 (max. 131072)
+ 41 words of extra memory for PDF output out of 10000 (max. 100000000)
 

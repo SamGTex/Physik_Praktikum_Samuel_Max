@@ -1,6 +1,6 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.9.21)  25 OCT 2019 07:56
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.9.21)  27 OCT 2019 16:32
  restricted system commands enabled.
-**main.tex
+**main.tex´
 (/home/samuel112110/.local/texlive/2019/texmf-dist/tex/latex/tools/x.tex
 LaTeX2e <2018-12-01>
 Lua module: luaotfload-main 2019-09-13 3.00 luaotfload entry point
@@ -55,7 +55,7 @@ Lua module: luaotfload-multiscript 2019-09-13 3.00 luaotfload submodule / multis
 cript
 Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.321 seconds
+luaotfload | main : initialization completed in 0.395 seconds
 
 ! .
 l.38   \batchmode \errmessage{}
@@ -75,7 +75,7 @@ Here is how much of LuaTeX's memory you used:
    avail lists: 2:10,3:1,4:1,5:1
  4367 multiletter control sequences out of 65536+600000
  14 fonts using 591799 bytes
- 5i,0n,1p,87b,15s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 5i,0n,1p,89b,15s stack positions out of 5000i,500n,10000p,200000b,100000s
 
 warning  (pdf backend): no pages of output.
 

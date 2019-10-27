@@ -2,3 +2,6 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{\numberline {1}Theorie}{3}{section.1}% 
 \contentsline {section}{\numberline {2}Fourier-Zerlegung der Funktion |sin(x)|}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Berechnung der Integrale}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Tabelle}{4}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Plot}{5}{subsection.2.3}% 
