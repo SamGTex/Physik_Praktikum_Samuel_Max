@@ -36,19 +36,9 @@ A_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot cos(\omega_k \cdot t)  \, \symup{d}
 \begin{equation}
 B_k=\frac{2}{T} \int_{-T/2}^{T/2} f(t) \cdot sin(\omega_k \cdot t)  \, \symup{d}t
 \end{equation}
-$A_0$ und $B_0$ sind seperat definiert
-\begin{equation}
-  A_0= \frac{1}{T} \int f(t) \, \symup{d}t
-\end{equation}
-\begin{equation}
-  B_0=0
-\end{equation}
 Die Funktion $|sin(x)|$ erfüllt die Eigenschaft $f(-x) = f(x)$ und ist somit eine gerade Funktion.
 Somit ist unser $B_k=0$. 
-Zunächst wählen wir $T=2\pi$. Daraus folgt für $A_0$ und $A_k$
-\begin{equation}
-  A_0=\frac{1}{2\pi} \int_{-\pi}^{\pi} |sin(t)| dt = \frac{1}{2\pi} \left[-cos(t)sgn(sin(t)) \right]_{-\pi}^{\pi} = 0.6366197723675814
-\end{equation}
+Zunächst wählen wir $T=2\pi$. Daraus folgt für $A_k$
 \begin{equation}
 A_k=\frac{1}{\pi} \int_{-\pi}^{\pi} |sin(t)| \cdot cos(\omega_k \cdot t) \, \symup{d}t
 \end{equation}
@@ -93,7 +83,7 @@ Regler einzustellen
     \toprule
     $k$ & $A_k$\\
     \midrule
-      0 & 0.6366197723675814\\
+      0 & 1.27323954e+00\\
       1 & -4.24413182e-01\\ 
       2 & -8.48826363e-02\\ 
       3 & -3.63782727e-02\\
