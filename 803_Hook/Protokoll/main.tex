@@ -18,7 +18,7 @@
  \section{Versuchbeschreibung}
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{Hooksche_Gesetzt.png}
+  \includegraphics[width=\textwidth]{content/Hooksche_Gesetzt.png}
   \caption{Der Versuchsaufbau auf der \href{http://hyperion.didaktik.physik.uni-due.de/IBEs/Hooke.php}{Website}.}
   \label{fig:Versuchsaufbau}
 \end{figure}
@@ -31,5 +31,34 @@ Zur Versuchsdurchführung wird die Klammer auf dem Lineal verschoben und anschli
 Daraufhin wird der Wert auf dem Kraftmesser abgelesen und notiert.
 Danach wird die Klammer wieder gelöst und erneut verschoben, bis die gewünschte Anzahl an Messwerten erreicht wird.
   \section{Versuchauswertung}
-  
+Durch die Durchfühnrung des Versuchs wurden folgende Werte gesammelt:
+\begin{table}
+  \centering
+  \caption{Die Aufgenommen Daten}
+  \label{tab:Messdaten}
+  \begin{tabular}{c c}
+  \toprule
+  $ \Delta x \:/\: \si{\meter}$ & $F \:/\: \si{\newton}$ \\
+  0.58 & 1.73 \\
+  0.53 & 1.58 \\
+  0.48 & 1.44 \\
+  0.43 & 1.28 \\
+  0.38 & 1.13 \\
+  0.33 & 0.98 \\
+  0.28 & 0.83 \\
+  0.23 & 0.68 \\
+  0.18 & 0.53 \\
+  0.13 & 0.38 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+\FloatBarrier
+Aus den aufgenommen Daten wurde nun der Mittelwert der Federkonstante $D$ wie folgt bestimmt
+\begin{equation}
+\sum_{i=1}^{10} \frac{1}{10} \cdot \frac{F_i}{\Delta x_i}
+\end{equation}
+Daraus ergibt sich
+\begin{equation}
+D = 2.967234488336867
+\end{equation}
 \end{document}
