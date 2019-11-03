@@ -60,7 +60,20 @@ Aus den aufgenommen Daten wurde nun der Mittelwert der Federkonstante $D$ wie fo
 \end{equation}
 Daraus ergibt sich
 \begin{equation}
-D = 2.967234488336867
+\bar{D} = 2.967234488336867
 \end{equation}
+Da dieser Wert nur der Mittelwert aller Federkonstante ist, ist er mit einer Unsicherheit behaftet.
+Um die Unsicherheit $u$ zu berechnen, wird zunächst die Standardabweichung $\sigma$ berechnet.
+\begin{equation}
+\sigma = \sqrt{\frac{1}{9} \sum_{i=1}^{10} (D_i - \bar{D})^2}
+\end{equation}
+Daraus ergibt sich eine Standardabweichung von $\sigma = 0.02170138854644041
+$
+Damit lässt sich nun die Unsicherheit $u$ bestimmen
+\begin{equation}
+u = \frac{1}{ \sqrt{9}} \cdot \sigma
+\end{equation}
+Die errechnete Unsicherheit beträgt $u = 0.006862581619504244$
+
 \subsection{lineare Ausgleichsrechnung}
 \end{document}
