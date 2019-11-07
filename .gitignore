@@ -4,3 +4,4 @@
 *.bcf
 *.pdf
 *.xml
+build/
