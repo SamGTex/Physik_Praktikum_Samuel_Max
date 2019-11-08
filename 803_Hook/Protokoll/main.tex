@@ -56,19 +56,18 @@ Durch die Durchfühnrung des Versuchs wurden folgende Werte gesammelt:
 \FloatBarrier
 Aus den aufgenommen Daten wurde nun der Mittelwert der Federkonstante $D$ wie folgt bestimmt
 \begin{equation}
-\sum_{i=1}^{10}  \frac{1}{10} \cdot \frac{F_i}{\Delta x_i}
+\frac{1}{10} \sum_{i=1}^{10} \frac{F_i}{\Delta x_i}
 \end{equation}
 Daraus ergibt sich
 \begin{equation}
-\bar{D} = 2.96723
+\bar{D} = 2.96723 \,\mathrm{N/m}
 \end{equation}
 Da dieser Wert nur der Mittelwert aller Federkonstante ist, ist er mit einer Unsicherheit behaftet.
 Um die Unsicherheit $u$ zu berechnen, wird zunächst die Standardabweichung $\sigma$ berechnet.
 \begin{equation}
 \sigma = \sqrt{\frac{1}{9} \sum_{i=1}^{10} (D_i - \bar{D})^2}
 \end{equation}
-Daraus ergibt sich eine Standardabweichung von $\sigma = 0.02170
-$
+Daraus ergibt sich eine Standardabweichung von $\sigma = 0.02170$
 Damit lässt sich nun die Unsicherheit $u$ bestimmen
 \begin{equation}
 u = \frac{1}{ \sqrt{9}} \cdot \sigma
@@ -76,7 +75,19 @@ u = \frac{1}{ \sqrt{9}} \cdot \sigma
 Die errechnete Unsicherheit beträgt $u = 0.00686$.
 Somit ist die Federkonstante 
 \begin{equation}
-D = 2.96723 \pm 0.00686.
+D = (2.967 \pm 0.006)\,\mathrm{N/m}.
 \end{equation}
+\newpage
 \subsection{lineare Ausgleichsrechnung}
+Die lineare Ausgleichsrechnung in Python/Scipy kann mit der Funktion curve fit
+aufgerufen werden. Curve fit verwendet die Methode der kleinsten Quadrate.
+Die Federkonstante $D$ lautet
+\begin{equation}
+  D=2.979 \,\mathrm{N/m}.
+\end{equation}
+\begin{figure}
+  \label{fig:plot}
+  \includegraphics[width=\textwidth]{content/plot.pdf}
+\caption{Messwerte und die lineare Funktion der Ausgleichsrechnung}
+\end{figure}
 \end{document}
