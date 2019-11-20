@@ -30,11 +30,11 @@ Mit Hilfe der beiden Kirchhoffschen Gesetzte
 \end{enumerate}
 ergibt sich dann für die Brückspannung 
 \begin{equation}
-U_B = \frac{R_2\cdot R_3 - R_1 \cdot R_4}{(R_3 + R_4) \cdot (R_1 + R_2)} \cdot U_s .
+U_B = \frac{R_2\cdot R_3 - R_1 \cdot R_4}{(R_3 + R_4) \cdot (R_1 + R_2)} \cdot U_S .
 \label{eqn:Brueckspannung}
 \end{equation}
 Wenn nun die Widerstände $R_3$ und $R_4$ so gewählt werden, dass die Brückspannung verschwindet,
-ergibt sich aus \eqref{eqn:Brueckspannung} die sogenannte Abgleichbedinnung:
+ergibt sich aus \eqref{eqn:Brueckspannung} die sogenannte Abgleichbedinung:
 \begin{equation}
 R_2 R_3 = R_1 R_4 .
 \label{eqn:abgleich}
@@ -55,6 +55,7 @@ Außerdem werden nur ohmsche Widerstände verwendet, von denen der Widerstand $R
 Dieser kann ermittelt werden indem \eqref{eqn:abgleich} nach $R_x$ umgestellt wird:
 \begin{equation}
     R_x = R_2 \frac{R_3}{R_4}.
+    \label{eqn:abgleich_2}
 \end{equation}
 
 \subsection{Kapazitätsmessbrücke}
@@ -62,7 +63,111 @@ Dieser kann ermittelt werden indem \eqref{eqn:abgleich} nach $R_x$ umgestellt wi
 \begin{figure}
     \centering
     \includegraphics[scale=0.25]{content/Kapazitätsmessbruecke.png}
-    \label{fig:kapa}
     \caption{Die Kapazitätsmessbrücke \cite[S. 220]{anleitung}.}
+     \label{fig:kapaz}
 \end{figure}
 
+In der Kapazitätsmessbrücke sind außer ohmschen Widerständen auch Kondensatoren verbaut.
+Da Kondensatoren einen Teil der elektrischen Energie in Wärme umwandeln wird ein Ersatzschaltbild genutzt.
+In der Abbildung \ref{fig:kapaz} wird dies durch einen ohmeschen Widerstand $R_x$ realisiert, der mit dem Kondensator $C_x$ in Reihe geschaltet ist.
+Außerdem muss auch hinter den Kondensator $C_2$ mit der bekannten Kapazität ein ohmscher Widerstand $R_2$ geschaltet werden.
+Dieser ist variabel um die von $R_x$ hervorgerufene Phasenverschiebung zu kompensieren.
+Der unbekannte Widerstand $R_x$ kann wie in \eqref{eqn:abgleich_2} bestimmt werden.
+Die Kapazität des Kondensators $C_x$ kann durch einsetzten der komplexen Widerstände in die
+Abgleichbedingung \eqref{eqn:abgleich} ermittelt werden:
+
+\begin{equation}
+C_x = C_2 \frac{R_4}{R_3}.
+\end{equation}
+
+\subsection{Induktivitätsmessbrücke}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{content/Induktivitaetsmessbruecke.png}
+    \caption{Die Induktivitätsmessbrücke \cite[S. 221]{anleitung}.}
+    \label{fig:induk}
+\end{figure}
+
+Die Induktivitätsmessbrücke wird dazu genutzt unbekannte Induktivitäten zu bestimmen.
+Da Spulen allerdings ähnlich wie Kondensatoren ein Teil der ihnen zugefügten elektrischen Energie in Wärme umwandeln,
+wird auch für Spulen ein Ersatzschaltbild genutzt. Dieses besteht, genau wie beim Kondensaor,
+aus einem ohmschen Widerstand, der mit der Spule in Reihe geschaltet wird.
+Bei der Induktivitätsmessbrücke in Abbildung \ref{fig:induk} ist dies der Fall bei der Spule $L_x$ mit dem ohmschen Widerstand $R_x$.
+Außerdem wird hinter die Spuel $L_2$ ähnlich wie bei der Kapazitätsmessbrücke wieder ein variabeler Widerstand gesetzt, 
+um die Phasenverschiebung, die durch den Widerstand von $R_x$ auftritt, zu kompensieren.
+Analog zu der Kapazitätsmessbrücke kann auch bei der Induktivitätsmessbrücke der Widerstand $R_x$ durch \eqref{eqn:abgleich_2} ermittelt werden.
+Die Induktivität der Spule $L_x$ lässt sich durch
+
+\begin{equation}
+    L_x = L_2 \frac{R_3}{R_4}
+\end{equation}
+
+berechnen.
+
+\subsection{Maxwell-Brücke}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{content/Maxwellbruecke.png}
+    \label{fig:maxwell}
+    \caption{Die Maxwellbrücke \cite[S. 222]{anleitung}.}
+\end{figure}
+
+Auch mit der Maxwell-Brücke werden Induktivitäten bestimmt. 
+Nun wird allerdings anstatt einer Induktivität $L_2$ ein Kapazität $C_4$ genutzt,
+welche mit dem Widerstand $R_4$ parallel geschaltet wird. 
+Diesmal liefert die Abgleichbedingung für den Widerstand $R_x$
+
+\begin{equation}
+    R_x = \frac{R_2 \cdot R_3}{R_4}
+\end{equation}
+und für die Induktivität $L_x$
+\begin{equation}
+    L_x = R_2 R_3 C_4 .
+\end{equation}
+
+\subsection{Wien-Robinson-Brücke}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{content/Wien-Robinson-Bruecke.png}
+    \caption{Die Wien-Robinson-Brücke \cite[S. 223]{anleitung}.}
+    \label{fig:wien}
+\end{figure}
+
+In der Wien-Robinson-Brücke ist kein variabler Widerstand verbaut, wie in Abbildung \ref{fig:wien}
+zu erkennen ist.
+Das liegt daran, dass sie zum Filtern von Frequenzen und nicht zur Messung von Widerständen genutzt wird.
+Wenn nun das Spannungsverhältnis zwischen Brüch- und Speisespannung in Abhängigkeit von der Frequenzen $\omega$ betrachte wird 
+
+\begin{equation}
+\lvert \frac{U_B}{U_S}^2 \rvert = \frac{(\omega^2R^2C^2-1)^2}{9((1-\omega^2R^2C^2) + 9 \omega^2 R^2 C^2)}
+\label{eqn:verhaeltnis}
+\end{equation}
+
+ist zu erkennen, dass die Brückspannung verschwindet wenn 
+
+\begin{equation}
+    \omega_0 = \frac{1}{RC}
+\end{equation}
+
+ist. Zur Vereinfachung wird 
+
+\begin{equation*}
+    \Omega \coloneq \frac{\omega}{\omega_0}
+\end{equation*}
+
+definiert. Damit lässt sich \eqref{eqn:verhaeltnis} umschreiben in
+
+\begin{equation}
+\lvert \frac{U_B}{U_S}^2 \rvert = \frac{1}{9} \frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2 + 9\Omega^2}.
+\end{equation}
+
+Es fällt nun auf, dass bei der Frequenz $\omega_0$ die Brückspannung verschwinden sollte.
+Dies ist allerdings in der Realität oft nicht der Fall, da Generatoren Oberwellen erzeugen.
+Das Verhältnis zwischen Oberwellen und Grundwelle ist als Klirrfaktor
+\begin{equation*}
+    k \coloneq \frac{\sqrt{\sum_i=2 U_i^2}}{U_1}
+\end{equation*}
+definiert. Ein Idealer Generator hat den Klirrfaktor 0.
