@@ -18,27 +18,35 @@ Diese In Reihe geschalteten Widerstandspaare werden dann wiederum parallel gesch
 
 Daraufhin lässt sich ziwschen Punkt $A$ und Punkt $B$ eine Brückspannung $U_B$ abgreifen.
 Mit Hilfe der beiden Kirchhoffschen Gesetzte
+
 \begin{enumerate}
-\item Die Summe alle zufließenden und abfließenden ströme ist gleich Null:
-\begin{equation}
-\sum_k I_k = 0
-\end{equation}
-\item Die Summe aller Spannungen in einem Knoten nach Beachtungen der Vorzeichen gleich Null:
-\begin{equation}
-\sum_k U_k = 0
-\end{equation}
+    \item Die Summe alle zufließenden und abfließenden ströme ist gleich Null:
+    
+    \begin{equation}
+        \sum_k I_k = 0
+    \end{equation}
+    \item Die Summe aller Spannungen in einem Knoten nach Beachtungen der Vorzeichen gleich Null:
+    
+    \begin{equation}
+        \sum_k U_k = 0
+    \end{equation}
 \end{enumerate}
+
 ergibt sich dann für die Brückspannung 
+
 \begin{equation}
-U_B = \frac{R_2\cdot R_3 - R_1 \cdot R_4}{(R_3 + R_4) \cdot (R_1 + R_2)} \cdot U_S .
-\label{eqn:Brueckspannung}
+    U_B = \frac{R_2\cdot R_3 - R_1 \cdot R_4}{(R_3 + R_4) \cdot (R_1 + R_2)} \cdot U_S .
+    \label{eqn:Brueckspannung}
 \end{equation}
+
 Wenn nun die Widerstände $R_3$ und $R_4$ so gewählt werden, dass die Brückspannung verschwindet,
 ergibt sich aus \eqref{eqn:Brueckspannung} die sogenannte Abgleichbedinung:
+
 \begin{equation}
-R_2 R_3 = R_1 R_4 .
-\label{eqn:abgleich}
+    R_2 R_3 = R_1 R_4 .
+    \label{eqn:abgleich}
 \end{equation}
+
 Dabei ist es egal ob komplexe oder reele Widerstände verwendet werden, darauf wird allerdings später nocheinmal eingegangen.
 
 \subsection{Wheatstonesche Brücke}
@@ -46,13 +54,14 @@ Dabei ist es egal ob komplexe oder reele Widerstände verwendet werden, darauf w
 \begin{figure}
     \centering
     \includegraphics[scale=0.25]{content/Wheatstonesche.png}
-    \caption{Die Wheatstonesche Brücke \cite[S. 219]{anleitung}.}
     \label{fig:wheatstonesche}
+    \caption{Die Wheatstonesche Brücke \cite[S. 219]{anleitung}.}
 \end{figure}
 
 Anstatt fester Widerstände wird nun für $R_3$ und $R_4$ ein Potentiometer verwendet.
 Außerdem werden nur ohmsche Widerstände verwendet, von denen der Widerstand $R_x$ unbekannt ist.
 Dieser kann ermittelt werden indem \eqref{eqn:abgleich} nach $R_x$ umgestellt wird:
+
 \begin{equation}
     R_x = R_2 \frac{R_3}{R_4}.
     \label{eqn:abgleich_2}
@@ -77,7 +86,7 @@ Die Kapazität des Kondensators $C_x$ kann durch einsetzten der komplexen Widers
 Abgleichbedingung \eqref{eqn:abgleich} ermittelt werden:
 
 \begin{equation}
-C_x = C_2 \frac{R_4}{R_3}.
+    C_x = C_2 \frac{R_4}{R_3}.
 \end{equation}
 
 \subsection{Induktivitätsmessbrücke}
@@ -110,8 +119,8 @@ berechnen.
 \begin{figure}
     \centering
     \includegraphics[scale=0.25]{content/Maxwellbruecke.png}
-    \caption{Die Maxwellbrücke \cite[S. 222]{anleitung}.}
     \label{fig:maxwell}
+    \caption{Die Maxwellbrücke \cite[S. 222]{anleitung}.}
 \end{figure}
 
 Auch mit der Maxwell-Brücke werden Induktivitäten bestimmt. 
@@ -122,7 +131,9 @@ Diesmal liefert die Abgleichbedingung für den Widerstand $R_x$
 \begin{equation}
     R_x = \frac{R_2 \cdot R_3}{R_4}
 \end{equation}
+
 und für die Induktivität $L_x$
+
 \begin{equation}
     L_x = R_2 R_3 C_4 .
 \end{equation}
@@ -142,8 +153,8 @@ Das liegt daran, dass sie zum Filtern von Frequenzen und nicht zur Messung von W
 Wenn nun das Spannungsverhältnis zwischen Brüch- und Speisespannung in Abhängigkeit von der Frequenzen $\omega$ betrachte wird 
 
 \begin{equation}
-\lvert \frac{U_B}{U_S}^2 \rvert = \frac{(\omega^2R^2C^2-1)^2}{9((1-\omega^2R^2C^2) + 9 \omega^2 R^2 C^2)}
-\label{eqn:verhaeltnis}
+    \lvert \frac{U_B}{U_S}^2 \rvert = \frac{(\omega^2R^2C^2-1)^2}{9((1-\omega^2R^2C^2) + 9 \omega^2 R^2 C^2)}
+    \label{eqn:verhaeltnis}
 \end{equation}
 
 ist zu erkennen, dass die Brückspannung verschwindet wenn 
@@ -161,13 +172,15 @@ ist. Zur Vereinfachung wird
 definiert. Damit lässt sich \eqref{eqn:verhaeltnis} umschreiben in
 
 \begin{equation}
-\lvert \frac{U_B}{U_S}^2 \rvert = \frac{1}{9} \frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2 + 9\Omega^2}.
+    \lvert \frac{U_B}{U_S}^2 \rvert = \frac{1}{9} \frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2 + 9\Omega^2}.
 \end{equation}
 
 Es fällt nun auf, dass bei der Frequenz $\omega_0$ die Brückspannung verschwinden sollte.
 Dies ist allerdings in der Realität oft nicht der Fall, da Generatoren Oberwellen erzeugen.
 Das Verhältnis zwischen Oberwellen und Grundwelle ist als Klirrfaktor
+
 \begin{equation*}
     k \coloneq \frac{\sqrt{\sum_i=2 U_i^2}}{U_1}
 \end{equation*}
+
 definiert. Ein Idealer Generator hat den Klirrfaktor 0.
