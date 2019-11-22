@@ -4,7 +4,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 def g(o):
     z=(o**2-1)**2
-    n=(1-o**2)**2 + 16*(o**2)
+    n=9*((1-o**2)**2 + 9*(o**2))
     return np.sqrt(z/n)
 with open('daten/e.csv' ) as csvfile:
     reader=csv.reader(csvfile, delimiter=',')
@@ -23,6 +23,7 @@ with open('daten/e.csv' ) as csvfile:
     C=993*10**(-9)
     w0=1/(R*C)
     v1=w0/(2*np.pi)
+    print(v1)
     x=np.array(np.linspace(20,1000,1000))
     o=x/v1
     plt.semilogx(f/v0,u/u_s,'rx')
