@@ -54,8 +54,8 @@ Dabei ist es egal ob komplexe oder reele Widerstände verwendet werden, darauf w
 \begin{figure}
     \centering
     \includegraphics[scale=0.25]{content/Wheatstonesche.png}
-    \label{fig:wheatstonesche}
     \caption{Die Wheatstonesche Brücke \cite[S. 219]{anleitung}.}
+    \label{fig:wheatstonesche}
 \end{figure}
 
 Anstatt fester Widerstände wird nun für $R_3$ und $R_4$ ein Potentiometer verwendet.
@@ -103,7 +103,7 @@ Da Spulen allerdings ähnlich wie Kondensatoren ein Teil der ihnen zugefügten e
 wird auch für Spulen ein Ersatzschaltbild genutzt. Dieses besteht, genau wie beim Kondensaor,
 aus einem ohmschen Widerstand, der mit der Spule in Reihe geschaltet wird.
 Bei der Induktivitätsmessbrücke in Abbildung \ref{fig:induk} ist dies der Fall bei der Spule $L_x$ mit dem ohmschen Widerstand $R_x$.
-Außerdem wird hinter die Spuel $L_2$ ähnlich wie bei der Kapazitätsmessbrücke wieder ein variabeler Widerstand gesetzt, 
+Außerdem wird hinter die Spuel $L_2$ ähnlich wie bei der Kapazitätsmessbrücke wieder ein variabeler Widerstand $R_2$ gesetzt, 
 um die Phasenverschiebung, die durch den Widerstand von $R_x$ auftritt, zu kompensieren.
 Analog zu der Kapazitätsmessbrücke kann auch bei der Induktivitätsmessbrücke der Widerstand $R_x$ durch \eqref{eqn:abgleich_2} ermittelt werden.
 Die Induktivität der Spule $L_x$ lässt sich durch
@@ -119,8 +119,8 @@ berechnen.
 \begin{figure}
     \centering
     \includegraphics[scale=0.25]{content/Maxwellbruecke.png}
-    \label{fig:maxwell}
     \caption{Die Maxwellbrücke \cite[S. 222]{anleitung}.}
+    \label{fig:maxwell}
 \end{figure}
 
 Auch mit der Maxwell-Brücke werden Induktivitäten bestimmt. 
@@ -153,7 +153,7 @@ Das liegt daran, dass sie zum Filtern von Frequenzen und nicht zur Messung von W
 Wenn nun das Spannungsverhältnis zwischen Brüch- und Speisespannung in Abhängigkeit von der Frequenzen $\omega$ betrachte wird 
 
 \begin{equation}
-    \lvert \frac{U_B}{U_S}^2 \rvert = \frac{(\omega^2R^2C^2-1)^2}{9((1-\omega^2R^2C^2) + 9 \omega^2 R^2 C^2)}
+    \left | \frac{U_B}{U_S}^2 \right | = \frac{(\omega^2R^2C^2-1)^2}{9((1-\omega^2R^2C^2) + 9 \omega^2 R^2 C^2)}
     \label{eqn:verhaeltnis}
 \end{equation}
 
@@ -172,7 +172,7 @@ ist. Zur Vereinfachung wird
 definiert. Damit lässt sich \eqref{eqn:verhaeltnis} umschreiben in
 
 \begin{equation}
-    \lvert \frac{U_B}{U_S}^2 \rvert = \frac{1}{9} \frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2 + 9\Omega^2}.
+    \left | \frac{U_B}{U_S}^2 \right | = \frac{1}{9} \frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2 + 9\Omega^2}.
 \end{equation}
 
 Es fällt nun auf, dass bei der Frequenz $\omega_0$ die Brückspannung verschwinden sollte.
@@ -180,7 +180,25 @@ Dies ist allerdings in der Realität oft nicht der Fall, da Generatoren Oberwell
 Das Verhältnis zwischen Oberwellen und Grundwelle ist als Klirrfaktor
 
 \begin{equation*}
-    k \coloneq \frac{\sqrt{\sum_i=2 U_i^2}}{U_1}
+    k \coloneq \frac{\sqrt{\sum_{i=2} U_i^2}}{U_1}
 \end{equation*}
 
 definiert. Ein Idealer Generator hat den Klirrfaktor 0.
+
+\subsection{Fehlerrechnung}
+
+Zur Fehlerrechnung wurde das Python Plugin numpy \cite{numpy} genutzt.
+Dieses nutzt zur Berechnung des Mittelwerts die Formel des arithmetischen Mittels
+
+\begin{equation}
+    \bar{x} = \frac{1}{n} \sum_{i=1}^n x_i.
+    \label{eqn:mittel}
+\end{equation}
+
+Außerdem wird zur Berechnung der Unsicherheit der Mittelwerte die folgende Formel genutzt:
+
+\begin{equation}
+    \Delta \bar{x} = \frac{1}{\sqrt{N}} \sqrt{\frac{1}{1-N} \sum_{i=1}^N (x_i-\bar{x})^2}.
+    \label{eqn:fehler}
+\end{equation}
+
