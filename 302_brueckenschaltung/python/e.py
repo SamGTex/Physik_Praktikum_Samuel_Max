@@ -20,12 +20,11 @@ with open('daten/e.csv' ) as csvfile:
     #plt.xlabel(r'$f / \mathr{Hertz}, U / mV$')
     #plt.ylabel(r'$F \, / \, \mathrm{N} $')
     R=1000
-    C=993*10**(-9)
+    C=994*10**(-9)
     w0=1/(R*C)
     v1=w0/(2*np.pi)
     print(v1)
-    x=np.array(np.linspace(20,1000,1000))
-    o=x/v1
+    o=f/v1
     plt.semilogx(f/v0,u/u_s,'rx')
     plt.semilogx(o,g(o))
     plt.show()
