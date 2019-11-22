@@ -1,9 +1,11 @@
 import csv
 import matplotlib.pyplot as plt
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-
+def g(o):
+    z=(o**2-1)**2
+    n=(1-o**2)**2 + 16*(o**2)
+    return np.sqrt(z/n)
 with open('daten/e.csv' ) as csvfile:
     reader=csv.reader(csvfile, delimiter=',')
     header_row=next(reader)
@@ -13,9 +15,16 @@ with open('daten/e.csv' ) as csvfile:
         u.append(row[1])
     f=np.array(f,dtype=float)
     u=np.array(u,dtype=float)
-    u_s=1
-    v0=150
+    u_s=1000
+    v0=160
     #plt.xlabel(r'$f / \mathr{Hertz}, U / mV$')
     #plt.ylabel(r'$F \, / \, \mathrm{N} $')
+    R=1000
+    C=993*10**(-9)
+    w0=1/(R*C)
+    v1=w0/(2*np.pi)
+    x=np.array(np.linspace(20,1000,1000))
+    o=x/v1
     plt.semilogx(f/v0,u/u_s,'rx')
+    plt.semilogx(o,g(o))
     plt.show()
