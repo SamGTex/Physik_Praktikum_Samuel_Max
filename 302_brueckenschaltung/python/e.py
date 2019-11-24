@@ -17,16 +17,17 @@ with open('daten/e.csv' ) as csvfile:
     u=np.array(u,dtype=float)
     u_s=1000
     v0=160
-    #plt.xlabel(r'$f / \mathr{Hertz}, U / mV$')
-    #plt.ylabel(r'$F \, / \, \mathrm{N} $')
+    plt.xlabel(r'$v/v_0$')
+    plt.ylabel(r'$U_{Br}/U_S$')
     R=1000
-    C=994*10**(-9)
+    C=993*10**(-9)
     w0=1/(R*C)
+    print('w0:',w0)
     v1=w0/(2*np.pi)
-    print(v1)
-    print(np.sqrt(np.sum(u)-u[0])/u[0])
-    o=f/v1
-    print(g(o)*1000-u)
-    plt.semilogx(f/v0,u/u_s,'rx')
-    plt.semilogx(o,g(o))
+    print('v0',v1)
+    o=f*np.pi*2/w0
+    plt.semilogx(f/v0,u/u_s,'rx',label='Messwerte')
+    plt.semilogx(o,g(o),label='Theoretische Funktion')
+    plt.legend()
+    plt.savefig('plot_e.pdf')
     plt.show()

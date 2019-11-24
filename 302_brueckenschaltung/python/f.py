@@ -16,9 +16,9 @@ with open('daten/e.csv' ) as csvfile:
     indices = [i for i, x in enumerate(f) if x == "160"]
     f=np.array(f,dtype=float)
     u=np.array(u,dtype=float)
-    u_br=u[indices]/(2*np.sqrt(2)*1000)
-    u_s=1
-    print('U_br_eff:',u_br)
+    u_br=u[indices]/(np.sqrt(2)*2)
+    u_s=1000
+    print(u[indices],'U_br_eff:',u_br)
     print('U_2:', g(2,u_br))
     print('k:',g(2,u_br)/u_s)
 

@@ -87,6 +87,7 @@ Abgleichbedingung \eqref{eqn:abgleich} ermittelt werden:
 
 \begin{equation}
     C_x = C_2 \frac{R_4}{R_3}.
+    \label{eqn:kapc}
 \end{equation}
 
 \subsection{Induktivitätsmessbrücke}
@@ -110,6 +111,7 @@ Die Induktivität der Spule $L_x$ lässt sich durch
 
 \begin{equation}
     L_x = L_2 \frac{R_3}{R_4}
+    \label{eqn:indl}
 \end{equation}
 
 berechnen.
@@ -130,12 +132,14 @@ Diesmal liefert die Abgleichbedingung für den Widerstand $R_x$
 
 \begin{equation}
     R_x = \frac{R_2 \cdot R_3}{R_4}
+    \label{eqn:mw_r}
 \end{equation}
 
 und für die Induktivität $L_x$
 
 \begin{equation}
     L_x = R_2 R_3 C_4 .
+    \label{eqn:mw_l}
 \end{equation}
 
 \subsection{Wien-Robinson-Brücke}
@@ -153,7 +157,7 @@ Das liegt daran, dass sie zum Filtern von Frequenzen und nicht zur Messung von W
 Wenn nun das Spannungsverhältnis zwischen Brüch- und Speisespannung in Abhängigkeit von der Frequenzen $\omega$ betrachte wird 
 
 \begin{equation}
-    \left | \frac{U_B}{U_S}^2 \right | = \frac{(\omega^2R^2C^2-1)^2}{9((1-\omega^2R^2C^2) + 9 \omega^2 R^2 C^2)}
+    \left | \frac{U_B}{U_S} \right |^2 = \frac{(\omega^2R^2C^2-1)^2}{9((1-\omega^2R^2C^2) + 9 \omega^2 R^2 C^2)}
     \label{eqn:verhaeltnis}
 \end{equation}
 
@@ -161,6 +165,7 @@ ist zu erkennen, dass die Brückspannung verschwindet wenn
 
 \begin{equation}
     \omega_0 = \frac{1}{RC}
+    \label{eqn:wien_rc}
 \end{equation}
 
 ist. Zur Vereinfachung wird 
@@ -173,15 +178,17 @@ definiert. Damit lässt sich \eqref{eqn:verhaeltnis} umschreiben in
 
 \begin{equation}
     \left | \frac{U_B}{U_S}^2 \right | = \frac{1}{9} \frac{(\Omega^2 -1)^2}{(1-\Omega^2)^2 + 9\Omega^2}.
+    \label{eqn:wien_verh}
 \end{equation}
 
 Es fällt nun auf, dass bei der Frequenz $\omega_0$ die Brückspannung verschwinden sollte.
 Dies ist allerdings in der Realität oft nicht der Fall, da Generatoren Oberwellen erzeugen.
 Das Verhältnis zwischen Oberwellen und Grundwelle ist als Klirrfaktor
 
-\begin{equation*}
+\begin{equation}
     k \coloneq \frac{\sqrt{\sum_{i=2} U_i^2}}{U_1}
-\end{equation*}
+    \label{eqn:wien_klirr}
+\end{equation}
 
 definiert. Ein Idealer Generator hat den Klirrfaktor 0.
 

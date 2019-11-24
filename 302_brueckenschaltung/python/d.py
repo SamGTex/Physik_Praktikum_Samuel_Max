@@ -2,7 +2,7 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
-print('Für Cx = Wert 19')
+print('Für Lx = Wert 19')
 with open('daten/d_19.csv' ) as csvfile:
     reader=csv.reader(csvfile, delimiter=',')
     header_row=next(reader)
@@ -17,7 +17,7 @@ with open('daten/d_19.csv' ) as csvfile:
     r3=np.array(r3,dtype=int)
     r4=np.array(r4,dtype=int)
     rx=(r2*r3)/r4
-    lx=r2*r3*c4
+    lx=r2*r3*c4*10**(-6)
     print('R2:',r2)
     print('C4:',c4)
     print('R3:',r3)
