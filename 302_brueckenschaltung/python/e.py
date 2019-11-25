@@ -25,9 +25,11 @@ with open('daten/e.csv' ) as csvfile:
     print('w0:',w0)
     v1=w0/(2*np.pi)
     print('v0',v1)
-    o=f*np.pi*2/w0
+    x=np.linspace(20,2000,10000)
+    o=x*np.pi*2/w0
     plt.semilogx(f/v0,u/u_s,'rx',label='Messwerte')
     plt.semilogx(o,g(o),label='Theoretische Funktion')
     plt.legend()
+    plt.grid()
     plt.savefig('plot_e.pdf')
     plt.show()
