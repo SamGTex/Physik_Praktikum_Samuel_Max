@@ -18,7 +18,7 @@ with open('daten/e.csv' ) as csvfile:
     u_s=1000
     v0=160
     plt.xlabel(r'$v/v_0$')
-    plt.ylabel(r'$U_{Br}/U_S$')
+    plt.ylabel(r'$U_\text{Br}/U_\text{S}$')
     R=1000
     C=993*10**(-9)
     w0=1/(R*C)
