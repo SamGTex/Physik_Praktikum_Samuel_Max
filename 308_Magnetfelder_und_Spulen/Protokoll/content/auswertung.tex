@@ -50,9 +50,9 @@ Da aus technsichen Gründen das Magnetfeld in der Mitte der Spule nicht gemessen
 \end{equation*}
 
 Der nach \eqref{eqn:spule} berechnete Werte liegt bei:
-\begin{equation}
+\begin{equation*}
   B = 1.9936 \si{\milli\tesla} 
-\end{equation}
+\end{equation*}
 
 \FloatBarrier
 \subsection{kurze Spule}
@@ -221,4 +221,98 @@ Die Werte in Tabelle \ref{teb:helm2} sind bei den Messung für Abstand $d_2=7\si
 Die Messung bei Abstand $d_3=15\si{\centi\metre}$ ergaben die Werte in Tabelle \ref{tab:helm3}.
 Die Werte in den Tabellen wurden in den Graphiken \ref{fig:helm1} für $d_1$, \ref{fig:helm2} für $d_2$ und \ref{fig:helm3} für $d_3$ dargstellt.
 
+Bei dem Spulenpaar mit Abstand $d_1$ wurde in der Mitte der beiden Spulen eine Feldstärke von 
+\begin{equation*}
+  B(5.5\si{\centi\meter}) = 2.755 \si{\milli\tesla}
+\end{equation*}
+gemessen.
+Der nach Gleichung \eqref{eqn:helm} berechnete Theoriewert beträgt dabei
+\begin{equation*}
+  B_1= 2.241 \si{\milli\tesla}
+\end{equation*}
+
+\FloatBarrier
 \subsection{Hysteresekurve}
+
+\begin{table}
+\centering
+\caption{Messwerte der Ringspule mit Eisenkern.}
+\begin{tabular}{cc}
+\toprule
+$I \:/\: \si{\ampere}$ & $B \:/\: \si{\milli\tesla}$ \\
+\midrule
+0& 0\\
+1& 162  \\
+2& 341\\
+3& 443\\
+4& 512\\
+5& 563\\
+6& 605\\
+7& 642\\
+8& 674\\
+9& 705\\
+10& 730\\
+9& 710\\
+8& 692\\
+7& 670\\
+6& 645\\
+5& 614\\
+4& 577\\
+3& 528\\
+2& 462\\
+1& 335\\
+0& 129\\
+-1& -073\\
+-2& -258\\
+-3& -390\\
+-4& -483\\
+-5& -549\\
+-6& -598\\
+-7& -639\\
+-8& -672\\
+-9& -703\\
+-10& -730\\
+-9& -712\\
+-8& -693\\
+-7& -672\\
+-6& -646\\
+-5& -616\\
+-4& -580\\
+-3& -533\\
+-2& -468\\
+-1& -335\\
+0& -126\\
+1& 70\\
+2& 251\\
+3& 389\\
+4& 481\\
+5& 545\\
+6& 593\\
+7& 633\\
+8& 667\\
+9& 697\\
+10& 723\\
+\bottomrule
+\label{tab:ring}
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{content/data/plot_ring.pdf}
+\caption{Die Hysteresekurve.}
+\label{fig:ring}
+\end{figure}
+
+In der Tabelle \ref{tab:ring} sind die Messwerte aufgetragen die beim messen des Magnetfeldes der Ringspule aufgenommen wurden.
+Daraufhin wurde eine Hysteresekurve mit den Werten erstellt die in Abbildung \ref{fig:ring} zu sehen ist.
+Zu erkennen ist dabei, dass die Remanenz $B_\text{r}$ bei 
+\begin{equation*}
+  B_\text{r} = 129 \si{\milli\tesla}
+\end{equation*}
+liegt.
+In der Graphik \ref{fig:ring} ist außerdem die Koerzitivfeldstärke $H_\text{c}$ aufgetragen.
+Diese liegt bei einem Wert von
+\begin{equation*}
+  H_\text{c} = -0.638 \si{\ampere}.
+\end{equation*}
