@@ -105,6 +105,42 @@ Der theoretisch berechnete Werte liegt wiederum bei
 
 \subsection{Helmholtzspulen}
 
+Das Magnetfeld der Helmholtzspulen wurde üfr drei verschiedene Abstände gemessen.
+Die Abstände wurden als $d_1=11\si{\centi\metre}, d_2=7\si{\centi\metre}$ und $d_3= 15 \si{\centi\metre}$ gewählt.
+Dabei ergaben die Messung für den Abstand $d_1$ die Werte in Tabelle \ref{tab:helm1}.
+Die Werte in Tabelle \ref{tab:helm2} sind bei den Messung für Abstand $d_2=7\si{\centi\metre}$ aufgenommen worden.
+Die Messung bei Abstand $d_3=15\si{\centi\metre}$ ergaben die Werte in Tabelle \ref{tab:helm3}.
+Die Werte in den Tabellen wurden in den Graphiken \ref{fig:helm1} für $d_1$, \ref{fig:helm2} für $d_2$ und \ref{fig:helm3} für $d_3$ dargstellt.
+
+Bei dem Spulenpaar mit Abstand $d_1$ wurde in der Mitte der beiden Spulen eine Feldstärke von 
+\begin{equation*}
+  B(5.5\si{\centi\meter}) = 2.755 \si{\milli\tesla}
+\end{equation*}
+gemessen.
+Der nach Gleichung \eqref{eqn:helm} berechnete Theoriewert beträgt dabei
+\begin{equation*}
+  B_1= 2.241 \si{\milli\tesla}
+\end{equation*}
+Beim Abstand $d_2$ konnte das Magnetfeld nicht direkt in Mitte zwischen beiden Spulen gemssen werden.
+Deswegen wird der Wert für $x=2 \si{\centi\meter}$
+\begin{equation*}
+  B(2\si{\centi\meter})= 3.841 \si{\milli\tesla}
+\end{equation*}
+mit dem Theoriewert verglichen, welcher mit der Formel \eqref{eqn:helm} berechnet wurde und 
+\begin{equation*}
+  B_2 = 3.255 \si{\milli\tesla}
+\end{equation*}
+beträgt.
+Für den Abstand $d_3$ hat das Magnetfeld in der Mitte zwischen beiden Spulen eine Stärke von 
+\begin{equation*}
+  B(8\si{\centi\meter})= 1.919\si{\milli\tesla}
+\end{equation*}
+Der Theoriewert beträgt dabei 
+\begin{equation*}
+  B_3=2.656 \si{\milli\tesla}.
+\end{equation*}
+
+\FloatBarrier
 \begin{table}
 \centering
 \caption{Messwerte der Helmholtzspulen mit Abstand $d_1=11\si{\centi\meter}$.}
@@ -213,31 +249,13 @@ $x \:/\: \si{\centi\metre}$ & $B \:/\: \si{\milli\tesla}$ \\
 \label{fig:helm3}
 \end{figure}
 
-
-Das Magnetfeld der Helmholtzspulen wurde üfr drei verschiedene Abstände gemessen.
-Die Abstände wurden als $d_1=11\si{\centi\metre}, d_2=7\si{\centi\metre}$ und $d_3= 15 \si{\centi\metre}$ gewählt.
-Dabei ergaben die Messung für den Abstand $d_1$ die Werte in Tabelle \ref{tab:helm1}.
-Die Werte in Tabelle \ref{tab:helm2} sind bei den Messung für Abstand $d_2=7\si{\centi\metre}$ aufgenommen worden.
-Die Messung bei Abstand $d_3=15\si{\centi\metre}$ ergaben die Werte in Tabelle \ref{tab:helm3}.
-Die Werte in den Tabellen wurden in den Graphiken \ref{fig:helm1} für $d_1$, \ref{fig:helm2} für $d_2$ und \ref{fig:helm3} für $d_3$ dargstellt.
-
-Bei dem Spulenpaar mit Abstand $d_1$ wurde in der Mitte der beiden Spulen eine Feldstärke von 
-\begin{equation*}
-  B(5.5\si{\centi\meter}) = 2.755 \si{\milli\tesla}
-\end{equation*}
-gemessen.
-Der nach Gleichung \eqref{eqn:helm} berechnete Theoriewert beträgt dabei
-\begin{equation*}
-  B_1= 2.241 \si{\milli\tesla}
-\end{equation*}
-
 \FloatBarrier
 \subsection{Hysteresekurve}
 
 \begin{table}
 \centering
 \caption{Messwerte der Ringspule mit Eisenkern.}
-\begin{tabular}{cc}
+\begin{tabular}[t]{cc}
 \toprule
 $I \:/\: \si{\ampere}$ & $B \:/\: \si{\milli\tesla}$ \\
 \midrule
@@ -272,6 +290,12 @@ $I \:/\: \si{\ampere}$ & $B \:/\: \si{\milli\tesla}$ \\
 -8& -672\\
 -9& -703\\
 -10& -730\\
+\bottomrule
+\end{tabular}
+\begin{tabular}[t]{cc}
+\toprule
+$I \:/\: \si{\ampere}$ & $B \:/\: \si{\milli\tesla}$ \\
+\midrule
 -9& -712\\
 -8& -693\\
 -7& -672\\
@@ -293,8 +317,8 @@ $I \:/\: \si{\ampere}$ & $B \:/\: \si{\milli\tesla}$ \\
 9& 697\\
 10& 723\\
 \bottomrule
-\label{tab:ring}
 \end{tabular}
+\label{tab:ring}
 \end{table}
 
 \begin{figure}
