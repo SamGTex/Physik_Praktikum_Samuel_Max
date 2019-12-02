@@ -32,7 +32,7 @@ mit der Magnetfeldstärke $\vec{B}$ bei dem Abstand $r$ vom Draht, welcher mit e
 Das Biot-Savart-Gesetz wird nun verwendet um das Magnetfeld einer Leiterschleife zu berechnen. Eine Leiterschleife
 kann als Spule mit $n=1$ Windungen angesehen werden. Im Mittelpunkt des stromdurchflossenen Ringes folgt aus dem Biot-Savart-Gesetz\eqref{eqn:biot}
 \begin{equation}
-    \vec{B}(x) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2+x^2)^(3/2)} \cdot \hat{x}
+    \vec{B}(x) = \frac{\mu_0 I}{2} \frac{R^2}{(R^2+x^2)^{3/2}} \cdot \hat{x}
 \end{equation}
 für die Magnetfeldstärke. Hier beschreibt $x$ den Abstand zur Ringmitte und $R$ den Radius des Kreisrings.  \\
 
@@ -63,7 +63,7 @@ beschrieben.
 Der allgemeine Fall für eine Spule mit $n$ Windungen und beliebigen Abstand $d$ wird durch die Formel 
 \cite[87--88]{demtroeder}
 \begin{equation}
-    B(z) = \frac{\mu_0 \cdot I \cdot R^2}{2} \cdot \left ( \frac{1}{\left((z+d/2)^2+R^2\right)^{3/2}} + \frac{1}{\left((z-d/2)^2+R^2\right)^{3/2}} \right )
+    B(z) = \frac{\mu_0 \cdot I \cdot R^2 \cdot n}{2} \cdot \left ( \frac{1}{\left((z+d/2)^2+R^2\right)^{3/2}} + \frac{1}{\left((z-d/2)^2+R^2\right)^{3/2}} \right )
     \label{eqn:helm}
 \end{equation}
 beschrieben.
@@ -83,7 +83,7 @@ Bei einem zuvor unmagnetisiertem Material sind die Weiß'schen Bezirke ohne äu�
 steigt die Magnetisierung bis zum Sättigungswert $B_s$ (siehe Abbildung \ref{fig:hysterese}: Neukurve (1)). Hier sind alle Weiß'schen Bezirke parallel ausgerichtet.\\
 Wird jetzt das äußere Magnetfeld abgeschaltet, so bleibt eine Restmagnetisierung, die Remanenz $B_r$ (siehe Abbildung \ref{fig:hysterese}: (2)).
 Mithilfe der Koerzitivkraft $H_c$ (ein magnetisches Gegenfeld) kann die Remanenz aufgehoben werden und die Magnetisierung beträgt wieder null.\\
-Wird nun weiter das äußere Magnetfeld erhöht, so nähert sich die Magnetisierung dem Sättigungswert $-B_s$. Zum Schluss wird das Magnetfeld wieder abgeschaltet und ein Magnetfeld,
+Wird nun weiter das äußere Magnetfeld erhöht, nähert sich die Magnetisierung dem Sättigungswert $-B_s$. Zum Schluss wird das Magnetfeld wieder abgeschaltet und ein Magnetfeld
 wie am Anfang angelegt (siehe Abbildung \ref{fig:hysterese}: (3)).
 \begin{figure}
     \centering
