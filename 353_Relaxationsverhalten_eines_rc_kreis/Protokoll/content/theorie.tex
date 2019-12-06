@@ -9,24 +9,61 @@ Ein RC-Kreis wird durch aufladen oder entladen zur Relaxion gebracht.
 Zum Zeitpunkt $t$ ist die Änderungsrate der betrachteten physikalischen Größe $A$ dann
 
 \begin{equation}
-    \frac{dA}{dt} = c\right [ A(t) - A(\inf) \left ] .
+    \frac{dA}{dt} = c \left[ A(t) - A(\inf)  \right]  .
     \label{eqn:diffA}
 \end{equation}
-
 Aus der Gleichung folgt 
 
 \begin{equation}
-    A(t) = A(\inf) + \right[ A(0) - A(\inf) \left ] \symup{e}^{ct} .
+    A(t) = A(\inf) + \left[ A(0) - A(\inf)  \right] e^{ct} .
 \end{equation}
 
 \subsubsection{Entladevorgang}
 
 Nun wird auf den Entladevorgang eines RC-Kreises eingegangen.
 Nach dem ohmschen Gesetzt gilt 
+
 \begin{equation}
     I = \frac{U_\text{C}}{R}, 
+    \label{eqn:ohm}
 \end{equation}
-wobei $U_\text{C}$ die Spannung am Kondensator ist, welcher durch
+wobei $U_\text{C}$ die Spannung am Kondensator ist, welche durch
 \begin{equation}
     U_\text{C} = \frac{Q}{C}
+    \label{eqn:spannungkondi}
+\end{equation}
+berechnet werden kann.
+In einem gewissen Zeitintervall $dt$ fließt durch den Leiter eine Ladungsmenge $Idt$.
+Dadurch ändert sich die Ladung der Kondensatorplatten um
+\begin{equation}
+    dQ = -Idt.
+    \label{eqn:dQ}
+\end{equation}
+
+Da die Spannung am Kondensator $U_\text{C}$ unbekannt ist wird diese mithilfe von Gleichung \eqref{eqn:ohm}, \eqref{eqn:spannungkondi} und \eqref{eqn:dQ} eliminiert.
+Durch umformen ergibt sich schließlich für die zeitliche Änderung der Ladung am Kondensator 
+\begin{equation*}
+    \frac{dQ}{dt} = - \frac{1}{RC} Q(t).
+\end{equation*}
+Diese Gleichung hat die Form wie Gleichung \eqref{eqn:diffA}.
+Da sich nach unedlich langer Zeit keine Ladung mehr auf dem Kondensator befindet, wenn dieser nicht aufgeladen wird, gilt 
+
+\begin{equation*}
+    Q(\inf) = 0.
+\end{equation*}
+Daraus folgt schließlich die Formel
+\begin{equation}
+    Q(t) = Q(0) e^{-\frac{t}{RC}}
+    \label{eqn:ladungkondi}
+\end{equation}
+welche die auf dem Kondensator befindliche Ladung zum Zeitpunkt $t$ wiedergibt.
+
+\subsection{Spannungsänderung durch Relaxion}
+Im allgemeinen gilt für Wechselspannung 
+\begin{equation}
+    U(t) = U_0 \cos(\omega t).
+\end{equation}
+Für die Wechselspannung am Kondensator gilt 
+\begin{equation}
+    U_\text{C}(t) = A(\omega) \cos(\omega t + \phi(\omega)).
 \end{equation}
