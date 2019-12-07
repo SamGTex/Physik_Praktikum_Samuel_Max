@@ -29,7 +29,7 @@ a1=popt[0]
 
 #plots
 plt.xlabel(r'$f\, / \, Hz$')
-plt.ylabel(r'$\phi \, / \, rad$')
+plt.ylabel(r'$\varphi \, / \, rad$')
 plt.grid()
 plt.semilogx(f,(a/b)*2*np.pi,'rx',label='Messwerte')
 x=np.linspace(10,30000,10000)

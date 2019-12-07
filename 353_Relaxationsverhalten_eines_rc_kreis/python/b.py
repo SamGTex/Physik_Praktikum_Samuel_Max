@@ -29,7 +29,7 @@ a1=popt[0]
 
 #plots
 plt.xlabel(r'$f\, / \, Hz$')
-plt.ylabel(r'$U_c \, / \, V$')
+plt.ylabel(r'$\frac{U_c}{U_0}$', fontsize=15)
 plt.grid()
 plt.semilogx(f,U/U0,'rx',label='Messwerte')
 x=np.linspace(20,30000,10000)
@@ -42,3 +42,4 @@ plt.show()
 uncertainties = np.sqrt(np.diag(pcov))
 print('RC =',-a1,'+-',uncertainties[0])
 print('Theoriewert:',11.01*1000*93.3*10**(-9))
+print('Phase:',(a/b)*np.pi*2)
