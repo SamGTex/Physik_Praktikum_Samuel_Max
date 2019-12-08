@@ -7,13 +7,12 @@ In Tabelle \ref{tab:entladung} ist die Spannung $U_\text{c}$ zum Zeitpunkt $t$ a
 Die angelegte Spannung beträgt $U_0 = \SI{0.5}{\volt}$. Im Folgenden werden drei Methoden
 zur Berechnung der Zeitkonstante $RC$ aufgeführt.
 \begin{figure}
-    \label{fig:entladung}
     \centering
     \includegraphics[width=\textwidth]{content/data/entlade.jpg}
     \caption{Entladekurve eines RC-Glieds mit einem Oszilloskop gemessen.}
+    \label{fig:entladung}
 \end{figure}
 \begin{table}
-    \label{tab:entladung}
     \centering
     \begin{tabular}{cc|cc}
         \toprule
@@ -34,6 +33,7 @@ zur Berechnung der Zeitkonstante $RC$ aufgeführt.
         \bottomrule
     \end{tabular}
     \caption{Messwerte einer Entladekurve in einem RC-Kreis.}
+    \label{tab:entladung}
 \end{table}
 \FloatBarrier
 
@@ -63,7 +63,6 @@ In Abbildung \ref{fig:plota} sind die Messwerte und die Gerade \ref{eqn:gerade} 
 \subsubsection{Methode 2: Ausgleichsrechnung über Kondensatorspannung}
 In Tabelle \ref{tab:phase} ist die Amplitude der Kondensatorspannung $U_\text{c}$ und die Phasenverschiebung $\varphi$ in Abhängigkeit von der Frequenz $f$ aufgelistet.
 \begin{table}
-    \label{tab:phase}
     \centering
     \begin{tabular}{ccccc}
     \toprule
@@ -98,6 +97,7 @@ In Tabelle \ref{tab:phase} ist die Amplitude der Kondensatorspannung $U_\text{c}
     \bottomrule
     \end{tabular}
     \caption{Phasenverschiebung $\varphi$ und Kondensatorspannung $U_\text{c}$ in Abhängigkeit der Frequenz $f$ in einem RC-Glied.}
+    \label{tab:phase}
 \end{table}
 Methode 2 verwendet die nicht-lineare Ausgleichsrechnung.
 Dabei wird die Gleichung \ref{eqn:ampli}, welche die Beziehung zwischen Kondensatorspannung $U_\text{c}$ und der Kreisfrequenz $\omega = 2 \pi f$ beschreibt, verwendet.
@@ -114,10 +114,10 @@ ergibt sich für den Zeitparameter
 In Abbildung \ref{fig:spannung} ist die Funktion \ref{eqn:nichtlin} mit der ermittelten Zeitkonstante $RC$ in einem halblogarithmischen Diagramm aufgetragen.
 Zudem sind die Messwerte zum Vergleich eingetragen.
 \begin{figure}
-    \label{fig:spannung}
     \centering
     \includegraphics[width=\textwidth]{content/data/plotb.pdf}
     \caption{Das Verhältnis von Kondensatorspannung $U_\text{c}$ zu $U_0$ in Abhängigkeit der Frequenz $f$ in einem halblogarithmischen Diagramm.}
+    \label{fig:spannung}
 \end{figure}
 \FloatBarrier
 
@@ -139,15 +139,15 @@ Mithilfe der Daten aus Tabelle \ref{tab:phase} erhalten wir den Polarplot (Abb. 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/plotc.pdf}
-    \label{fig:phase}
     \caption{Die Phasenverschiebung $\varphi$ in Abhängigkeit der Frequenz $f$ in einem halblogarithmischen Diagramm.}
+    \label{fig:phase}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/plotd.pdf}
-    \label{fig:polar}
     \caption{Abhängigkeit der Relativamplitude $A(\omega)/U_0$ von der Phase $\varphi$ in einem Polarkoordinatensystem.}
+    \label{fig:polar}
 \end{figure}
 \FloatBarrier
 
