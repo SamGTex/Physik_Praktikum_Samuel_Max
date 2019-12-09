@@ -38,6 +38,7 @@ zur Berechnung der Zeitkonstante $RC$ aufgeführt.
 \FloatBarrier
 
 \subsubsection{Methode 1: lineare Ausgleichsrechnung}
+\label{sec:met1}
 Mithilfe der linearen Ausgleichsrechnung kann die Steigung der Geraden $a$ und die Zeitkonstante $RC=-\frac{1}{a}$ bestimmt werden.
 Für die Geradengleichung
 \begin{equation}
@@ -52,6 +53,7 @@ ergeben sich die Parameter
     b = \SI{-0.35887(863)} .
 \end{equation*}
 In Abbildung \ref{fig:plota} sind die Messwerte und die Gerade \ref{eqn:gerade} aufgetragen.
+Der Plot wurde mit dem Python Plugin matplotlib \cite{matplotlib} erstellt.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/plota.pdf}
@@ -61,6 +63,7 @@ In Abbildung \ref{fig:plota} sind die Messwerte und die Gerade \ref{eqn:gerade} 
 \FloatBarrier
 
 \subsubsection{Methode 2: Ausgleichsrechnung über Kondensatorspannung}
+\label{sec:met2}
 In Tabelle \ref{tab:phase} ist die Amplitude der Kondensatorspannung $U_\text{c}$ und die Phasenverschiebung $\varphi$ in Abhängigkeit von der Frequenz $f$ aufgelistet.
 \begin{table}
     \centering
@@ -112,6 +115,7 @@ ergibt sich für den Zeitparameter
     RC = \SI{1.2360(167)}{\milli\second} .
 \end{equation*}
 In Abbildung \ref{fig:spannung} ist die Funktion \ref{eqn:nichtlin} mit der ermittelten Zeitkonstante $RC$ in einem halblogarithmischen Diagramm aufgetragen.
+Der Plot wurde mit dem Python Plugin matplotlib \cite{matplotlib} erstellt.
 Zudem sind die Messwerte zum Vergleich eingetragen.
 \begin{figure}
     \centering
@@ -122,6 +126,7 @@ Zudem sind die Messwerte zum Vergleich eingetragen.
 \FloatBarrier
 
 \subsubsection{Methode 3: Ausgleichsrechnung über die Phasenverschiebung}
+\label{sec:met3}
 Methode 3 verwendet die Phasenverschiebung $\varphi = \frac{a}{b}2\pi$ um $RC$ zu ermitteln.
 Die Ausgleichsfunktion
 \begin{equation}
@@ -136,6 +141,7 @@ Für $RC$ ermittelt über die Phasenverschiebung zwischen Kondensator und RC-Gli
 \end{equation*}
 In dem halblogarithmischen Diagramm (Abb. \ref{fig:phase}) ist die Funktion \ref{eqn:nlinphase} und die gemessene Phase $\varphi$ aufgetragen.
 Mithilfe der Daten aus Tabelle \ref{tab:phase} erhalten wir den Polarplot (Abb. \ref{fig:polar}) mit der theoretischen Kurve und den Messwerten $(\varphi, \frac{U_\text{c}}{U_0})$.
+Beide Plots wurden ebenfalls mit dem Python Plugin matplotlib \cite{matplotlib} erstellt.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/plotc.pdf}
@@ -195,6 +201,7 @@ Mithilfe der Daten aus Tabelle \ref{tab:phase} erhalten wir den Polarplot (Abb. 
 
     \begin{table}
         \centering
+        \caption{Eingangsspannung vom Generator und integrierte Spannung vom Kondensator.}
         \begin{tabular}{cc}
             \toprule
             Eingangsspannung $U$ & Kondensatorspannung $U_\text{c}$ \\
