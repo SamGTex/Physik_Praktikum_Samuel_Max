@@ -3,7 +3,8 @@
 
 %Siehe \autoref{fig:plot}!
 \subsection{gedämpfte Schwingung}
-
+Die gemessen Werte für die Spannung am Kondensator $U_\text{C}$ bei Frequenz $f$ sind in der Tabelle \ref{tab:gedaempft} aufgetragen.
+Die Schwingung ist in Abbildung \ref{fig:schwingung} zu sehen.
 %Tabelle mit den Messwerten zur gedämpften Schwingung, 
 %gemessen wurde dabei die Spannung in Abhängigkeit von der Zeit
 \begin{table}
@@ -46,14 +47,41 @@
 \label{tab:gedaempft}
 \end{table}
 
+\begin{figure}
+\centering
+\caption{Die gedämpfte Schwingung.}
+\includegraphics[width=\textwidth]{content/data/schwingung_gedaempft.jpeg}
+\label{fig:schwingung}
+\end{figure}
+
 \subsection{aperiodischer Grenzfall}
-
-
+%U_0/mV, R_p/kOhm
+%180, 5
+Zu einer Spannung von $U_0 = \SI{180}{\milli\V}$ wurde der Widerstand auf einen Wert von $R_\text{ap} = \SI{5}{\kilo\ohm}$ eingestellt.
+Zu diesem Wert tritt der aperiodische Grenzfall auf.  
 \subsection{Spannung und Phase am Kondensator}
+In der Tabelle \ref{tab:phase} sind in der links die Frequenzen abhängigen Spannungen des Kondensators zu finden.
+In der rechten Tabelle sind die aufgenommen Werte $a, b$ zu finden, aus denen anschließend der Phasenunterschied berechnet wurde.
+Die beiden Grafiken \ref{fig:phase_log} und \ref{fig:phase_lin} zeigen die berechneten Phasenunterschiede in Abhängigkeit von der Frequenz.
+
+\begin{figure}
+    \centering
+    \centering
+    \includegraphics[height=3cm]{content/data/plotd.pdf}
+    \caption{Phasenunterschied in Abhängigkeit zur Frequenz halblogariythmisch aufgetragen.}
+    \label{fig:phase_log}
+\end{figure}
+\begin{figure}
+        \centering
+        \includegraphics[height=3cm]{content/data/lrckreis.jpg}
+        \caption{Pahasenunterschied in Abhängigkeit zur Frequenz linear aufgetragen.} 
+        \label{fig:phase_lin}
+    \caption{Der berechnete Phasenunterschied zu den aufgenommen Frequenzen.}
+\end{figure}
 
 \begin{table}
 \centering
-\caption{Der aus den Messwerten berechnete Phasenunterschied zu verschiedenen Frequenzen und die >.}
+\caption{Der aus den Messwerten berechnete Phasenunterschied zu verschiedenen Frequenzen und die.}
 \begin{tabular}[t]{cc|}
     \toprule
     $f \, / \, \si{\hertz}$ & $U \, / \, \si{\V}$\\
