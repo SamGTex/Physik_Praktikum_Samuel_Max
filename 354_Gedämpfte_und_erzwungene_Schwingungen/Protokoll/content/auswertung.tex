@@ -9,9 +9,9 @@
 \begin{table}
 \centering
 \caption{Die Spannungswerte zu verschiedenen Zeitpunkten während einer gedämpften Schwingung.}
-\begin{tabular}{cc}
+\begin{tabular}[t]{cc}
     \toprule
-    $t \. / \. \si{\milli\second}$ & $U \./\. \si{\milli\Volt}$ \\
+    $t \, / \, \si{\milli\s}$ & $U \,/\, \si{\milli\V}$ \\
     \midrule
     0.000&-125\\
     0.025&135\\
@@ -25,6 +25,11 @@
     0.170&70\\
     0.190&-65\\
     0.210&60\\
+\end{tabular}
+\begin{tabular}[t]{cc}
+    \toprule
+    $t \, / \, \si{\milli\s}$ & $U \,/\, \si{\milli\V}$ \\
+    \midrule
     0.225&-55\\
     0.245&50\\
     0.260&-45\\
@@ -48,8 +53,11 @@
 
 \begin{table}
 \centering
-\caption{Die Messwerte der Spannung zu verschiedenen Frequenzen.}
-\begin{tabular}[t]{cc}
+\caption{Der aus den Messwerten berechnete Phasenunterschied zu verschiedenen Frequenzen und die >.}
+\begin{tabular}[t]{cc|}
+    \toprule
+    $f \, / \, \si{\hertz}$ & $U \, / \, \si{\V}$\\
+    \midrule
     1.0& 180    \\
     5.0& 170\\
     10.0& 190\\
@@ -72,28 +80,28 @@
     50.0& 55\\
     60.0& 38\\
     100.0& 10\\
-\end{tabular}[t]
-
-\begin{tabular}{cccc}
-\toprule
-$f \./\. \si{\kilo\hertz}$ & $a \./\. \si{\milli\second}$ &  $b \./\. \si{\milli\second}$ & $\phi$
-\midrule
-1& 0.0000& 1.0000& 0.0000\\
-5& 0.0020& 0.2000& 0.0628\\
-10& 0.0020& 0.1000&  0.1256\\
-15& 0.0020& 0.0670& 0.1875 \\
-20& 0.0030& 0.0500&  0.3769\\
-25& 0.0065& 0.0400&  1.0210\\
-26& 0.0096& 0.0360&  1.6755\\
-28& 0.0106& 0.0345& 1.9304 \\
-29& 0.0115& 0.0335& 2.1569\\
-30& 0.0120& 0.0325&  2.3199\\
-31& 0.0125& 0.0315 & 2.4933\\
-32& 0.0125& 0.0305& 2.5750\\
-40& 0.0110& 0.0245& 2.8210\\
-50& 0.0090& 0.0195& 2.8999\\
-100&0.0000& 0.0245& 0.0000\\
-\bottomrule
+    \bottomrule
+\end{tabular}
+\begin{tabular}[t]{|cccc}
+    \toprule
+    $f \,/\, \si{\kilo\hertz}$ & $a \,/\, \si{\milli\second}$ &  $b \,/\, \si{\milli\second}$ & $\phi$\\
+    \midrule
+    1& 0.0000& 1.0000& 0.0000\\
+    5& 0.0020& 0.2000& 0.0628\\
+    10& 0.0020& 0.1000&  0.1256\\
+    15& 0.0020& 0.0670& 0.1875 \\
+    20& 0.0030& 0.0500&  0.3769\\
+    25& 0.0065& 0.0400&  1.0210\\
+    26& 0.0096& 0.0360&  1.6755\\
+    28& 0.0106& 0.0345& 1.9304 \\
+    29& 0.0115& 0.0335& 2.1569\\
+    30& 0.0120& 0.0325&  2.3199\\
+    31& 0.0125& 0.0315 & 2.4933\\
+    32& 0.0125& 0.0305& 2.5750\\
+    40& 0.0110& 0.0245& 2.8210\\
+    50& 0.0090& 0.0195& 2.8999\\
+    100&0.0000& 0.0245& 0.0000\\
+    \bottomrule
 \end{tabular}
 \label{tab:phase}
 \end{table}
