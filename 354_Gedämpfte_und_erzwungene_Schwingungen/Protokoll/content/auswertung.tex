@@ -17,14 +17,14 @@ Die Ausgleichsrechung hat folgende Werte ergeben
     A_0 = \SI{1.7004}{}
 \end{equation*}
 \begin{equation*}
-    \mu = \SI{0.6423}{}.
+    \mu = \SI{642.3597}{}.
 \end{equation*}
 Aus den Werten der Ausgleichrechung folgt mit \eqref{eqn:mu} und \eqref{eqn:T}
 \begin{equation*}
-    T_0 = \SI{0.2477}{\second}.
+    T_0 = \SI{0.2477}{\milli\second}.
 \end{equation*}
 \begin{equation*}
-    R_\text{eff} = \SI{0.136164(403)}{\ohm}
+    R_\text{eff} = \SI{136.1768(4036)}{\ohm}
 \end{equation*}
 
 %Tabelle mit den Messwerten zur gedämpften Schwingung, 
@@ -90,7 +90,13 @@ Aus den Werten der Ausgleichrechung folgt mit \eqref{eqn:mu} und \eqref{eqn:T}
 %U_0/mV, R_p/kOhm
 %180, 5
 Zu einer Spannung von $U_0 = \SI{180}{\milli\V}$ wurde der Widerstand auf einen Wert von $R_\text{ap} = \SI{5}{\kilo\ohm}$ eingestellt.
-Zu diesem Wert tritt der aperiodische Grenzfall auf. Der theoretische Wert der nach \eqref{eqn:aperiodisch} berechnet wurde, beträgt $\SI{5723.3977}{\ohm}$.
+Zu diesem Wert tritt der aperiodische Grenzfall auf. Der theoretische Wert der nach \eqref{eqn:aperiodisch} berechnet wurde, beträgt $\SI{5.72(4)}{\kilo\ohm}$.
+Der Fehler wurde hierbei mit 
+\begin{equation}
+    \Delta y = \sum_i \left | \frac{\partial y}{\partial x_\text{i}} \right |
+    \label{eqn:fehler}
+\end{equation}
+berechnet.
 Der Unterschied zwischen den beiden Werten, ist damit zu erklären, dass in der Theorie die Kapazitäten und Induktivitäten als optimal angenommen werden, also keine Widerstände bestitzen.
 Außerdem wurde der Innenwiderstand des Generators nicht mit in die Rechnung mit einbezogen, dies ist ebenfalls ein Grund für die Abweichung des Theoriewerts vom experimentellen Wert.
 
@@ -105,17 +111,17 @@ Dies erfolgt mit der Gleichung \eqref{eqn:guete1}, die Rechung hat folgende Wert
     q_\text{exp} = 3.657
 \end{equation*}
 \begin{equation*}
-    q_\text{theo} =  \SI{00.655(13150)}{}.
+    q_\text{theo} =  \SI{4,179(013)}{}.
 \end{equation*}
 
 Für die Breite der Resonanzkurve wurden mit \eqref{eqn:breite} der theoretische Wert 
 \begin{equation*}
-    f_{\text{theo}+}- f_{\text{theo}-} = \SI{4014(2000)}{\hertz}
+    f_{\text{theo}+}- f_{\text{theo}-} = \SI{40.430(012)}{\kilo\hertz}
 \end{equation*}
 berechnet.
 Experimentell wurde für Breite der Resonanzkurve der Wert 
 \begin{equation*}
-    f_{\text{exp}+}-f_{\text{exp}-} = \SI{5}{\kilo\hertz}.
+    f_{\text{exp}+}-f_{\text{exp}-} = \SI{50}{\kilo\hertz}.
 \end{equation*}
 ermittelt.
 Die beiden Grafiken \ref{fig:phase_log} und \ref{fig:phase_lin} zeigen die berechneten Phasenunterschiede in Abhängigkeit von der Frequenz.

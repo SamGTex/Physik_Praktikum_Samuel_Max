@@ -10,7 +10,7 @@ def func(t,A_0,mu):
 t, U =np.genfromtxt('python/data/a.csv', delimiter=',', unpack=True)
 U = U / 80
 U_1 = abs(U)
-
+t=t/1000
 plt.xlabel(r'$t \, / \, ms$')
 plt.ylabel(r'$\ln \left ( U_c \,/\, U_0 \right ) $')
 plt.grid()
