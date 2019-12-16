@@ -4,15 +4,15 @@
 %Siehe \autoref{fig:plot}!
 \subsection{gedämpfte Schwingung}
 \label{sec:gedaempft}
-Die gemessen Werte für die Spannung am Kondensator $U_\text{C}$ bei Frequenz $f$ sind in der Tabelle \ref{tab:gedaempft} aufgetragen.
+Die gemessenen Werte für die Spannung am Kondensator $U_\text{C}$ bei der Frequenz $f$ sind in der Tabelle \ref{tab:gedaempft} aufgetragen.
 Die Schwingung ist in Abbildung \ref{fig:schwingung} zu sehen.
-In der Abbildung \ref{fig:ausgleich} sind die Messwerte halblogarythmisch aufgetragen.
-Außerdem wurde durch die Funktion 
+In der Abbildung \ref{fig:ausgleich} sind die Messwerte in einem halblogarithmischen Diagramm aufgetragen.
+Außerdem wurde mit der Funktion 
 \begin{equation}
     A = A_0 \symup{e}^{-2 \pi \mu t}
 \end{equation}
 eine Ausgleichsrechung durchgeführt, dessen Graph ebenfalls in \ref{fig:ausgleich} zu finden ist.
-Die Ausgleichsrechung hat folgende Werte ergeben
+Die Ausgleichsrechnung hat folgende Werte ergeben
 \begin{equation*}
     A_0 = \SI{1.7004}{}
 \end{equation*}
@@ -79,14 +79,14 @@ Aus den Werten der Ausgleichrechung folgt mit \eqref{eqn:mu} und \eqref{eqn:T}
 
 \begin{figure}
 \centering
-\caption{Die Messwerte mit Ausgleichsrechung, die Ausgleichrechnung wurde mit \cite{matplotlib} durchgeführt.}
+\caption{Die Messwerte mit Ausgleichsrechung. Die Ausgleichrechnung wurde mit \cite{matplotlib} durchgeführt.}
 \includegraphics[width=\textwidth]{content/data/plota.pdf}
 \label{fig:ausgleich}
 \end{figure}
 
 \FloatBarrier
 
-\subsection{aperiodischer Grenzfall}
+\subsection{Aperiodischer Grenzfall}
 %U_0/mV, R_p/kOhm
 %180, 5
 Zu einer Spannung von $U_0 = \SI{180}{\milli\V}$ wurde der Widerstand auf einen Wert von $R_\text{ap} = \SI{5}{\kilo\ohm}$ eingestellt.
@@ -104,21 +104,21 @@ Außerdem wurde der Innenwiderstand des Generators nicht mit in die Rechnung mit
 \subsection{Spannung und Phase am Kondensator}
 In der Tabelle \ref{tab:phase} sind in der links die Frequenzen abhängigen Spannungen des Kondensators zu finden.
 In der rechten Tabelle sind die aufgenommen Werte $a, b$ zu finden, aus denen anschließend der Phasenunterschied berechnet wurde.
-Die Grafik \ref{fig:spannung_log} und \ref{fig:spannung_lin} zeigen die Spannung in Abhängigkeit vom der Frequenz am Kondensator.
-Aus den dafür aufgenommen Werten wird die Güte $q$ des RCL-Kreises bestimmt.
-Dies erfolgt mit der Gleichung \eqref{eqn:guete1}, die Rechung hat folgende Werte ergeben
+Die Grafik \ref{fig:spannung_log} und \ref{fig:spannung_lin} zeigen die Spannung in Abhängigkeit von der Frequenz am Kondensator.
+Aus den dafür aufgenommenen Werten wird die Güte $q$ des RCL-Kreises bestimmt.
+Dies erfolgt mit der Gleichung \eqref{eqn:guete1}. Die Rechnung hat folgende Werte ergeben
 \begin{equation*}
     q_\text{exp} = 3.657
 \end{equation*}
 \begin{equation*}
     q_\text{theo} =  \SI{3.909(029)}{}.
 \end{equation*}
-Für die Breite der Resonanzkurve wurden mit \eqref{eqn:breite} der theoretische Wert 
+Für die Breite der Resonanzkurve wurde mit \eqref{eqn:breite} der theoretische Wert 
 \begin{equation*}
     f_{\text{theo}+}- f_{\text{theo}-} = \SI{6947(21)}{\hertz}
 \end{equation*}
 berechnet.
-Experimentell wurde für Breite der Resonanzkurve der Wert 
+Experimentell wurde für die Breite der Resonanzkurve der Wert 
 \begin{equation*}
     f_{\text{exp}+}-f_{\text{exp}-} = \SI{8}{\kilo\hertz}.
 \end{equation*}
@@ -152,13 +152,13 @@ Die Experimentell bestimmte Resonanzfrequenz liegt bei
 \begin{figure}
         \centering
         \includegraphics[width=0.6\textwidth]{content/data/plotd2.pdf}
-        \caption{Pahasenunterschied in Abhängigkeit zur Frequenz linear aufgetragen.} 
+        \caption{Phasenunterschied in Abhängigkeit zur Frequenz linear aufgetragen.} 
         \label{fig:phase_lin}
 \end{figure}
 
 \begin{table}
 \centering
-\caption{Der aus den Messwerten berechnete Phasenunterschied zu verschiedenen Frequenzen und die.}
+\caption{Der aus den Messwerten berechnete Phasenunterschied und Kondensatorspannung zu verschiedenen Frequenzen.}
 \begin{tabular}[t]{cc|}
     \toprule
     $f \, / \, \si{\hertz}$ & $U \, / \, \si{\V}$\\
