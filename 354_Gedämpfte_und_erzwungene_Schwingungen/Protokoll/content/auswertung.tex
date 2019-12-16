@@ -54,19 +54,60 @@ Die Schwingung ist in Abbildung \ref{fig:schwingung} zu sehen.
 \label{fig:schwingung}
 \end{figure}
 \FloatBarrier
+
 \subsection{aperiodischer Grenzfall}
 %U_0/mV, R_p/kOhm
 %180, 5
 Zu einer Spannung von $U_0 = \SI{180}{\milli\V}$ wurde der Widerstand auf einen Wert von $R_\text{ap} = \SI{5}{\kilo\ohm}$ eingestellt.
 Zu diesem Wert tritt der aperiodische Grenzfall auf. Der theoretische Wert der nach \eqref{eqn:aperiodisch} berechnet wurde, beträgt $\SI{5723.3977}{\kilo\ohm}$.
+Der Unterschied zwischen den beiden Werten, ist damit zu erklären, dass in der Theorie die Kapazitäten und Induktivitäten als optimal angenommen werden, also keine Widerstände bestitzen.
+Außerdem wurde der Innenwiderstand des Generators nicht mit in die Rechnung mit einbezogen, dies ist ebenfalls ein Grund für die Abweichung des Theoriewerts vom experimentellen Wert.
+
 \FloatBarrier  
 \subsection{Spannung und Phase am Kondensator}
 In der Tabelle \ref{tab:phase} sind in der links die Frequenzen abhängigen Spannungen des Kondensators zu finden.
 In der rechten Tabelle sind die aufgenommen Werte $a, b$ zu finden, aus denen anschließend der Phasenunterschied berechnet wurde.
+Die Grafik \ref{fig:spannung_log} und \ref{spannung_lin} zeigen die Spannung in Abhängigkeit vom der Frequenz am Kondensator.
+Aus den dafür aufgenommen Werten wird die Güte $q$ des RCL-Kreises bestimmt.
+Dies erfolgt mit der Gleichung \eqref{eqn:guete1}, die Rechung hat folgende Werte ergeben
+\begin{equation*}
+    q_\text{exp} = 3.657
+\end{equation*}
+\begin{equation*}
+    q_\text{theo} =  \SI{00.655(13150)}{}.
+\end{equation*}
+
+Für die Breite der Resonanzkurve wurden mit \eqref{eqn:breite} der theoretische Wert 
+\begin{equation*}
+    f_{\text{theo}+}- f_{\text{theo}-} = \SI{40142.264(2000.000)}{\hertz}
+\end{equation*}
+berechnet.
+Experimentell wurde für Breite der Resonanzkurve der Wert 
+\begin{equation*}
+    f_{\text{exp}+}-f_{\text{exp}-} = \SI{5}{\kilo\hertz}.
+\end{equation*}
+ermittelt.
 Die beiden Grafiken \ref{fig:phase_log} und \ref{fig:phase_lin} zeigen die berechneten Phasenunterschiede in Abhängigkeit von der Frequenz.
+Die Experimentell bestimmte Resonanzfrequenz liegt bei 
+\begin{equation*}
+    f_{\text{exp}\text{res}} = \SI{26.3}{\kilo\hertz}.
+\end{equation*}
 
 \begin{figure}
     \centering
+    \includegraphics[width=\textwidth]{content/data/plotc.pdf}
+    \caption{Spannung in Abhängigkeit zur Frequenz halblogariythmisch aufgetragen.}
+    \label{fig:spannung_log}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{content/data/plotc2.pdf}
+    \caption{Spannung in Abhängigkeit zur Frequenz linear aufgetragen.}
+    \label{fig:spannung_lin}
+\end{figure}
+
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/plotd.pdf}
     \caption{Phasenunterschied in Abhängigkeit zur Frequenz halblogariythmisch aufgetragen.}

@@ -8,7 +8,7 @@ def func(T,a,b):
 
 t, U =np.genfromtxt('python/data/c2.csv', delimiter=',', unpack=True)
 U = U/175
-plt.xlabel(r'$t \, / \, ms$')
+plt.xlabel(r'$f \, / \, Hz$')
 plt.ylabel(r'$ U_c \, / \, U_0 $')
 plt.grid()
 plt.plot(t, U,'rx', label='Messwerte')
