@@ -39,7 +39,7 @@ Der Ansatz
 \begin{equation*}
     I(t) = \tilde{I} \mathrm{e}^{i\tilde{\omega} t} \quad \text{mit } \tilde{\omega}, \tilde{I} \in \mathbb{C}
 \end{equation*}
-löst die Differentialgleichung \autoref{eqn:dgl_lrc}.
+löst die Differentialgleichung \eqref{eqn:dgl_lrc}.
 Nach einsetzen in die DGL ergibt sich
 \begin{equation}
     \tilde{\omega}_{1,2} = i \frac{R}{2L} \pm \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}} .
@@ -50,7 +50,7 @@ Die allgemeine Lösung
     I(t) = \tilde{I}_1 \mathrm{e}^{i\tilde{\omega}_1 t} + \tilde{I}_2 \mathrm{e}^{i\tilde{\omega}_2 t}
 \end{equation*}
 ergibt sich durch Linearkombination der einzelnen Lösungen.
-Nach einsetzen von $\tilde{\omega}_{1,2}$ \autoref{eqn:lrcomega}, folgt
+Nach einsetzen von $\tilde{\omega}_{1,2}$ \eqref{eqn:lrcomega}, folgt
 \begin{equation}
     I(t) = \mathrm{e}^{-2 \pi \mu t} \left ( \tilde{I}_1 \mathrm{e}^{i 2\pi \tilde{\nu} t} + \tilde{I}_2 \mathrm{e}^{-i 2\pi \tilde{\nu} t} \right)
     \label{eqn:dgl_loesung}
@@ -64,7 +64,7 @@ mit den Abkürzungen
     2\pi\tilde{\nu} \coloneqq \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}} .
 \end{equation*}
 
-\subsubsection{Fallunterscheidung: Lösungsgleichung}
+\subsubsection{Fallunterscheidung: Lösungsgleichungen}
 Die Art der gedämpften Schwingung hängt nun von der Form von $\tilde{\nu}$ ab.
 Im folgenden werden drei Fälle für $2\pi\tilde{\nu}$ genauer untersucht.\\
 \\
@@ -145,7 +145,7 @@ Die gestrichelte Linie in Abb. \ref{fig:aperiodisch} zeigt den Verlauf des aperi
     \label{fig:aperiodisch}
 \end{figure}
 \FloatBarrier
-\subsection{Erzwungene Schwingung}
+\subsection{Erzwungene Schwingungen}
 \subsubsection{Schaltkreis}
 In den gedämpften Schwingkreis wird zusätzlich eine Spannungsquelle verbaut und eine Sinusspannung eingeschaltet.
 In Abb. \ref{fig:erzw_schwingkreis} ist ein Schaltplan einer erzwungenen Schwingung.
@@ -163,14 +163,14 @@ Die Wechselspannung hat die Form
 \subsubsection{Differential- und Lösungsgleichungen}
 Die Differentialgleichung
 \begin{equation}
-    LC \frac{\symup{d}^2U_\text{c}}{\symup{d}t^2} + RC \frac{\symup{d}U_\text{c}}{\symup{d}t + U_\text{c}} = U_0 \mathrm{e}^{i\omega t}
+    LC \frac{\symup{d}^2U_\text{c}}{\symup{d}t^2} + RC \frac{\symup{d}U_\text{c}}{\symup{d}t} + U_\text{c} = U_0 \mathrm{e}^{i\omega t}
     \label{eqn:dgl_erzwungen}
 \end{equation}
 lässt sich mit dem Ansatz
 \begin{equation*}
     U_\text{c}(\omega,t) = U(\omega) \mathrm{e}^{i\omega t}
 \end{equation*}
-lösen. Nach einsetzen in die DGL (\autoref{eqn:dgl_erzwungen}) und auflösen nach $U$ ergibt sich
+lösen. Nach einsetzen in die DGL \eqref{eqn:dgl_erzwungen} und auflösen nach $U$ ergibt sich
 \begin{equation}
     U = \frac{U_0}{1 - LC \omega^2 + i\omega RC} = \frac{U_0 (1-LC \omega^2 - i\omega RC)}{(1-LC\omega^2)^2 + \omega^2 R^2 C^2}
 \end{equation}
@@ -201,7 +201,7 @@ Also folgt für $U_\text{c}$
     U_\text{c,max} = \frac{1}{\omega_0 RC} U_0 = \frac{1}{R} \sqrt{\frac{L}{C}}U_0 .
 \end{equation}
 Wenn nun $R \rightarrow 0$ geht, so folgt die Resonanzkatastrophe $U_\text{c,max} \rightarrow \infty$.
-Die Resonanz kann durch die Breite der Kurve (\autoref{eqn:spannung_c}) quantifiziert werden.
+Die Resonanz kann durch die Breite der Kurve \eqref{eqn:spannung_c} quantifiziert werden.
 Die Frequenzen $\omega_+$ und $\omega_-$ geben an, wo $U_\text{c}$ um den Faktor $1/\sqrt{2}$ vom Maximalwert gesunken ist.
 Sie können nach
 \begin{equation}
@@ -219,7 +219,7 @@ Eine starke Dämpfung liegt vor, wenn
     \frac{R^2}{2L^2} >> \frac{1}{LC}
 \end{equation*}
 gilt. Hier existiert keine Resonanzerhöhung, sondern $U_\text{c}$ geht vom Anfangswert $U_0$ gegen 0.
-Ist die Phase gerade $\pi/2$ oder $\frac{3}{4}\pi$, so gilt
+Ist die Phase gerade $\frac{\pi}{2}$ oder $\frac{3}{4}\pi$, so gilt
 \begin{equation}
     \omega_{1,2} = \pm \frac{R}{2L} + \sqrt{\frac{R^2}{4L^2} + \frac{1}{LC}} 
 \end{equation}
@@ -228,4 +228,4 @@ und es ergibt sich
     \omega_1 - \omega_2 = \frac{R}{L} ,
     \label{eqn:breite}
 \end{equation}
-genauso wie bei der schwachen Dämpfung (\autoref{eqn:guete1}).
+genauso wie bei der schwachen Dämpfung \eqref{eqn:guete1}.
