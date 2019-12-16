@@ -3,8 +3,30 @@
 
 %Siehe \autoref{fig:plot}!
 \subsection{gedämpfte Schwingung}
+\label{sec:gedaempft}
 Die gemessen Werte für die Spannung am Kondensator $U_\text{C}$ bei Frequenz $f$ sind in der Tabelle \ref{tab:gedaempft} aufgetragen.
 Die Schwingung ist in Abbildung \ref{fig:schwingung} zu sehen.
+In der Abbildung \ref{fig:ausgleich} sind die Messwerte halblogarythmisch aufgetragen.
+Außerdem wurde durch die Funktion 
+\begin{equation}
+    A = A_0 \symup{e}^{-2 \pi \mu t}
+\end{equation}
+eine Ausgleichsrechung durchgeführt, dessen Graph ebenfalls in \ref{fig:ausgleich} zu finden ist.
+Die Ausgleichsrechung hat folgende Werte ergeben
+\begin{equation*}
+    A_0 = \SI{1.7004}{}
+\end{equation*}
+\begin{equation*}
+    \mu = \SI{0.6423}{}.
+\end{equation*}
+Aus den Werten der Ausgleichrechung folgt mit \eqref{eqn:mu} und \eqref{eqn:T}
+\begin{equation*}
+    T_0 = \SI{0.2477}{\second}.
+\end{equation*}
+\begin{equation*}
+    R_\text{eff} = \SI{0.136164(403)}{\ohm}
+\end{equation*}
+
 %Tabelle mit den Messwerten zur gedämpften Schwingung, 
 %gemessen wurde dabei die Spannung in Abhängigkeit von der Zeit
 \begin{table}
@@ -53,13 +75,22 @@ Die Schwingung ist in Abbildung \ref{fig:schwingung} zu sehen.
 \includegraphics[width=\textwidth]{content/data/schwingung_gedaempft.jpeg}
 \label{fig:schwingung}
 \end{figure}
+
+
+\begin{figure}
+\centering
+\caption{Die Messwerte mit Ausgleichsrechung, die Ausgleichrechnung wurde mit \cite{matplotlib} durchgeführt.}
+\includegraphics[width=\textwidth]{content/data/plota.pdf}
+\label{fig:ausgleich}
+\end{figure}
+
 \FloatBarrier
 
 \subsection{aperiodischer Grenzfall}
 %U_0/mV, R_p/kOhm
 %180, 5
 Zu einer Spannung von $U_0 = \SI{180}{\milli\V}$ wurde der Widerstand auf einen Wert von $R_\text{ap} = \SI{5}{\kilo\ohm}$ eingestellt.
-Zu diesem Wert tritt der aperiodische Grenzfall auf. Der theoretische Wert der nach \eqref{eqn:aperiodisch} berechnet wurde, beträgt $\SI{5723.3977}{\kilo\ohm}$.
+Zu diesem Wert tritt der aperiodische Grenzfall auf. Der theoretische Wert der nach \eqref{eqn:aperiodisch} berechnet wurde, beträgt $\SI{5723.3977}{\ohm}$.
 Der Unterschied zwischen den beiden Werten, ist damit zu erklären, dass in der Theorie die Kapazitäten und Induktivitäten als optimal angenommen werden, also keine Widerstände bestitzen.
 Außerdem wurde der Innenwiderstand des Generators nicht mit in die Rechnung mit einbezogen, dies ist ebenfalls ein Grund für die Abweichung des Theoriewerts vom experimentellen Wert.
 
@@ -95,27 +126,27 @@ Die Experimentell bestimmte Resonanzfrequenz liegt bei
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{content/data/plotc.pdf}
+    \includegraphics[width=0.6\textwidth]{content/data/plotc.pdf}
     \caption{Spannung in Abhängigkeit zur Frequenz halblogariythmisch aufgetragen.}
     \label{fig:spannung_log}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{content/data/plotc2.pdf}
+    \includegraphics[width=0.6\textwidth]{content/data/plotc2.pdf}
     \caption{Spannung in Abhängigkeit zur Frequenz linear aufgetragen.}
     \label{fig:spannung_lin}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{content/data/plotd.pdf}
+    \includegraphics[width=0.6\textwidth]{content/data/plotd.pdf}
     \caption{Phasenunterschied in Abhängigkeit zur Frequenz halblogariythmisch aufgetragen.}
     \label{fig:phase_log}
 \end{figure}
 \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{content/data/plotd2.pdf}
+        \includegraphics[width=0.6\textwidth]{content/data/plotd2.pdf}
         \caption{Pahasenunterschied in Abhängigkeit zur Frequenz linear aufgetragen.} 
         \label{fig:phase_lin}
 \end{figure}
