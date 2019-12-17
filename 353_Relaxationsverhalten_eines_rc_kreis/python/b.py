@@ -27,13 +27,18 @@ U0=0.6
 popt, pcov = curve_fit(func, f*2*np.pi, U/U0)
 a1=popt[0]
 
+#theoriewerte
+R_th=11.01*10**3
+C_th=93.3*10**(-9)
+
 #plots
 plt.xlabel(r'$f\, / \, Hz$')
 plt.ylabel(r'$\frac{U_c}{U_0}$', fontsize=15)
 plt.grid()
 plt.semilogx(f,U/U0,'rx',label='Messwerte')
 x=np.linspace(20,30000,10000)
-plt.semilogx(x,func(x*2*np.pi,a1),'b-',label='lineare Ausgleichsrechnung')
+plt.semilogx(x,func(x*2*np.pi,a1),'b-',label='Ausgleichsrechnung')
+plt.semilogx(x,func(x*2*np.pi,R_th*C_th),'g-',label='Theoriekurve')
 plt.legend()
 plt.savefig('plotb.pdf')
 plt.show()

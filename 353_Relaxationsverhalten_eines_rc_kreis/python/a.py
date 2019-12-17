@@ -18,16 +18,22 @@ with open('data/entladung.csv' ) as csvfile:
 
 #curvefit
 U0=1
-popt, pcov = curve_fit(func, T, np.log(U))
+popt, pcov = curve_fit(func, T, np.log(U/U0))
 a1=popt[0]
 b1=popt[1]
 
+#theoriewerte
+R_th=11.01*10**3
+C_th=93.3*10**(-9)
+a_th=-1/(R_th*C_th)
+
 #plots
 plt.xlabel(r'$t \, / \, ms$')
-plt.ylabel(r'$\ln \left ( U_c \right ) $')
+plt.ylabel(r'$\ln \left ( \frac{U_c}{U_0} \right ) $')
 plt.grid()
-plt.plot(T*1000,np.log(U),'rx',label='Messwerte')
+plt.plot(T*1000,np.log(U/U0),'rx',label='Messwerte')
 plt.plot(T*1000,func(T,a1,b1),'b-',label='lineare Ausgleichsrechnung')
+plt.plot(T*1000,a_th*T, 'g-',label='Theoriekurve')
 plt.legend()
 plt.savefig('plota.pdf')
 plt.show()
