@@ -20,14 +20,14 @@ h_z=3/100 #m
 #Rechnung für D
 D = F*r/phi
 D_mittel = ufloat(np.mean(D), np.std(D,ddof=1))
-print('D: ', D)
+print('D:',np.around(D,decimals=3))
 print('D_mittel =', D_mittel)
 
 #Rechnung für I_s
 popt, pcov = curve_fit(T2,r**2,T**2)
 a=ufloat(popt[0],np.absolute(pcov[0][0])**0.5)
 b=ufloat(popt[1],np.absolute(pcov[1][1])**0.5)
-I_d=D_mittel*b/(2*np.pi)**2- 2*m*(R_z**2/4 + h_z**2/12)
+I_d=D_mittel*b/(2*np.pi)**2 - 2*m*(R_z**2/4 + h_z**2/12)
 a_all=8*np.pi**2*m/D
 print('a:',a)
 print('b:',b)
@@ -39,4 +39,5 @@ plt.plot(x,a.n*x+b.n,'b-',label='lineare Ausgleichsrechnung')
 plt.plot(r**2,T**2,'rx',label='Messwerte')
 plt.grid()
 plt.legend()
+plt.savefig('ausgleich.pdf')
 plt.show()
