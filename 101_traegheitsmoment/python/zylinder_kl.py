@@ -13,11 +13,10 @@ r=3.75/100 #m
 h=3/100 #m
 m=1.180 #kg
 
-I_ex=I(T_m)
+I_ex=I(T_m) - I_d
 I_th=m*(r**2/4 + h**2/12)
 I_diff=I_th-I_ex
 print('T_mittel:',T_m)
 print('I_ex =', I_ex)
 print('I_th =', I_th)
 print('I_diff =', I_diff, '(',I_diff*100/I_th,'% )')
-print('I_diff(mit I_d) =', I_diff-I_d, '(',(I_diff-I_d)*100/I_th,'% )')

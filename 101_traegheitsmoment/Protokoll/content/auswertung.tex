@@ -101,7 +101,14 @@ Das gesuchte Eigenträgheitsmoment der Drillachse lässt sich nun mithilfe der D
 
 \FloatBarrier
 
-\subsection{Trägheitsmoment eines großen Zylinders}
+\subsection{Trägheitsmoment Zylinder (parallel)}
+Der Zylinder ist symmetrisch um die Drehachse fixiert.
+Die Drechachse verläuft also durch Boden und Deckel des Zylinders.
+Der Radius beträgt $r = \SI{4}{\centi\metre}$, die Höhe $h = \SI{14}{\centi\metre}$ und die Masse $m = \SI{1.0059}{\kg}$.
+Die gemessenen Zeiten (Tab. \ref{tab:zylinder_gr}) ergeben im Mittel
+\begin{equation*}
+    T = \SI{1.02(6)}{\second} .
+\end{equation*}
 \begin{table}
     \centering
     \csvreader[tabular=c|c,
@@ -110,12 +117,23 @@ Das gesuchte Eigenträgheitsmoment der Drillachse lässt sich nun mithilfe der D
     \midrule,
     late after line= \\]
     {content/data/zylinder_gr.csv}{1=\eins, 2=\zwei}{$\num{\eins}$ & $\num{\zwei}$}
-    \caption{Mehrfache Messung der Schwingungsdauer $T$ für den großen Zylinder.}
-    \label{tab:zylinder_gr}  
+    \caption{Mehrfache Messung der Schwingungsdauer $T$ für den Zylinder parallel zur Drehachse.}
+    \label{tab:zylinder_gr}
 \end{table}
 \FloatBarrier
+Nach \autoref{eqn_tragheit} und Abzug des Eigenträgheitsmoment der Drillachse ergibt sich der Wert
+\begin{equation*}
+    I_\text{exp} = \SI{-0.0030(19)}{\metre^2\kg} .
+\end{equation*}
+Der theoretisch berechnete Wert
+\begin{equation*}
+    I_\text{th} = \SI{0.0008}{\metre^2\kg}
+\end{equation*}
+folgt aus \autoref{eqn:zyls}.
 
-\subsection{Trägheitsmoment eines kleinen Zylinders}
+\subsection{Trägheitsmoment Zylinder (senkrecht)}
+Die Symmetrieachse des Zylinders ist senkrecht zur Drechachse.
+Der Zylinder hat den Radius $r = \SI{3.75}{\centi\metre}$, die Höhe $h = \SI{3}{\centi\metre}$ und die Masse $m = \SI{1.180}{\kg}$.
 \begin{table}
     \centering
     \csvreader[tabular=c|c,
@@ -124,11 +142,23 @@ Das gesuchte Eigenträgheitsmoment der Drillachse lässt sich nun mithilfe der D
     \midrule,
     late after line= \\]
     {content/data/zylinder_kl.csv}{1=\eins, 2=\zwei}{$\num{\eins}$ & $\num{\zwei}$}
-    \caption{Mehrfache Messung der Schwingungsdauer $T$ für den kleinen Zylinder.}
+    \caption{Mehrfache Messung der Schwingungsdauer $T$ für den Zylinder senkrecht zur Drehachse.}
     \label{tab:zylinder_kl}  
 \end{table}
 \FloatBarrier
-
+Im Mittel beträgt die Schwingungsdauer (Tab. \ref{tab:zylinder_kl})
+\begin{equation*}
+    T = \SI{0.874(34)}{\second} .
+\end{equation*}
+Nach \autoref{eqn:tragheit} und Abzug des Eigenträgheitsmoment der Drillachse ergibt sich das Trägheitsmoment
+\begin{equation}
+    I_\text{exp} = \SI{-0.0032(19)}{\metre^2\kg} .
+\end{equation}
+Der Theoriewert
+\begin{equation}
+    I_\text{th} = \SI{0.0005}{\metre^2\kg}
+\end{equation}
+berechnet sich nach \autoref{eqn:zyll}.
 \subsection{Trägheitsmomente der Modellpuppe}
 \subsubsection{Position 1}
 \begin{table}
