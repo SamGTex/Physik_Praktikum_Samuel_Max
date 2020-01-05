@@ -27,7 +27,7 @@ messung, T = np.genfromtxt('data/modellpuppe2.csv', comments='#', unpack=True, d
 
 #Rechnung
 T_mittel=ufloat(T.mean(),T.std(ddof=1))
-I_puppe2_ex = I(T_mittel)
+I_puppe2_ex = I(T_mittel) - I_d
 I_puppe2_th = (2/5) * m_kopf*r_kopf**2 + (m_ober*r_ober**2)/2 + 2*m_arm*((r_arm**2)/4 + (h_arm**2)/12) + 2*m_arm*(r_ober+h_arm/2)**2 + 2*(m_bein*r_bein**2)/2 + 2*m_bein*r_bein**2
 I_diff=I_puppe2_th - I_puppe2_ex
 
@@ -36,4 +36,3 @@ print('T_mittel =',T_mittel)
 print('I_th =', I_puppe2_th)
 print('I_ex =',I_puppe2_ex)
 print('Abweichung:',I_diff,'(', I_diff*100/I_puppe2_th,'% )')
-print('Abweichung(mit I_d):',I_diff-I_d,'(', (I_diff-I_d)*100/I_puppe2_th,'% )')
