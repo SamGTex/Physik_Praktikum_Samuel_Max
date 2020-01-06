@@ -1,10 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Winkelrichtgröße und Eigenträgheitsmoment}
-Die Winkelrichtgröße $D$ wird nach
-\begin{equation*}
-    D = \frac{F \cdot r}{\varphi}
-\end{equation*} 
+Die Winkelrichtgröße $D$ wird nach \eqref{eqn:federstarke}
 berechnet.
 Der Abstand zur Drehachse beträgt hier $r=\SI{14.2}{\centi\metre}$.
 In Tab. \ref{tab:kraft} ist die gemessene Kraft $F$ für den Auslenkwinkel $\varphi$ und die resultierende Winkelrichtgrößte $D$ aufgeführt.
@@ -43,7 +40,7 @@ Die Winkelrichtgrößte beträgt im Mittel
     D = \SI{0.032(14)}{\newton\metre} .
 \end{equation*}
 \\
-Um das Eigenträgheitsmoment zu Bestimmen, werden für verschiedene Abstände $a$ die Schwingungsdauer $T$ gemessen (siehe Tab. \ref{tab:gewichte}).
+Um das Eigenträgheitsmoment zu bestimmen, werden für verschiedene Abstände $a$ die Schwingungsdauer $T$ gemessen (siehe Tab. \ref{tab:gewichte}).
 Die Masse der kleinen Gewichte beträgt jeweils $m_G = \SI{223,27}{\kg}$.
 Sie werden um $\varphi = \SI{20}{\degree}$ ausgelenkt.
 Sie haben die Form eines Zylinders mit Radius $r_G=\SI{1,75}{\centi\metre}$ und Höhe $h_G=\SI{3}{\centi\metre}$.
@@ -202,7 +199,7 @@ Daraus ergeben sich die folgenden Massen:\\
 \end{center}
 \subsubsection{Position 1}
 Die Modellpupe befindet sich in der sitzenden Position wie in Abb. \ref{fig:puppesitzend} zu sehen.
-Der theoretische Wert für das Trägheitsmoment der Modellpuppe setzt sich aus den einzelnen Trägheitsmomenten der Puppe zusammen (siehe \autoref{eqn:zyll}, \autoref{eqn:zyls}, \autoref{eqn:kugel}).
+Der theoretische Wert für das Trägheitsmoment der Modellpuppe setzt sich aus den einzelnen Trägheitsmomenten der Puppe zusammen (siehe \autoref{eqn:zyls}, \autoref{eqn:zyll}, \autoref{eqn:kugel}).
 Sind die Körperteile um einen bestimmten Abstand $r$ verschoben, so wird der Satz von Steiner verwendet (siehe \autoref{eqn:steiner}).
 Die einzelnen Trägheitsmomente
 
@@ -228,7 +225,7 @@ ein Gesamtträgheitsmoment von
     I_\text{th} = \SI{0.000328}{\metre^2\kg} .
 \end{equation*}
 \\
-Der Experimentelle Wert folgt aus der Schwingdauer.
+Der experimentelle Wert folgt aus der Schwingdauer.
 \begin{table}
     \centering
     \csvreader[tabular=c|c,
