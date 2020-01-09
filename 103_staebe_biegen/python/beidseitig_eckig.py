@@ -16,11 +16,15 @@ with open('data/biegung_beidseitig_eckig.csv' ) as csvfile:
         D = 10-D
         D_0 = 10-D_0
         D_a = D-D_0
-        plt.xlabel(r'$x/cm$')
+        L=49
+        
+        plt.xlabel(r'$Lx^2 - x^3/3 /cm$')
         plt.ylabel(r'$D(x)/mm$')
         plt.plot(x,D_a, 'x', label='absolute Auslenkung')
         plt.legend()
         plt.grid()
         plt.savefig('plot_beidseitig_eckig.pdf')
         plt.show()
+        data = list(zip(x, D_0, D, D_a))
+        np.savetxt('data/biegung_beidseitig_eckig_data.csv', data, fmt="%1.2f", delimiter=",")
 

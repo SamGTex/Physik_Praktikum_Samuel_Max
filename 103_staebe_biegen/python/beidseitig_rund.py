@@ -28,3 +28,5 @@ with open('data/biegung_beidseitig_rund.csv' ) as csvfile:
         plt.grid()
         plt.savefig('plot_beidseitig_rund.pdf')
         plt.show()
+        data = list(zip(x, D_0, D, D_a))
+        np.savetxt('data/biegung_beidseitig_rund_data.csv', data, fmt="%1.2f", delimiter=",")
