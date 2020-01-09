@@ -21,4 +21,24 @@ Hier genügt eine relativ kleine Kraft am Ende des Stabes um eine messbare Läng
     \caption{Dehnung eines Stabes bei wirkender Normalspannung.\cite{anleitung}}
     \label{fig:spannung}
 \end{figure}
-\subsection{Biegung - einseitige Einspannung}
+\subsection{Biegung - Einseitige Einspannung}
+Ein homogener Stab wird auf einer Seite eingespannt und am anderen Ende wirkt eine Kraft $F$.
+Es wird die Durchbiegung $D(x)$ gemessen.
+Sie beschreibt die Verschiebung von einem Oberflächenpunkt bei einer Biegung (siehe Abb. \ref{fig:stab_einseitig}).
+Mithilfe von $x$ und $D(x)$ kann die Materialkonstante bestimmt werden.
+\begin{figure}
+    \centering
+    \includegraphics[0.5\textwidth]{content/data/biegen_einseitig.jpg}
+    \caption{Stange mit Querschnitt $Q$ wird durch eine äußere Kraft $F$ einseitig gebogen.\cite{anleitung}}
+    \label{fig:stab_einseitig}
+\end{figure}
+Die Kraft $F$ wirkt senkrecht auf den Querschnitt $Q$ des Stabes.
+Sie bewirkt ein bestimmtes Drehmoment $M$ in Abstand $x$, das den Stab verbiegt.
+Dabei werden obere Schichten gedehnt und die unteren gestaucht.
+Durch die Elastizität des Materials stellt sich ein Gleichgewichtszustand und eine Durchbiegung $D$ ein.
+In den oberen Schichten treten Zugspannungen auf, in den oberen Schichten Druckspannungen und dazwischen befindet sich ein Gebiet ohne Spannung.
+Dieses Gebiet wird als neutrale Faser bezeichnet.
+Das Drehmoment $M_\sigma$ berechnet sich nach
+\begin{equation}
+    M_\sigma = \int_Q y \sigma(y) \symup{d}q
+\end{equation}
