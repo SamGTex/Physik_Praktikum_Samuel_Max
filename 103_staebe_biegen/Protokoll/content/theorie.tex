@@ -42,3 +42,90 @@ Das Drehmoment $M_\sigma$ berechnet sich nach
 \begin{equation}
     M_\sigma = \int_Q y \sigma(y) \symup{d}q
 \end{equation}
+mit dem Abstand Abstand $y$ des Flächenelements $\symup{d}q$ zur neutralen Faser $x$ (siehe Abb. \ref{fig:drehmoment}).
+\begin{figure}
+    \centering
+    \includegraphics[0.5width=\textwidth]{conent/data/drehmoment.jpg}
+    \caption{Stange zur Veranschaulichung des Trägheitsmoment.\cite{anleitung}}
+    \label{fig:drehmoment}
+\end{figure}
+Nach einer bestimmten Zeit stellt sich ein Gleichgewicht
+\begin{equation}
+    M_\text{F} = M_\text{\sigma}
+    \label{eqn:einseitig1}
+\end{equation}
+ein.
+Außerdem gilt die Beziehung
+\begin{equation}
+    \sigma(y) = E \frac{\delta x}{\Delta x}
+    \label{eqn:einseitig2}
+\end{equation}
+und
+\begin{equation}
+    \delta x = y \Delta \varphi = y \frac{\Delta x}{R} .
+    \label{eqn:einseitig3}
+\end{equation}
+Hierbei steht $R$ für den Krümmungsradius der Faser an der Stelle $x$.
+Aus den Gleichungen \eqref{eqn:einseitig1} und \eqref{eqn:einseitig1} folgt
+\begin{equation}
+    \sigma(y) = E \frac{y}{R} .
+    \label{eqn:einseitig4}
+\end{equation}
+Für geringe Kurvenkrümmungen kann die Näherung $\frac{1}{R} \approx \frac{\symup{d^2}{D}{\symup{d}x^2}}$ aus der Differentialgeometrie verwendet werden.
+Mithilfe der Näherung ergibt sich für die Formel \eqref{eqn:einseitig4}
+\begin{equation}
+\sigma(y) = E y \frac{\symup{d^2}D}{\symup{d}x^2}
+\end{equation}
+und für die Momentengleichung \eqref{einseitig1}
+\begin{equation}
+    E \frac{\symup{d^2}D}{\symup{d}x^2} \int_Q y^2 \symup{d}q = F(L-x).
+    \label{eqn:moment}
+\end{equation}
+Wird das Flächenträgheitsmoment
+\begin{equation*}
+    I := \int_Q y^2 \symup{d}q(y)
+\end{equation*}
+verwendet, so lässt sich die Gleichung \eqref{eqn:moment} durch Integration für $(0\leqx\leqL)$ auf
+\begin{equation}
+    D(x) = \frac{F}{2EI} \left( Lx^2-\frac{x^3}{3} \right)
+    \label{eqn:d_einseitig}
+\end{equation}
+vereinfachen.
+\subsection{Biegung - Zweiseitige Auflage}
+Der Stab wird an beide Enden aufgelegt und eine Kraft $F$ wirkt in der Mitte der Auflagepunkte (siehe Abb. \ref{fig:beidseitig}).
+\begin{figure}
+    \centering
+    \includegraphics[0.5width=\textwidth]{content/data/beidseitig.jpg}
+    \caption{Biegung eines Stabes mit zweiseitiger Auflage. \cite{anleitung}}
+    \label{fig:beidseitig} 
+\end{figure}
+An der Querschnittsfläche $Q$ wirkt die Kraft $F/2$ mit dem Hebelarm $x$.
+Im Bereich $0\leqx\leqL$ folgt nach dem Drehmoment
+\begin{equation*}
+    M_\text{F} = -\frac{F}{2}x .
+\end{equation*}
+Das Drehmoment welches auf der andere Hälfte $\frac{L}{2}\leqx\leqL$ wirkt, berechnet sich nach
+\begin{equation*}
+    M_\text{F} = -\frac{F}{2}(L-x) .
+\end{equation*}
+Aus der Momentengleichung \eqref{eqn:moment} und Integration ergibt sich
+\begin{equation}
+    \frac{\symup{d}D}{\symup{d}x} = - \frac{x^2F}{4EI} + C \quad \text{für} 0\leqx\leq\frac{L}{2}
+\end{equation}
+und
+\begin{equation}
+    \frac{\symup{d}D(x)}{\symup{d}x} = -\frac{F}{2EI} \left( Lx-\frac{x^2}{2} \right) + C' \quad \text{für} \frac{L}{2}\leqx\leqL
+\end{equation}
+für die jeweiligen Teilintervalle.
+In der Mitte des Stabes besitzt die Biegekurve ein horizontale Tangente.
+Daraus ergeben sich die Integrationskonstanten
+\begin{equation}
+    C = \frac{L^2F}{16EI}
+    \label{eqn:konst1}
+\end{equation}
+und
+\begin{equation}
+    C' = \frac{3L^2F}{16EI} .
+    \label{eqn:konst2}
+\end{equation}
+Mit den Konstanten \eqref{eqn:konst1}, \eqref{eqn:konst2} und anschließender Integration von 
