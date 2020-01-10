@@ -18,7 +18,7 @@ with open('data/biegung_beidseitig_eckig.csv' ) as csvfile:
         D_a = D-D_0
         L=49
         
-        plt.xlabel(r'$Lx^2 - x^3/3 /cm$')
+        plt.xlabel(r'$x/cm$')
         plt.ylabel(r'$D(x)/mm$')
         plt.plot(x,D_a, 'x', label='absolute Auslenkung')
         plt.legend()
