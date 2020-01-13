@@ -4,7 +4,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from scipy.stats import sem
 from uncertainties import ufloat
-
+print('Nickel: ')
 d_a = np.array([10.5, 10.3, 10.3, 10.5, 10.4, 10.3, 10.3, 10.0, 10.0, 10.1])
 d_b = np.array([10.3, 10.2, 10.1, 10.1, 10.1, 10.0, 10.1, 10.0, 10.1, 10.2])
 da = np.mean(d_a)
@@ -34,7 +34,7 @@ def D_fit(x,E):
 x,D0,DM = np.genfromtxt('data/biegung_einseitig_eckig.csv',delimiter=',',unpack=True)
 
 #Berechnungen
-x = x*10**(-3) #in meter
+x = x*10**(-2) #in meter
 D0 = D0*10**(-3) #in meter
 DM = DM*10**(-3) #meter
 D= D0-DM #meter 

@@ -4,8 +4,10 @@ import json
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
 from scipy import stats
+
+print('Nickel: ')
 m =(18.9+ 1169.6+ 1171.8+ 520.9)/1000
-F = m * 9.81 #Gewichtskraft
+F = m * 9.81 / 2#Gewichtskraft
 L = 0.555 #Meter
 I= 9.14*10**-10 #Meter^4
 
@@ -45,7 +47,7 @@ def D_gerade(x,a,b):
 x,D0,DM = np.genfromtxt('data/biegung_beidseitig_eckig.csv',delimiter=',',unpack=True)
 
 #Berechnungen
-x = x*10**(-3) #m
+x = x*10**(-2) #m
 D0 = D0*10**(-3) #m
 DM = DM*10**(-3) #m
 D= D0-DM #m

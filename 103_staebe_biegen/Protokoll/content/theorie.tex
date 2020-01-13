@@ -36,13 +36,13 @@ Die Kraft $F$ wirkt senkrecht auf den Querschnitt $Q$ des Stabes.
 Sie bewirkt ein bestimmtes Drehmoment $M$ in Abstand $x$, das den Stab verbiegt.
 Dabei werden obere Schichten gedehnt und die unteren gestaucht.
 Durch die Elastizität des Materials stellt sich ein Gleichgewichtszustand und eine Durchbiegung $D$ ein.
-In den oberen Schichten treten Zugspannungen auf, in den oberen Schichten Druckspannungen und dazwischen befindet sich ein Gebiet ohne Spannung.
+In den oberen Schichten treten Zugspannungen auf, in den uneteren Schichten Druckspannungen und dazwischen befindet sich ein Gebiet ohne Spannung.
 Dieses Gebiet wird als neutrale Faser bezeichnet.
 Das Drehmoment $M_\sigma$ berechnet sich nach
 \begin{equation}
     M_\sigma = \int_Q y \sigma(y) \symup{d}q
 \end{equation}
-mit dem Abstand Abstand $y$ des Flächenelements $\symup{d}q$ zur neutralen Faser $x$ (siehe Abb. \ref{fig:drehmoment}).
+mit dem Abstand $y$ des Flächenelements $\symup{d}q$ zur neutralen Faser $x$ (siehe Abb. \ref{fig:drehmoment}).
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{content/data/drehmoment.jpg}
@@ -51,7 +51,7 @@ mit dem Abstand Abstand $y$ des Flächenelements $\symup{d}q$ zur neutralen Fase
 \end{figure}
 Nach einer bestimmten Zeit stellt sich ein Gleichgewicht
 \begin{equation}
-    M_\text{F} = M_\text{\sigma}
+    M_\text{F} = M_\sigma
     \label{eqn:einseitig1}
 \end{equation}
 ein.
@@ -66,7 +66,7 @@ und
     \label{eqn:einseitig3}
 \end{equation}
 Hierbei steht $R$ für den Krümmungsradius der Faser an der Stelle $x$.
-Aus den Gleichungen \eqref{eqn:einseitig1} und \eqref{eqn:einseitig1} folgt
+Aus den Gleichungen \eqref{eqn:einseitig1} und \eqref{eqn:einseitig2} folgt
 \begin{equation}
     \sigma(y) = E \frac{y}{R} .
     \label{eqn:einseitig4}
@@ -110,16 +110,16 @@ Das Drehmoment welches auf der andere Hälfte $\frac{L}{2} \leq x \leq L$ wirkt,
 \end{equation*}
 Aus der Momentengleichung \eqref{eqn:moment} und Integration ergibt sich
 \begin{equation}
-    \frac{\symup{d}D}{\symup{d}x} = - \frac{x^2F}{4EI} + C \quad \text{für} 0 \leq x \leq \frac{L}{2}
+    \frac{\symup{d}D}{\symup{d}x} = - \frac{x^2F}{4EI} + C \quad \text{für} \:\: 0 \leq x \leq \frac{L}{2}
     \label{eqn:mom1}
 \end{equation}
 und
 \begin{equation}
-    \frac{\symup{d}D(x)}{\symup{d}x} = -\frac{F}{2EI} \left( Lx-\frac{x^2}{2} \right) + C' \quad \text{für} \frac{L}{2} \leq x \leq L
+    \frac{\symup{d}D(x)}{\symup{d}x} = -\frac{F}{2EI} \left( Lx-\frac{x^2}{2} \right) + C' \quad \text{für } \frac{L}{2} \leq x \leq L
     \label{eqn:mom2}
 \end{equation}
 für die jeweiligen Teilintervalle.
-In der Mitte des Stabes besitzt die Biegekurve ein horizontale Tangente.
+In der Mitte des Stabes besitzt die Biegekurve eine horizontale Tangente.
 Daraus ergeben sich die Integrationskonstanten
 \begin{equation}
     C = \frac{L^2F}{16EI}
@@ -132,10 +132,10 @@ und
 \end{equation}
 Mit den Konstanten \eqref{eqn:konst1}, \eqref{eqn:konst2} und anschließender Integration von \eqref{eqn:mom1}, \eqref{eqn:mom2}, folgt die gesuchte Gleichung für einen elastisch gebogenen Stab
 \begin{equation}
-    D(x) = \frac{F}{48 E I} \left( 3L^2x -4x^3 \right) \quad \text{für} 0 \leq x \leq \frac{L}{2}
+    D(x) = \frac{F}{48 E I} \left( 3L^2x -4x^3 \right) \quad \text{für } 0 \leq x \leq \frac{L}{2}
     \label{eqn:moment_links}
 \end{equation}
 und
 \begin{equation}
-    D(x) = \frac{F}{48EI} \left( 4x^3-12Lx^2+9L^2x-L^3 \right) \quad \text{für} \frac{L}{2} \leq x \leq L .
+    D(x) = \frac{F}{48EI} \left( 4x^3-12Lx^2+9L^2x-L^3 \right) \quad \text{für } \frac{L}{2} \leq x \leq L .
 \end{equation}

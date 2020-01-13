@@ -8,16 +8,18 @@ from uncertainties import ufloat
 d_a = np.array([10.0, 10.0, 9.9, 9.9, 10.0, 9.9, 10.0, 9.9, 10.0, 10.0])
 da = np.mean(d_a)
 err_da = sem(d_a)
+print('Messing: ')
 print('Mittelwert von a ist : ' ,da,'Fehler von a: ', err_da )
 a = ufloat(da, err_da)
 
 a = (a/2) / 1000
+print(a)
 a_cm = a * 100
 L=49
 V = np.pi * a_cm**2 * 55
 Dichte = 360.4 / V
 print('Volumen = ', V, 'Dichte = ', Dichte)
-F=(18.9 + 520.9 + 1171.8)/1000 * 9.81
+F=(20.6+ 500.2)/1000 * 9.81
 I = np.pi*a**4 / 4 
 print('I= ',I)
 
@@ -30,7 +32,7 @@ def D_fit(x,E):
 # Daten einlesen
 x,DM,D0 = np.genfromtxt('data/biegung_einseitig_rund.csv',delimiter=',',unpack=True)
 #Berechnungen
-x = x*10**(-3) #in meter
+x = x*10**(-2) #in meter
 D0 = (D0)*10**(-3) #in meter
 DM = (DM)*10**(-3) #meter
 D= D0 - DM #meter

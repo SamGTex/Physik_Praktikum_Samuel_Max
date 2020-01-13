@@ -4,7 +4,7 @@ import json
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
 from scipy.stats import sem
-
+print('Alu: ')
 d_stange = np.array([10.0, 10.0, 10.1, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0])
 d = np.mean(d_stange)
 err_d = sem(d_stange)
@@ -14,12 +14,12 @@ r_wert = (d_wert/2) / 1000 #meter
 r = (d/2) / 1000
 
 m =(18.9+ 1169.6+ 1171.8+ 520.9)/1000
-F = m * 9.81 #Gewichtskraft
-L = 0.60 #Meter
+F = m * 9.81 / 2#Gewichtskraft
+L = 0.55 #Meter
 I= (np.pi/4) * r**4 #Meter^4
 
 I_wert = (np.pi/4) * r_wert**4
-V = np.pi * ((r_wert)*100)**2 * L*100
+V = np.pi * ((r_wert)*100)**2 * 0.60*100
 Dichte = 132.6 / V
 
 
@@ -64,7 +64,7 @@ def D_gerade(x,a,b):
 x,DM,D0 = np.genfromtxt('data/biegung_beidseitig_rund.csv',delimiter=',',unpack=True)
 
 #Berechnungen
-x = x*10**(-3) #m
+x = x*10**(-2) #m
 D0 = (10-D0)*10**(-3) #m
 DM = (10-DM)*10**(-3) #m
 D= D0-DM #m
