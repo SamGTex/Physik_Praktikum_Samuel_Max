@@ -82,7 +82,7 @@ Nach einigen Umformungen folgt für $I(t)$
 mit  $A_0,\eta \in \mathbb{R}$. Physikalisch beschreibt $\nu$ die Frequenz einer harmonischen Schwingung.
 Die Schwingungsdauer
 \begin{equation}
-    T= \frac{2\pi}{\omega} = \frac{2\pi}{\sqrt{\frac{1}{LC}\frac{R^2}{4L^2}}}
+    T= \frac{2\pi}{\omega} = \frac{2\pi}{\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}}
     \label{eqn:schwingfall_T}
 \end{equation}
 ist konstant. Anders als die Amplitude die mit der Zeit abnimmt.
@@ -133,7 +133,7 @@ Nach hinreichender Zeit gilt für die Stromstärke $I(t)$
 \end{equation}
 Hier ist $\nu = 0$ und für die Stromstärke $I(t)$ folgt
 \begin{equation}
-    I(t) = A \mathrm{e}^{-\frac{R}{2L}t} = A \mathrm{e}^{-\frac{1}{\sqrt{LC}}} .
+    I(t) = A \mathrm{e}^{-\frac{R}{2L}t} = A \mathrm{e}^{-\frac{1}{\sqrt{LC}}t} .
 \end{equation}
 Es ist kein Nulldurchgang bzw. Überschwingung möglich.
 $I(t)$ verläuft am schnellsten aller Lösungen gegen 0.
@@ -148,7 +148,7 @@ Die gestrichelte Linie in Abb. \ref{fig:aperiodisch} zeigt den Verlauf des aperi
 \subsection{Erzwungene Schwingungen}
 \subsubsection{Schaltkreis}
 In den gedämpften Schwingkreis wird zusätzlich eine Spannungsquelle verbaut und eine Sinusspannung eingeschaltet.
-In Abb. \ref{fig:erzw_schwingkreis} ist ein Schaltplan einer erzwungenen Schwingung.
+In Abb. \ref{fig:erzw_schwingkreis} ist der Schaltplan für eine erzwungene Schwingung dargestellt.
 Die Wechselspannung hat die Form
 \begin{equation}
     U(t) = U_0 \mathrm{e}^{i\omega t} .
@@ -170,7 +170,7 @@ lässt sich mit dem Ansatz
 \begin{equation*}
     U_\text{c}(\omega,t) = U(\omega) \mathrm{e}^{i\omega t}
 \end{equation*}
-lösen. Nach einsetzen in die DGL \eqref{eqn:dgl_erzwungen} und auflösen nach $U$ ergibt sich
+lösen. Nach Einsetzen in die DGL \eqref{eqn:dgl_erzwungen} und auflösen nach $U$ ergibt sich
 \begin{equation}
     U = \frac{U_0}{1 - LC \omega^2 + i\omega RC} = \frac{U_0 (1-LC \omega^2 - i\omega RC)}{(1-LC\omega^2)^2 + \omega^2 R^2 C^2}
 \end{equation}
@@ -219,7 +219,7 @@ Eine starke Dämpfung liegt vor, wenn
     \frac{R^2}{2L^2} >> \frac{1}{LC}
 \end{equation*}
 gilt. Hier existiert keine Resonanzerhöhung, sondern $U_\text{c}$ geht vom Anfangswert $U_0$ gegen 0.
-Ist die Phase gerade $\frac{\pi}{2}$ oder $\frac{3}{4}\pi$, so gilt
+Ist die Phase gerade $\frac{\pi}{4}$ oder $\frac{3}{4}\pi$, so gilt
 \begin{equation}
     \omega_{1,2} = \pm \frac{R}{2L} + \sqrt{\frac{R^2}{4L^2} + \frac{1}{LC}} 
 \end{equation}
