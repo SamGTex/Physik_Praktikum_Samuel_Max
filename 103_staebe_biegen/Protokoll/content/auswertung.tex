@@ -1,14 +1,14 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Tabelle \ref{tab:ein_eckig} zeigt die Messwerte der Auslenkung durch Kraft für einen eckigen Stab und \ref{tab:ein_rund} die Messwerte für einen runden Stab.
-Beide Stäbe sind hierbei einseitig eingespannt worden.
+Tabelle \ref{tab:ein_eckig} zeigt die Messwerte der Auslenkung durch eine Kraft für einen eckigen Stab und \ref{tab:ein_rund} die Messwerte für einen runden Stab.
+Beide Stäbe sind hierbei einseitig eingespannt.
 In der Spalte $D_\text{A}(x)$ sind jeweils die absoluten Auslenkungen der Stäbe zu finden.
-Diese wurde durch \eqref{eqn:D_real} berechnet.
+Diese werden durch \eqref{eqn:D_real} berechnet.
 $D(x)$ steht hierbei für die Auslenkung an der Stelle $x$, während auf den Stab eine Kraft wirkt.
 Die Spalte $D_0(x)$ zeigt die Auslenkung an der Stelle $x$, die der Stab hat bevor auf diesen eine Kraft wirkt.
 $D_0(x)$ ist nicht an jedem Ort gleich, da die Stäbe nicht perfekt gerade sind.
-Da die Stäbe außerdem nicht an jedem Punkt den selben Durchmesser haben, wurde dieser an zehn Stellen gemessen und die Messwerte gemittelt.
-Der Mittelwert wurde für alle Berechnungen genutzt, bei denen dieser benötigt wird.
+Die Stäbe haben nicht an jedem Punkt den selben Durchmesser, daher wird dieser an zehn Stellen gemessen und die Messwerte gemittelt.
+Der Mittelwert wurde für alle Berechnungen genutzt, bei denen der Radius $r$ benötigt wird.
 \begin{table}
 \centering
 \caption{Messwerte der Biegung für einseitige Einspannung.}
@@ -122,7 +122,8 @@ Dabei wurde $D_\text{A}(x)$ wie in \eqref{eqn:Da} berechnet.
 
 
 Zur Auslenkung der veschiedenen Stäbe wurden unterschiedliche Massen genutzt, diese sind in \ref{tab:massen} zu finden.
-Zu beachten ist dabei, dass der eckige Stab sowohl für die beidseitige als auch für die einseitige Einspannung genutzt wurde, deshalb ist dieser zweimal in der Tabelle \ref{tab:massen} zu finden.
+Zu beachten ist dabei, dass der eckige Stab sowohl für die beidseitige als auch für die einseitige Einspannung genutzt wurde.
+Deshalb ist dieser zweimal in der Tabelle \ref{tab:massen} zu finden.
 \begin{table}
 \centering
 \caption{Die Massen die für die Auslenkung der Stäbe genutzt wurden.}
@@ -142,7 +143,7 @@ Zu beachten ist dabei, dass der eckige Stab sowohl für die beidseitige als auch
 
 \FloatBarrier
 \subsection{Der Elastizitätsmodul des eckigen Stabes}
-Der eckige Stab dessen Auslenkungen in \ref{tab:ein_eckig} aufgetragen sind, hat die Eigenschaften die in Tabelle \ref{tab:eigen_eckig} dargestellt wurden.
+Der eckige Stab dessen Auslenkung in \ref{tab:ein_eckig} aufgetragen ist, hat die Eigenschaften die in Tabelle \ref{tab:eigen_eckig} dargestellt sind.
 \begin{table}
 \centering
 \caption{Werte für den eckigen Stab.}
@@ -159,13 +160,13 @@ Der eckige Stab dessen Auslenkungen in \ref{tab:ein_eckig} aufgetragen sind, hat
 Damit hat dieser eine Dichte von $\SI{8.94(6)}{\gram\per\cubic\centi\meter}$.
 
 Die durch die einseitige Biegung des Stabes aufgenommenen Werte sind in Abbildung \ref{fig:ein_eckig} in einem Plot dargestellt.
-Dieser wurde mit den python Plugin \cite{matplotlib} erstellt.
+Dieser wurde mit den python Plugin matplotlib \cite{matplotlib} erstellt.
 Die Ausgleichsgerade folgt dabei der Funktion
 \begin{equation}
     D(x) = F/(2\cdot E \cdot I) \cdot \left ( Lx^2 - \frac{x^3}{3} \right ).
     \label{eqn:ausgleich_ein}
 \end{equation}
-Wobei $I = \SI{9.14(16)e-10}{\meter^4}$ das Flächenträgheitsmoment darstellt.
+Daraus folgt für das Flächenträgheitsmoment $I = \SI{9.14(16)e-10}{\meter^4}$ .
 Nach der Ausgleichsrechung ist der Wert für den Elastizitätsmodul $E = \SI{149.931(591)}{\giga\pascal}$.
 
 
@@ -194,28 +195,28 @@ Nach der Ausgleichsrechung ist der Wert für den Elastizitätsmodul $E = \SI{149
 \end{figure}
 
 Der selbe Stab wurde ebenfalls beidseitig eingespannt und in der Mitte belastet.
-Die aufgenommen Messwerte sind in Tabelle \ref{tab:beid_eckig} zu finden und wurden in der Abbildungen \ref{fig:beid_eckig} grafisch dargestellt.
-Die Ausgleichsgerade folgen der Funktion 
+Die aufgenommenen Messwerte sind in Tabelle \ref{tab:beid_eckig} zu finden und sind in der Abbildung \ref{fig:beid_eckig} grafisch dargestellt.
+Die Ausgleichsgerade folgt der Funktion 
 \begin{equation}
     ax+b.
     \label{eqn:ausgleich_beid}
 \end{equation}
-Durch die Ausgleichsrechung wurde für die Funktion in Abbildung \ref{fig:beid_links_eckig} der Wert $a = \SI{-0.009(27)}{}$ und $b = \SI{8.85(993)e-4}{}$ bestimmt.
-Durch das selbe Schema wurden die Werte $a= \SI{0.013(4)}{}$ und $b=\SI{0.0025(5)}{}$ für die Funktion in Abbildung \ref{fig:beid_rechts_eckig} bestimmt.
+Mit Hilfe der Ausgleichsrechung (siehe Abb. \ref{fig:beid_links_eckig}) ergeben sich die Parameter $a = \SI{-0.009(27)}{}$ und $b = \SI{8.85(993)e-4}{}$.
+Mit dem selben Schema folgen die Werte $a= \SI{0.013(4)}{}$ und $b=\SI{0.0025(5)}{}$ für die Ausgleichsrechnng der Funktion in Abb. \ref{fig:beid_rechts_eckig}.\\
 Für den Elastizitätsmodul ergab die Ausgleichsrechung links vom Gewicht $E_\text{links} = \SI{0.6(23)e3}{\giga\pascal}$ und rechts vom gewicht $E_\text{rechts}=\SI{96(18)e2}{\giga\pascal}$.
-Im Mittel ergibt sich einen Wert von $E=\SI{0.3(11)e3}{\giga\pascal}$.
+Im Mittel ergibt sich ein Wert von $E=\SI{0.3(11)e3}{\giga\pascal}$.
 
 \FloatBarrier
 
 \subsection{Der Elastizitätsmodul des ersten runden Stabes}
-Es wurden zwei verschiedene runde Stäbe genutzt, der erste wurde einseitig eingespannt, der zweite beidseitig.
-Der Fall des ersten Stabes wird in diesem Abschnitt behandelt.
+Hier werden zwei verschiedene runde Stäbe genutzt, der erste wird einseitig eingespannt, der zweite beidseitig.
+Zuerst wird der erste Stab in diesem Abschnitt behandelt.
 Der Stab hat die Eigenschaften die in Tabelle \ref{tab:eigen_rund1} dargestellt sind.
-Die gemessenen Auslenkung sind in Tabelle \ref{tab:ein_rund} zu finden.
+Die gemessene Auslenkung ist in Tabelle \ref{tab:ein_rund} zu finden.
 
 \begin{table}
 \centering
-\caption{Eigenschaften des runden  Stabes, der einseitig eingespannt wurde.}
+\caption{Eigenschaften des runden Stabes, der einseitig eingespannt wurde.}
 \begin{tabular}{cc}
     \midrule
     \text{Länge} L & \SI{55}{\centi\meter} \\
@@ -226,11 +227,10 @@ Die gemessenen Auslenkung sind in Tabelle \ref{tab:ein_rund} zu finden.
 \label{tab:eigen_rund1}
 \end{table}
 Damit hat der runde Stab eine Dichte von $\SI{8.410(28)}{\gram\per\cubic\centi\meter}$.
-Die gemessenen Auslenkung wurden in der Abbildung \ref{fig:ein_rund} mit dem python Plugin \cite{matplotlib} grafisch dargestellt.
-Die Ausgleichsgerade folgt dabei der Funktion \eqref{eqn:ausgleich_ein}.
-Dabei hat das Flächenträgheitsmoment einen Wert von $I = \SI{4.831(32)e-10}{\meter^4}$ hat.
-Die Ausgleichsrechung ergibt für den Elastizitätsmodul einen Wert von $E = \SI{121.796(4012)}{\giga\pascal}$.
-
+Die gemessenen Auslenkung ist in der Abbildung \ref{fig:ein_rund} mit dem python Plugin matplotlib \cite{matplotlib} grafisch dargestellt.
+Die Ausgleichsgerade folgt dabei der Gleichung \eqref{eqn:ausgleich_ein}.
+Dabei hat das Flächenträgheitsmoment einen Wert von $I = \SI{4.831(32)e-10}{\meter^4}$.
+Die Ausgleichsrechnung ergibt für den Elastizitätsmodul einen Wert von $E = \SI{121.796(4012)}{\giga\pascal}$.
 
 \begin{figure}
     \centering
@@ -243,7 +243,7 @@ Die Ausgleichsrechung ergibt für den Elastizitätsmodul einen Wert von $E = \SI
 \subsection{Der Elastizitätsmodul des zweiten runden Stabes}
 Der zweite Runde Stab wurde beidseitig eingespannt.
 Die Auslenkungen dieses Stabes sind in Tabelle \ref{tab:beid_rund} zu finden.
-Die Eigenschaften des Stabes sind in Tabelle \ref{tab:eigen_rund2} zu finden.
+Die Eigenschaften des Stabes sind in Tabelle \ref{tab:eigen_rund2} aufgeführt.
 
 \begin{table}
 \centering
@@ -258,12 +258,12 @@ Die Eigenschaften des Stabes sind in Tabelle \ref{tab:eigen_rund2} zu finden.
 \label{tab:eigen_rund2}
 \end{table}
 
-Der Stab hat nach den in Tabelle \ref{tab:eigen_rund2} aufgetragenen Eigenschaften also eine Dichte von $\SI{2.808(6)}{\gram\per\cubic\centi\meter}$.
-Die Messwerte wurden für die beiden Plots in Abbildung \ref{fig:beid_rund} grafisch dargstellt.
-Dafür wurden zwei Ausgleichsgeraden erstellt die Gleichung \eqref{eqn:ausgleich_beid} folgen.
-Für den Plot \ref{fig:beid_links_rund} wurde ein Wert von $a = \SI{-0.079(6)}{}$ und $b = \SI{4.916(291)e-3}{}$ genutzt.
-Für den Plot \ref{fig:beid_rechts_rund} ergeben sich die Werte $a = \SI{0.019(2)}{}$ und $b = \SI{4.659(453)e-3}{}$.
-Der Elastizitätsmodul lässt sich in diesem Fall durch die Ausgleichsrechung links vom Gewicht auf $E_\text{links} = \SI{89.3(22)}{\giga\pascal}$ setzten und rechts vom Gewicht auf $E_\text{rechts} = \SI{71(7)}{\giga\pascal}$ setzten. 
+Der Stab hat nach den in Tabelle \ref{tab:eigen_rund2} aufgetragenen Eigenschaften ein Dichte von $\SI{2.808(6)}{\gram\per\cubic\centi\meter}$.
+Die Messwerte sind in Abbildung \ref{fig:beid_rund} grafisch dargstellt.
+Dazu wurden zwei Ausgleichsgeraden erstellt, die Gleichung \eqref{eqn:ausgleich_beid} folgen.
+Für die Ausgleichsrechnung \ref{fig:beid_links_rund} ergibt sich ein Wert von $a = \SI{-0.079(6)}{}$ und $b = \SI{4.916(291)e-3}{}$.
+Die zweite Ausgleichsrechnung \ref{fig:beid_rechts_rund} ergibt die Parameter $a = \SI{0.019(2)}{}$ und $b = \SI{4.659(453)e-3}{}$.
+Der Elastizitätsmodul lässt sich in diesem Fall durch die Ausgleichsrechung links vom Gewicht auf $E_\text{links} = \SI{89.3(22)}{\giga\pascal}$ und rechts vom Gewicht auf $E_\text{rechts} = \SI{71(7)}{\giga\pascal}$ bestimmen . 
 Im Mittel ergibt sich der Elastizitätsmodul $E = \SI{80(4)}{\giga\pascal}$.
 
 \begin{figure}
