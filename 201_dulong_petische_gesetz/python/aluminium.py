@@ -5,7 +5,12 @@ from scipy import stats
 #Werte
 cm = 163.75650422535293 #J/K
 c_w = 4.18 * 10**(3) #J/Kg*K
-m_p, m_d, m_dg, T_p, T_d, T_m =  np.genfromtxt('data/graphit.csv', comments='#', unpack=True, delimiter=',')
+m_p = 151.85 * 10**(-3) #kg
+m_d = 821.96 * 10**(-3) #kg
+m_dg = 237.84 * 10**(-3) #kg
+T_p = 90.0 + 273.15
+T_d = 21.4 + 273.15
+T_m = 24.6 + 273.15
 rho = 2.25*10**3 #kg/m^3
 M = 12.0*10**(-3) #kg/Mol
 a = 8*10**(-6) #1/K
@@ -18,14 +23,10 @@ R = 8.314
 #Rechnung
 m_d2 = m_d - m_dg #masse des Wassers
 c_k = (c_w*m_d2 + cm)*(T_m - T_d) / (m_p*(T_p-T_m))
-c_k_mittel = ufloat(np.mean(c_k), stats.sem(c_k))
 c_v = c_k * M - 9 * a**2 * k * (M/rho) * T_m
-c_v_mittel = ufloat(np.mean(c_v), stats.sem(c_v))
 
 #Ausgabe
-print('Graphit: c_k =', c_k/1000, 'J/g*K')
-print('c_k_mittel =', c_k_mittel/1000)
+print('Aluminium: c_k =', c_k/1000, 'J/g*K')
 print('c_v =',c_v)
-print('c_v_mittel =',c_v_mittel)
 print('3R =',3*R)
-print('rel. Abweichung:', (c_v_mittel-3*R)*100/(3*R), '%')
+print('rel. Abweichung:', (c_v-3*R)*100/(3*R), '%')
