@@ -1,4 +1,54 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Wärmekapazität des Kalorimeters}
+Das Wasser mit Masse $m_\text{x}$ und Temperatur $T_\text{x}$ befindet sich im Kalorimetergefäß.
+Ein weiteres Gefäß mit Wasser mit der Masse $m_\text{y}$ wird auf die Temperatur $T_\text{y}$ erwärmt.
+Es wurden folgende Werte gemessen:
+\begin{equation*}
+    m_\text{x} = \SI{263.94}{\gram}
+\end{equation*}
+\begin{equation*}
+    m_\text{y} = \SI{286.95}{\gram}
+\end{equation*}
+\begin{equation*}
+    T_\text{x} = \SI{294.75}{\kelvin}    
+\end{equation*}
+\begin{equation*}
+    T_\text{y} = \SI{353.15}{\kelvin}
+\end{equation*}
+\begin{equation*}
+    T_\text{m} = \SI{323.15}{\kelvin}
+\end{equation*}
 
-%Siehe \autoref{fig:plot}!
+Nach Gleichung \eqref{eqn:ref} folgt für die Wärmekapazität
+\begin{equation}
+    c_\text{g}m_\text{g} = \SI{163.76}{\joule/\kelvin} .
+\end{equation}
+
+\subsection{Spezifische Wärmekapazität}
+\subsubsection{Graphit}
+\begin{table}
+    \centering
+    \csvreader[tabular=c|cccccc,
+    head=false,
+    table head= Messung & $m_\text{k} / \si{\kg}$ & $m_\text{Gefäß} / \si{\kg}$ & $m_\text{Glas} / \si{\kg}$ & $T_\text{k} / \si{\kelvin}$ & $T_\text{w} / \si{\kelvin}$ & $T_\text{m} / \si{\kelvin}$\\
+    \midrule,
+    late after line= \\]
+    {content/data/graphit.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier, 5=\fuenf, 6=\sechs, 7=\sieben}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$ & $\num{\fuenf}$ & $\num{\sechs}$ & $\num{\sieben}$}
+    \caption{Die gemessenen Daten zur Probe Graphit. }
+    \label{tab:graphit}  
+\end{table}
+
+\subsubsection{Blei}
+\label{sec:Auswertung}
+\begin{table}
+    \centering
+    \csvreader[tabular=c|cccccc,
+    head=false,
+    table head= Messung & $m_\text{k} / \si{\kg}$ & $m_\text{Gefäß} / \si{\kg}$ & $m_\text{Glas} / \si{\kg}$ & $T_\text{k} / \si{\kelvin}$ & $T_\text{w} / \si{\kelvin}$ & $T_\text{m} / \si{\kelvin}$\\
+    \midrule,
+    late after line= \\]
+    {content/data/blei.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier, 5=\fuenf, 6=\sechs, 7=\sieben}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$ & $\num{\fuenf}$ & $\num{\sechs}$ & $\num{\sieben}$}
+    \caption{Die gemessenen Daten zur Probe Blei. }
+    \label{tab:blei}  
+\end{table}
