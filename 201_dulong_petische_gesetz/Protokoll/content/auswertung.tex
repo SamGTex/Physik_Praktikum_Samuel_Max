@@ -26,14 +26,19 @@ Nach Gleichung \eqref{eqn:ref} folgt für die Wärmekapazität
     c_\text{g}m_\text{g} = \SI{163.76}{\joule/\kelvin} .
 \end{equation}
 
-\subsection{Spezifische Wärmekapazität}
+\subsection{Spezifische Wärmekapazität und Atomwärme}
+Der Probekörper mit Masse $m_\text{k}$ wird auf die Temperatur $T_\text{k}$ erwärmt.
+Dann wird der Körper in das Kalorimetergefäß mit der Masse $m_\text{Gefäß}$ getaucht.
+Das Kalorimetergefäß ohne Wasser hat die Masse $m_\text{w}$.
+Also hat das Wasser die Masse $m_\text{Gefäß}-m_\text{Glas}$ mit der Anfangstemperatur $T_\text{w}$.
+Nach einer bestimmten Zeit stellt sich die Mischungstemperatur $T_\text{m}$ ein.
 \subsubsection{Graphit}
-Die 3 Messungen für die Probe Graphit ergeben die Werte in Tab. \ref{tab:graphit}.
+Die 3 Messungen für die Probe Graphit ergeben die Werte aus Tab. \ref{tab:graphit}.
 \begin{table}
     \centering
     \csvreader[tabular=c|cccccc,
     head=false,
-    table head= Messung & $m_\text{k} / \si{\kg}$ & $m_\text{Gefäß} / \si{\kg}$ & $m_\text{Glas} / \si{\kg}$ & $T_\text{k} / \si{\kelvin}$ & $T_\text{w} / \si{\kelvin}$ & $T_\text{m} / \si{\kelvin}$\\
+    table head= Messung & $m_\text{k} / \si{\gram}$ & $m_\text{Gefäß} / \si{\gram}$ & $m_\text{Glas} / \si{\gram}$ & $T_\text{k} / \si{\kelvin}$ & $T_\text{w} / \si{\kelvin}$ & $T_\text{m} / \si{\kelvin}$\\
     \midrule,
     late after line= \\]
     {content/data/graphit.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier, 5=\fuenf, 6=\sechs, 7=\sieben}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$ & $\num{\fuenf}$ & $\num{\sechs}$ & $\num{\sieben}$}
@@ -72,20 +77,92 @@ Die Fehler werden im Folgenden mithilfe des Python-Plugin uncertainties \cite{un
 \\
 Im Mittel \eqref{eqn:mittel} mit dem Fehler \eqref{eqn:fehler} beträgt die spezifische Wärmekapazität für Blei
 \begin{equation}
-    c_\text{k,Blei} = \SI{9.6(7)}{\joule/\gram\kelvin} .
+    c_\text{k,Graphit} = \SI{0.80(6)}{\joule/\gram\kelvin} .
 \end{equation}
-Die folgenden Mittelwerte werden nach Gleichung \eqref{eqn:mittel} mit dem dazugehörigen Fehler \eqref{eqn:fehler} berechnet.
+Alle folgenden Mittelwerte werden nach Gleichung \eqref{eqn:mittel} mit dem dazugehörigen Fehler \eqref{eqn:fehler} berechnet.
+\\
+Die Molwärme ergibt sich aus dem Zusammenhang zwischen $C_\text{P}$ und $C_\text{V}$ \eqref{eqn:ref}.
+Die Werte für $\alpha$, $M$, $k$ und $\rho$ werden dabei aus Tab. \ref{tab:ref} entnommen.
+Für den Probekörper aus Graphit ergeben sich folgende Atomwärmen:
+\begin{equation*}
+    C_\text{V,1} = \SI{8.10}{\frac{\joule}{\mol\kelvin}}
+\end{equation*}
+\begin{equation*}
+    C_\text{V,2} = \SI{10.17}{\frac{\joule}{\mol\kelvin}}
+\end{equation*}
+\begin{equation*}
+    C_\text{V,3} = \SI{10.48}{\frac{\joule}{\mol\kelvin}}
+\end{equation*}
+Im Mittel ergibt sich eine Molwärme von
+\begin{equation}
+    C_\text{V,Graphit} = \SI{9.6(7)}{\frac{\joule}{\mol\kelvin}} .
+\end{equation}
 
 \subsubsection{Blei}
-\label{sec:Auswertung}
+Für den Probekörper aus Blei ergeben sich die Werte aus Tab. \ref{tab:blei}.
+Daraus folgt nach der Gleichung \eqref{eqn:ref} für die spezifische Wärmekapazität:
+\begin{equation*}
+    c_\text{k,1} = \SI{0.123}{\joule/\gram\kelvin}
+\end{equation*}
+\begin{equation*}
+    c_\text{k,2} = \SI{0.129}{\joule/\gram\kelvin}
+\end{equation*}
+\begin{equation*}
+    c_\text{k,3} = \SI{0.118}{\joule/\gram\kelvin}
+\end{equation*}
+Im Mittel ergibt sich der Wert
+\begin{equation}
+    c_\text{k,Blei} = \SI{0.1233(31)}{\joule/\gram\kelvin}.
+\end{equation}
 \begin{table}
     \centering
     \csvreader[tabular=c|cccccc,
     head=false,
-    table head= Messung & $m_\text{k} / \si{\kg}$ & $m_\text{Gefäß} / \si{\kg}$ & $m_\text{Glas} / \si{\kg}$ & $T_\text{k} / \si{\kelvin}$ & $T_\text{w} / \si{\kelvin}$ & $T_\text{m} / \si{\kelvin}$\\
+    table head= Messung & $m_\text{k} / \si{\gram}$ & $m_\text{Gefäß} / \si{\gram}$ & $m_\text{Glas} / \si{\gram}$ & $T_\text{k} / \si{\kelvin}$ & $T_\text{w} / \si{\kelvin}$ & $T_\text{m} / \si{\kelvin}$\\
     \midrule,
     late after line= \\]
     {content/data/blei.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier, 5=\fuenf, 6=\sechs, 7=\sieben}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$ & $\num{\fuenf}$ & $\num{\sechs}$ & $\num{\sieben}$}
     \caption{Die gemessenen Daten zur Probe Blei. }
     \label{tab:blei}  
 \end{table}
+\\
+Die Atomwärme für die jeweiligen Messungen des Probekörpers aus Blei haben folgende Werte:
+\begin{equation*}
+    C_\text{V,1} = \SI{23.74}{\frac{\joule}{\mol\kelvin}}
+\end{equation*}
+\begin{equation*}
+    C_\text{V,2} = \SI{25.00}{\frac{\joule}{\mol\kelvin}}
+\end{equation*}
+\begin{equation*}
+    C_\text{V,3} = \SI{25.74}{\frac{\joule}{\mol\kelvin}}
+\end{equation*}
+Im Mittel ergibt sich eine Molwärme von
+\begin{equation}
+    C_\text{V,Blei} = \SI{23.8(7)}{\frac{\joule}{\mol\kelvin}} .
+\end{equation}
+
+\subsubsection{Aluminium}
+Die Messung für Aluminium ergibt folgende Massen und Temperaturen:
+\begin{equation*}
+    m_\text{p} = \SI{151.85}{\gram}
+\end{equation*}
+\begin{equation*}
+    m_\text{D} = \SI{584.12}{\gram}
+\end{equation*}
+\begin{equation*}
+    T_\text{p} = \SI{363.15}{\kelvin}
+\end{equation*}
+\begin{equation*}
+    T_\text{D} = \SI{294.55}{\kelvin}
+\end{equation*}
+\begin{equation*}
+    T_\text{m} = \SI{297.75}{\kelvin}
+\end{equation*}
+Die spezifische Wärmekapazität \eqref{eqn:ref} für Aluminium beträgt
+\begin{equation}
+    c_\text{k,Alu} = \SI{0.840}{\joule/\gram\kelvin} .
+\end{equation}
+Für die Molwärme folgt nach Gleichung \eqref{eqn:ref}
+\begin{equation}
+    C_\text{V,Alu} = \SI{10.04}{\frac{\joule}{\mol\kelvin}} .
+\end{equation}
