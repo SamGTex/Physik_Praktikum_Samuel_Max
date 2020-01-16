@@ -3,6 +3,7 @@
 \subsection{Wärmekapazität des Kalorimeters}
 Das Wasser mit Masse $m_\text{x}$ und Temperatur $T_\text{x}$ befindet sich im Kalorimetergefäß.
 Ein weiteres Gefäß mit Wasser mit der Masse $m_\text{y}$ wird auf die Temperatur $T_\text{y}$ erwärmt.
+Der Literaturwert für die Wärmekapazität von Wasser beträgt $c_\text{w} = \SI{4.18}{\joule / \gram\kelvin}$ \cite[159]{anleitung}.
 Es wurden folgende Werte gemessen:
 \begin{equation*}
     m_\text{x} = \SI{263.94}{\gram}
@@ -27,6 +28,7 @@ Nach Gleichung \eqref{eqn:ref} folgt für die Wärmekapazität
 
 \subsection{Spezifische Wärmekapazität}
 \subsubsection{Graphit}
+Die 3 Messungen für die Probe Graphit ergeben die Werte in Tab. \ref{tab:graphit}.
 \begin{table}
     \centering
     \csvreader[tabular=c|cccccc,
@@ -38,6 +40,41 @@ Nach Gleichung \eqref{eqn:ref} folgt für die Wärmekapazität
     \caption{Die gemessenen Daten zur Probe Graphit. }
     \label{tab:graphit}  
 \end{table}
+Nach der Gleichung \eqref{eqn:ref} für die spezifische Wärmekapazität des Probekörpers, folgt
+\begin{equation}
+    c_\text{k,1} = \SI{0.678}{\joule/\gram\kelvin}
+\end{equation}
+\begin{equation}
+    c_\text{k,2} = \SI{0.850}{\joule/\gram\kelvin}
+\end{equation}
+\begin{equation}
+    c_\text{k,3} = \SI{0.876}{\joule/\gram\kelvin}
+\end{equation}
+Um den Mittelwert zu ermitteln wird die Formel
+\begin{equation}
+    \mu = \frac{1}{n} \sum_{i=1}^n x_i
+    \label{eqn:mittel}
+\end{equation}
+verwendet. Hier wird das Python-Plugin Numpy \cite{numpy} verwendet.
+Wobei $x_i$ der $i$-te Wert bei $n$ Werten ist.
+Um den Fehler zu berechnen wird
+\begin{equation}
+    \sigma = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \mu)^2}
+    \label{eqn:fehler}
+\end{equation}
+verwendet. Hier wird das Python-Plugin Numpy \cite{numpy} verwendet.
+Werden fehlerbehaftete Größen in Formeln verwendet, so wird im Folgenden die Gauß'sche Fehlerfortpflanzung 
+\begin{equation}
+    \Delta y = \left|\frac{\partial y}{\partial x_1}\right| \Delta x_1 + \left|\frac{\partial y}{\partial x_2}\right| \Delta x_2 + ...
+\end{equation}
+verwendet. Die $\Delta$-Werte beschreiben die Fehlergrenzen.
+Die Fehler werden im Folgenden mithilfe des Python-Plugin uncertainties \cite{uncertainties} berechnet.
+\\
+Im Mittel \eqref{eqn:mittel} mit dem Fehler \eqref{eqn:fehler} beträgt die spezifische Wärmekapazität für Blei
+\begin{equation}
+    c_\text{k,Blei} = \SI{9.6(7)}{\joule/\gram\kelvin} .
+\end{equation}
+Die folgenden Mittelwerte werden nach Gleichung \eqref{eqn:mittel} mit dem dazugehörigen Fehler \eqref{eqn:fehler} berechnet.
 
 \subsubsection{Blei}
 \label{sec:Auswertung}
