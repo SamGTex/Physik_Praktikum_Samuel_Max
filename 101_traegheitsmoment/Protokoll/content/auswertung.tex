@@ -21,19 +21,19 @@ Um den Mittelwert zu ermitteln wird die Formel
 \begin{equation}
     \mu = \frac{1}{n} \sum_{i=1}^n x_i
 \end{equation}
-verwendet. Hier wird das Python-Plugin Numpy \cite{numpy} verwendet.
+verwendet. Hier wird die Python-Bibliothek Numpy \cite{numpy} verwendet.
 Wobei $x_i$ der $i$-te Wert bei $n$ Werten ist.
 Um die Standardabweichung zu berechnen wird
 \begin{equation}
     \sigma = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \mu)^2}
 \end{equation}
-verwendet. Hier wird das Python-Plugin Numpy \cite{numpy} verwendet.
+verwendet. Hier wird die Python-Bibliothek Numpy \cite{numpy} verwendet.
 Werden fehlerbehaftete Größen in Formeln verwendet, so wird im Folgenden die Gauß'sche Fehlerfortpflanzung 
 \begin{equation}
     \Delta y = \left|\frac{\partial y}{\partial x_1}\right| \Delta x_1 + \left|\frac{\partial y}{\partial x_2}\right| \Delta x_2 + ...
 \end{equation}
 verwendet. Die $\Delta$-Werte beschreiben die Fehlergrenzen.
-Die Fehler werden im Folgenden mithilfe des Python-Plugin uncertainties \cite{uncertainties} berechnet.
+Die Fehler werden im Folgenden mithilfe der Python-Bibliothek uncertainties \cite{uncertainties} berechnet.
 \\
 Die Winkelrichtgrößte beträgt im Mittel
 \begin{equation*}
@@ -85,7 +85,7 @@ und
     \label{eqn:b}
 \end{equation}
 Hier gilt zudem $y = T^2$ und $x = a^2$.
-Mithilfe des Python Plugin curvefit \cite{scipy}, folgt
+Mithilfe der Python Funktion curvefit \cite{scipy}, folgt
 \begin{equation*}
     c = \SI{719(21)}{\frac{1}{\second^2 \metre^2}}
 \end{equation*}
