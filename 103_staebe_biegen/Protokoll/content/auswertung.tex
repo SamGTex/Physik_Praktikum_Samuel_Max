@@ -15,7 +15,7 @@ Der Mittelwert wurde für alle Berechnungen genutzt, bei denen der Radius $r$ be
 \subcaption{Messwerte für den eckigen Stab.}
 \begin{tabular}[t]{cccc}
     \toprule
-    $x\,/\,\si{\milli\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
+    $x\,/\,\si{\centi\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
     \midrule
     48.00 & 1.91 & 5.91 & 4.00 \\
     45.00 & 1.92 & 5.58 & 3.66 \\
@@ -38,7 +38,7 @@ Der Mittelwert wurde für alle Berechnungen genutzt, bei denen der Radius $r$ be
 \subcaption{Messwerte für den runden Stab.}
 \begin{tabular}[t]{cccc}
     \toprule
-    $x\,/\,\si{\milli\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
+    $x\,/\,\si{\centi\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
     \midrule
     48.00 & 4.41 & 7.83 & 3.42 \\
     45.00 & 4.41 & 7.63 & 3.22 \\
@@ -70,7 +70,7 @@ Dabei wurde $D_\text{A}(x)$ wie in \eqref{eqn:D_real} berechnet.
 \subcaption{Messwerte für den eckigen Stab.}
 \begin{tabular}[t]{cccc}
     \toprule
-    $x\,/\,\si{\milli\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
+    $x\,/\,\si{\centi\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
     \midrule
     52.00 & 2.23 & 2.42 & 0.19 \\
     49.00 & 2.26 & 2.68 & 0.42 \\
@@ -94,7 +94,7 @@ Dabei wurde $D_\text{A}(x)$ wie in \eqref{eqn:D_real} berechnet.
 \subcaption{Messwerte für den runden Stab.}
 \begin{tabular}[t]{cccc}
     \toprule
-    $x\,/\,\si{\milli\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
+    $x\,/\,\si{\centi\meter}$ & $D_0(x) \,/\, \si{\milli\meter}$ & $D(x) \,/\, \si{\milli\meter}$ & $D_\text{A}(x) \,/\, \si{\milli\meter}$\\
     \midrule
     
     54.00 & 2.30 & 2.44 & 0.14 \\
@@ -201,10 +201,10 @@ Die Ausgleichsgerade folgt der Funktion
     ax+b.
     \label{eqn:ausgleich_beid}
 \end{equation}
-Mit Hilfe der Ausgleichsrechung (siehe Abb. \ref{fig:beid_links_eckig}) ergeben sich die Parameter $a = \SI{-0.009(27)}{}$ und $b = \SI{8.85(993)e-4}{}$.
-Mit dem selben Schema folgen die Werte $a= \SI{0.013(4)}{}$ und $b=\SI{0.0025(5)}{}$ für die Ausgleichsrechnng der Funktion in Abb. \ref{fig:beid_rechts_eckig}.\\
+Mit Hilfe der Ausgleichsrechung (siehe Abb. \ref{fig:beid_links_eckig}) ergeben sich die Parameter $a = \SI{-0.009(27)}{\frac{1}{\meter\squared}}$ und $b = \SI{8.85(993)e-4}{\meter}$.
+Mit dem selben Schema folgen die Werte $a= \SI{0.013(4)}{\frac{1}{\meter\squared}}$ und $b=\SI{0.0025(5)}{\meter}$ für die Ausgleichsrechnng der Funktion in Abb. \ref{fig:beid_rechts_eckig}.\\
 Für den Elastizitätsmodul ergab die Ausgleichsrechung links vom Gewicht $E_\text{links} = \SI{60(230)}{\giga\pascal}$ und rechts vom gewicht $E_\text{rechts}=\SI{96(18)}{\giga\pascal}$.
-Im Mittel ergibt sich ein Wert von $E=\SI{30(110)}{\giga\pascal}$.
+Im Mittel ergibt sich ein Wert von $E=\SI{78(124)}{\giga\pascal}$.
 
 \FloatBarrier
 
@@ -261,8 +261,8 @@ Die Eigenschaften des Stabes sind in Tabelle \ref{tab:eigen_rund2} aufgeführt.
 Der Stab hat nach den in Tabelle \ref{tab:eigen_rund2} aufgetragenen Eigenschaften ein Dichte von $\SI{2.808(6)}{\gram\per\cubic\centi\meter}$.
 Die Messwerte sind in Abbildung \ref{fig:beid_rund} grafisch dargstellt.
 Dazu wurden zwei Ausgleichsgeraden erstellt, die Gleichung \eqref{eqn:ausgleich_beid} folgen.
-Für die Ausgleichsrechnung \ref{fig:beid_links_rund} ergibt sich ein Wert von $a = \SI{-0.079(6)}{}$ und $b = \SI{4.916(291)e-3}{}$.
-Die zweite Ausgleichsrechnung \ref{fig:beid_rechts_rund} ergibt die Parameter $a = \SI{0.019(2)}{}$ und $b = \SI{4.659(453)e-3}{}$.
+Für die Ausgleichsrechnung \ref{fig:beid_links_rund} ergibt sich ein Wert von $a = \SI{-0.079(6)}{\frac{1}{\meter\squared}}$ und $b = \SI{4.916(291)e-3}{\meter}$.
+Die zweite Ausgleichsrechnung \ref{fig:beid_rechts_rund} ergibt die Parameter $a = \SI{0.019(2)}{\frac{1}{\meter\squared}}$ und $b = \SI{4.659(453)e-3}{\meter}$.
 Der Elastizitätsmodul lässt sich in diesem Fall durch die Ausgleichsrechung links vom Gewicht auf $E_\text{links} = \SI{89.3(22)}{\giga\pascal}$ und rechts vom Gewicht auf $E_\text{rechts} = \SI{71(7)}{\giga\pascal}$ bestimmen . 
 Im Mittel ergibt sich der Elastizitätsmodul $E = \SI{80(4)}{\giga\pascal}$.
 

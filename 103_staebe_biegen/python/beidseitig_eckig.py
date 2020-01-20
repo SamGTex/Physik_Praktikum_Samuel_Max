@@ -144,6 +144,6 @@ print('b rechts: ',b_rechts,'+-',b_rechts_err)
 print('E3 rechts[GP]: ',E_rechts*10**(-9))
 
 # gemittelt
-E_gemittelt = (E_rechts+E_links)/2
+E_gemittelt = (E_rechts+E_links)/ 2
 
 print('E3 gemittelt[GP]: ',E_gemittelt*10**(-9))
