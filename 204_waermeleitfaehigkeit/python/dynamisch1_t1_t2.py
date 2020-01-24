@@ -11,6 +11,7 @@ T2 = T2
 s = s
 
 #minima finden
+#x werte der minima ausgeben
 
 T1x_mini = find_peaks(-T1)
 T2x_mini = find_peaks(-T2)
@@ -26,10 +27,10 @@ T1x_max = T1x_max[0]
 T2x_max = T2x_max[0]
 T1_max = T1[T1x_max]
 T2_max = T2[T2x_max]
-#x werte der minima ausgeben
 
 print('T1 Minima : ', T1x_mini)
 print('T2 Minima : ', T2x_mini)
+print('T1 Maxima : ', (T1x_max,T1_max),  'T2 Maxima : ', T2x_max)
 
 #y werte der minima finden
 
@@ -40,12 +41,12 @@ f = interp1d(T1x_mini, T1_mini,  fill_value="extrapolate")
 f2 = interp1d(T2x_mini, T2_mini,  fill_value="extrapolate")
 y1_mini = f(s)
 y2_mini = f2(s)
-print(y1_mini[T1x_mini], T1_max)
+print(y1_mini[T1x_max], T1_max)
 
 #werte berechnen
 
-print('Amplituden abstände: ',T1x_max - y1_mini[T1x_mini])
-
+print('Amplituden abstände T1: ',T1_max - y1_mini[T1x_max])
+print('Amplituden abstände T2: ', T2_max - y2_mini[T2x_max])
 #plots machen
 
 plt.xlabel(r'$t \, / \, s$')
