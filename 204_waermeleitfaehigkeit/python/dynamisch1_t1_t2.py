@@ -4,6 +4,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from scipy.interpolate import interp1d
 from scipy.signal import find_peaks
+from scipy.stats import sem
 
 N, T1, T2, T3, T4, T5, T6, T7, T8, s = (np.genfromtxt('data/dynamisch1.txt', delimiter=', ', unpack=True))
 T1 = T1
@@ -54,8 +55,18 @@ plt.ylabel(r'$T \, / \, °C$')
 plt.grid()
 plt.plot(s, T1, 'g-', label='T1')
 plt.plot(s, T2, 'r-', label='T2')
-#plt.plot(s, y1_mini, '--', label='Interpolation T1')
-#plt.plot(s, y2_mini, '--', label='Interpolation T2')
+plt.plot(s, y1_mini, '--', label='Interpolation der Minima vonT1')
+plt.plot(s, y2_mini, '--', label='Interpolation der Minima von T2')
 plt.legend(loc='best')
 plt.savefig('dynamisch_T1_T2.pdf')
 plt.show
+
+phase = s[T1x_max] - s[T2x_max]
+periode = 80
+A1 = T1_max - y1_mini[T1x_max]
+A2 = T2_max - y2_mini[T2x_max]
+#print(np.log(A2/A1))
+kappa = (8520*377 * (0.03)**2) /(2 * phase * np.log(A2/A1))
+print('phase : ', phase)
+print('kappa : ', kappa)
+print('Messing : ', (np.mean(kappa), sem(kappa)))
