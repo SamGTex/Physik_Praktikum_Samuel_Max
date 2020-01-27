@@ -1,3 +1,4 @@
+
 import numpy as np
 from uncertainties import ufloat
 from scipy import stats
@@ -11,10 +12,10 @@ m_dg = 237.84 * 10**(-3) #kg
 T_p = 90.0 + 273.15
 T_d = 21.4 + 273.15
 T_m = 24.6 + 273.15
-rho = 2.25*10**3 #kg/m^3
-M = 12.0*10**(-3) #kg/Mol
-a = 8*10**(-6) #1/K
-k = 33*10**9 #N/m^2
+rho = 2.7*10**3 #kg/m^3
+M = 27.0*10**(-3) #kg/Mol
+a = 23.5*10**(-6) #1/K
+k = 75*10**9 #N/m^2
 R = 8.314
 
 #Rechnung
