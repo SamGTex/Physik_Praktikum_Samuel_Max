@@ -94,7 +94,7 @@ Die Temperaturverläufe an den Thermoelementen dieser beiden Stäbe sind in Abbi
 
 %In die Disskusion schreiben, dass die vierte amplitude wesentlich kleiner ist als die dritte, da wir spannung runter regeln mussten
 
-Zur erwähnen ist, dass die Periodendauer, welche zum Aufnehmen der Werte für Abbildung \ref{fig:dyn_T1_T2}, $\SI{80}{\second}$ beträgt wohingegen die Periodendauer der anderen Abbildung $\SI{200}{\second}$ beträgt.
+Zu erwähnen ist, dass die Periodendauer, welche zum Aufnehmen der Werte für Abbildung \ref{fig:dyn_T1_T2}, $\SI{80}{\second}$ beträgt wohingegen die Periodendauer der anderen Abbildung $\SI{200}{\second}$ beträgt.
 Die Interpolation, der Minima aller Graphen wurden mit der Python Bibliothek scipy \cite{scipy} durchgeführt.
 Durch diese wurde eine Funktion erstellt, welche die Minima interpoliert.
 Mit dieser Funktion kann wiederrum die absolute Amplitude der Temperaturen berechnet werden.
@@ -120,14 +120,41 @@ Die Tabelle \ref{tab:erg_mess} zeigt die Amplituden und die Phasenverschiebung d
 \end{tabular}
 \label{tab:erg_mess}
 \end{table}
-
+\FloatBarrier
 Im Mittel ergibt sich für Messing eine Wärmeleitfähigekeit von 
 \begin{equation*}
     \kappa = \SI{80.763(6316)}{\frac{\watt}{\meter\kelvin}} .
 \end{equation*}
 Zur Mittelung der Werte aus Tabelle \ref{tab:erg_mess} wird die Numpy Funktion 'mean' genutzt \cite{numpy}.
 Zur Berechung des Fehlers des Mittelwertes wird die scipy Funktion 'sem' genutzt \cite{scipy}.
-Die Tabelle \ref{tab:erg_edel} zeigt die Amplituden und den Phasenunterschied der Wärmekurve des Edelstahls.
+Zusätzlich wird die Wärmeleitfähigekeit von Aluminium bestimmt, die dazu gemessenen Werte sind in Tabelle \ref{tab:erg_alu} zu finden.
+Die nötigen Literaturwerte wurden aus \cite{anleitung} entnommen. Auch hier ist der Abstand zwischen den Thermoelementen $\SI{3}{\centi\meter}$.
+
+\begin{table}
+\centering
+\caption{Die berechneten absoluten Amplituden, sowie die jweiligen Phasenverschiebungen und die Wärmeleitfähigekeit von Aluminium.}
+    \begin{tabular}{cccc}
+    \toprule
+    $A_\text{nah} \,/\, \si{\celsius}$ & $A_\text{fern} \,/\, \si{\celsius}$ & $\Delta t \,/\, \si{\second}$ & $\kappa \, / \, \si{\frac{\watt}{\meter\kelvin}}$ \\
+    \midrule
+    14.588 & 3.183 & 10 & 68.769 \\
+    16.366 & 7.122 & 8  & 157.121 \\
+    16.025 & 7.692 & 8  & 178.114 \\
+    15.946 & 7.689 & 7  & 205.134 \\
+    15.608 & 7.577 & 6  & 239.665 \\
+    15.668 & 7.548 & 7  & 204.577 \\
+    15.421 & 7.308 & 7  & 200.087 \\
+    \bottomrule
+    \end{tabular}
+\label{tab:erg_alu}
+\end{table}
+Durch die Werte aus der Tabelle \ref{tab:erg_alu} ergibt sich für die Wärmeleitfähigekeit des Aluminiums ein Wert von 
+\begin{equation}
+    \kappa = \SI{179.071(20751)}{\frac{\watt}{\meter\kelvin}} .
+\end{equation}
+\FloatBarrier
+Die letzte Messreihe die ausgewertet wird ist die des Edelstahls.
+Die Werte dazu sind in Tabelle \ref{tab:erg_edel} zu finden. Sie zeigt die Amplituden und den Phasenunterschied der Wärmekurve des Edelstahls.
 \begin{table}
 \centering
 \caption{Die berechnteten absoluten Amplituden, der Phasenunterschied und die jeweilige Wärmeleitfähigekeit von Edelstahl.}
@@ -154,3 +181,4 @@ Im Mittel ergibt sich aus den Werten der Tabelle \ref{tab:erg_edel} eine Wärmel
 \end{equation*} 
 für Edelstahl.
 
+\FloatBarrier
