@@ -11,27 +11,27 @@ Die transportierte Wärmemenge $\symup{d}Q$ in der Zeit $\symup{d}t$ eines Stabe
 \end{equation}
 Der Stab hat die Länge $L$, die Querschnittsfläche $A$ und das Material die Dichte $\rho$, die spezifische Wärme $c$ und die Wärmeleitfähigkeit $\kappa$.
 Für die Wärmestromdichte gilt 
-\begin{equation}
+\begin{equation*}
     j_\text{w} = -\kappa \frac{\partial T}{\partial x} .
-\end{equation}
+\end{equation*}
 Die eindimensionale Wärmeleitungsgleichung
-\begin{equation}
+\begin{equation*}
     \frac{\partial T}{\partial t} = \frac{\kappa}{\rho c} \frac{\partial^2 T}{\partial x^2}
     \label{eqn:wellengleichung}
-\end{equation}
+\end{equation*}
 ergibt sich aus der Kontinuitätsgleichung.
 Die Temperaturleitfähigkeit $\sigma_\text{T} = \frac{\kappa}{\rho c}$ gibt an, wie schnell sich der Temperaturunterschied ausgleicht.
-Die Lösung der Diffusionsgleichung ist Abhängig von der Geometrie des Stabes und der Anfangsbedingungen.
+Die Lösung der Diffusionsgleichung ist abhängig von der Geometrie des Stabes und den Anfangsbedingungen.
 \\
 In einem Stab der mit der Periode $T$ abwechselnd erwärmt und abgekühlt wird, breitet sich eine Temperaturwelle der Form
-\begin{equation}
+\begin{equation*}
     T(x,t) = T_\text{max} e^{-\sqrt{\frac{\omega \rho c}{2 \kappa}}x} \cdot \cos{\omega t - \sqrt{\frac{\omega \rho c}{2 \kappa}}x}
-\end{equation}
+\end{equation*}
 aus.
 Die Phasengeschwindigkeit der Welle beträgt
-\begin{equation}
+\begin{equation*}
     v = \frac{\omega}{k} = \frac{2 \kappa \omega}{\rho c} .
-\end{equation}
+\end{equation*}
 Die Wärmeleitfähigkeit ergibt sich aus dem Amplitudenverhältnis $\frac{A_\text{nah}}{A_\text{fern}}$ an zwei Messstellen $x_\text{nah}$, $x_\text{fern}$ und den Beziehungen $\omega = 2\pi / T$, $\phi = 2 \pi \Delta t / T$ mit der Periodendauer $T$ und der Winkelgeschwindigkeit $\omega$:
 \begin{equation}
     \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t \frac{A_\text{nah}}{A_\text{fern}}}
