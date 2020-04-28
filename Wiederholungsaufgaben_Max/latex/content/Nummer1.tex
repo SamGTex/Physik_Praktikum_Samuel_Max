@@ -1,0 +1,37 @@
+\section{Nummer 1}
+\label{sec:nummer1}
+
+\subsection{Mittelwert}
+Der Mittelwert ist die Summe aus allen aufgenommenen Daten, geteilt durch die Anzahl dieser.
+Dieser wird oft benutzt um den Einfluss durch experimentelle Fehler möglichst klein zu halten.
+
+\begin{equation*}
+    \bar x = \frac{\sum_\text{i}^N x_\text{i}}{N} 
+\end{equation*}
+Hierbei entspricht $x_\text{i}$ den einzelenen aufgenommen Werten, $\bar x$ dem Mittelwert und $N$ der Anzahl an aufgenommenen Werten.
+
+Diese Art der Berechnung wird arithmetischer Mittelwert genannt,
+ es gibt auch andere Arten der Berechnung, 
+ diese werden für unsere Zwecke allerdings nicht so häufig genutzt.
+
+\subsection{Standardabweichung}
+
+Die Standardabweichung gibt an wie sehr die Werte eines Datensatzes von dem Mittelwert des Datensatzes abweichen.
+Das Bedeutet, dass bei einer kleinen Standardabweichung sich die Werte eher in der Nähe des Mittelwertes befinden.
+Wohingegen sie weiter weg vom Mittelwert sind wenn die Standardabweichung groß ist.
+Die Standardabweichung wird berechnet durch
+
+\begin{equation*}
+    s = \sqrt{\frac{1}{N-1} \sum _{i=1}^N(x_i -\bar x)^2}.
+\end{equation*}
+
+$s$ ist hierbei die Standardabweichung, $N$ die Anzahl an Daten, $x_i$ sin die Daten und $\bar x$ ist der Mittelwert der Daten.
+
+\subsection{Varianz und Standardabweichung}
+
+Der Fehler des Mittelwertes entspricht der Standardabweichung.
+Die Streuung der Messwerte, welche auch Varianz genannt wird, ist das Quadrat der Standardabweichung.
+Die Varianz gewichtet die Werte, welche weiter vom Mittelwert weg liegen stärker, wodurch die Differenz zwischen Mittelwert und Wert stärker ins Gewicht fällt.
+Die Standardabweichung gewichtet hingegen die Anzahl von Werten die vom Mittelwert abweichen stärker.
+
+
