@@ -6,6 +6,7 @@ from scipy.interpolate import interp1d
 from scipy.signal import find_peaks
 from scipy.stats import sem
 import scipy.constants as cn
+from uncertainties import ufloat
 #einlesung der Daten 
 alpha_al , N_al = (np.genfromtxt('data/ComptonAl.txt', delimiter=', ', unpack=True))
 alpah_0 , N_0 = (np.genfromtxt('data/ComptonOhne.txt', delimiter=', ', unpack=True))
@@ -38,15 +39,15 @@ T = I_al/ I_0
 def func(x,a,b):
     return a*x+b
 popt, pcov = curve_fit(func, lamda_al, T)
-print(popt)
-a = popt[0]
-b = popt[1]
+fehler = np.sqrt(np.diag(pcov))
+a = ufloat(popt[0], fehler[0])
+b = ufloat(popt[1], fehler[1])
 
 plt.xlabel(r'$\lambda \, / \, pm$')
 plt.ylabel(r'$T(\lambda)$')
 plt.grid()
 plt.plot(lamda_al, T, 'rx', label='Transmission')
-plt.plot(lamda_al, func(lamda_al, a, b), 'g-', label='Ausgleichsgerade')
+plt.plot(lamda_al, func(lamda_al, popt[0], popt[1]), 'g-', label='Ausgleichsgerade')
 plt.legend(loc='best')
 plt.savefig('Transmission.pdf')
 plt.show()
@@ -63,3 +64,4 @@ def wave(T, a, b):
 
 print('Die Wellenlänge lambda 1 entspricht: ', wave(T_1, a, b))
 print('Die Wellenlänge lambda 2 entspricht: ', wave(T_2, a, b))
+print('Damit erhält man eine Comptonwellenlänge von ', wave(T_2,a,b)-wave(T_1, a, b))
