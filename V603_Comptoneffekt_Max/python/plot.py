@@ -12,7 +12,7 @@ theta, N = (np.genfromtxt('data/EmissionCu.txt', delimiter=', ', unpack=True))
 d = 201.4 * 10**(-12)
 def rad(theta):
     return theta*2*np.pi / 360
-print(rad(theta))
+#print(rad(theta))
 
 def welle(alpha):
     E = cn.c * cn.h /(2 *d * np.sin(alpha))

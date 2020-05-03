@@ -1,8 +1,8 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
-Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei aufgenommenen Wert sind in Tabelle \ref{tab:emission1} und \ref{emission1} zu finden.
 \FloatBarrier
+\subsection{Bestimmung des Emissionsspektrums}
+Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei aufgenommenen Wert sind in Tabelle \ref{tab:emission1} und \ref{tab:emmision2} zu finden.
 \begin{table}
 \centering
   \caption{Die aufgenommen Intensitäten der Röntgenröhre nach Reflexion an einem LiF-Kristall [Teil 1].}
@@ -43,7 +43,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{second}}$ \\
+  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   10.9 & 409.0\\
   11.0 & 414.0\\
@@ -78,7 +78,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{second}}$ \\
+  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   13.8 & 286.0  \\
   13.9 & 285.0  \\
@@ -118,7 +118,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \caption{Die aufgenommen Intensitäten der Röntgenröhre nach Reflexion an einem LiF-Kristall [Teil 2].}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{second}}$ \\
+  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   16.6 & 211.0  \\
   16.7 & 206.0  \\
@@ -153,7 +153,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{second}}$ \\
+  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   19.5 & 148.0\\
   19.6 & 149.0\\
@@ -188,7 +188,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{second}}$ \\
+  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   22.4 & 4128.0\\
   22.5 & 5050.0\\
@@ -232,7 +232,7 @@ Um die charakteristischen Linien des Spektrums besser erkennen zu können wurden
 \end{figure}
 
 Aus der Graphik \ref{fig:emission} ist zu entnehmen, dass die gemessenen Impulse pro Sekunde bei dem Winkel $\alpha_1 = 20.2 \si{\degree}$, sowie dem Winkel $\alpha_2 = 22.5 \si{\degree}$ stark zunehmen.
-Diese beiden Punkte sind in der Graphik mit $K_\beta$ für den Winkel $\alpha_1$ und $K_\alpha$ für den Winkel $alpha_2$ gekennzeichnet worden.
+Diese beiden Punkte sind in der Graphik mit $K_\beta$ für den Winkel $\alpha_1$ und $K_\alpha$ für den Winkel $\alpha_2$ gekennzeichnet worden.
 Mit Hilfe der Gleichung \eqref{eq:bragg} lässt für die beiden Winkeln die Wellenlänge der reflektierten Strahlung berechnen.
 Mit dieser kann nun die Energie der Strahlung berechnet werden.
 Dazu wird die Gleichung
@@ -242,7 +242,107 @@ Dazu wird die Gleichung
 \end{equation}
 genutzt.
 $c$ ist hier die Lichtgeschwindigkeit und $h$ die Plank'sche Konstante.
-Durch die Rechnung kann die Erergie der $K_\beta$ Linie bestimmt werden, diese beträgt $\SI{1.4282e-15}{\Joule}$.
-Auf den selbem Weg lässt sich auch die Energie der $K_\alpha$ Linie bestimmen, diese liegt bei $\SI{1.2886e-15}{\Joule}$.
-
+Durch die Rechnung kann die Energie der $K_\beta$ und $K_\alpha$ Linie bestimmt werden.
+\begin{align*}
+  E(K_\beta) & = \SI{1.4282e-15}{\joule}\\
+  E(K_\alpha) &= \SI{1.2886e-15}{\joule}\\
+\end{align*}
 %Ab hier nummer 2 also T(lambda) und so 
+
+\FloatBarrier
+
+\subsection{Bestimmung der Transmissionsfunktion}
+Die Werte in Tabelle \ref{tab:comp} ergeben sich wenn wie im Abschnitt \ref{sec:Durchführung} beschrieben, der Kristall auf $7\si{\degree}$ eingestellt wird und schrittweise nach jeder Messung bis auf $10\si{\degree}$ erhöht wird.
+Dabei sind die Messwerte der Messung ohne Absorber in der mittleren Spalte $N_0$ und die mit Absorber in der rechten Spalte $N_\text{Al}$ zu finden.
+Die Messwerte können anschließen mit der Gleichung \eqref{eq:intens} in eine Intensität umgerechnet werden.
+Aus dem Verhältnis der Intensität
+\begin{align*} 
+T(\lambda) = \frac{I_\text{Al}}{I_0},
+\end{align*}
+also der Intensität mit Absorber geteilt durch die des ohne Absorbers, lässt sich nun eine Transmission $T(\lambda)$ berechnen.
+Diese ist abhängig von der Wellenlänge $\lambda$ und wird in Abbildung \ref{fig:trans} gegen diese aufgetragen.
+Die Regressionsgerade wurde nach dem Muster $f(x) = ax+b$ erstellt.
+Dabei ergibt sich für die Steigung $a$ und für den Startwert $b$ die Werte
+\begin{align*}
+  a & =  \SI{-0.01461(25)}{\frac{1}{\pico\meter}} \\
+  b & =   \SI{1.189(16)}{} \\
+\end{align*}
+\begin{table}
+  \centering
+  \caption{Die aufgenommenen Messwerte, bei Messung mit Absorber und ohne Absorber.}
+  \begin{tabular}[t]{ccc}
+  \toprule
+  $\alpha \,/\, \si{\degree}$ & $\frac{N_0}{Imp/\si{\second}}$ & $\frac{N_\text{Al}}{Imp/\si{\second}}$ \\
+  \midrule
+  7.0 & 226.0 & 113.5 \\
+  7.1 & 232.0 & 112.0\\
+  7.2 & 240.5 & 112.0\\
+  7.3 & 248.0 & 113.5\\
+  7.4 & 255.0 & 115.0\\
+  7.5 & 262.0 & 113.5\\
+  7.6 & 269.0 & 113.0\\
+  7.7 & 276.0 & 114.5\\
+  7.8 & 281.0 & 114.0\\
+  7.9 & 289.5 & 112.0\\
+  8.0 & 295.0 & 109.5\\
+  8.1 & 300.0 & 109.0\\
+  8.2 & 308.5 & 108.0\\
+  8.3 & 311.0 & 106.0\\
+  8.4 & 317.0 & 104.5\\
+  \bottomrule
+\end{tabular}
+\begin{tabular}[t]{ccc}
+  \toprule
+  $\alpha \,/\, \si{\degree}$ & $\frac{N_0}{Imp/\si{\second}}$ & $\frac{N_\text{Al}}{Imp/\si{\second}}$ \\
+  \midrule
+  8.5 & 324.0 & 101.5\\
+  8.6 & 328.5 & 100.0\\
+  8.7 & 332.5 & 100.5\\
+  8.8 & 337.0 & 97.5\\
+  8.9 & 340.5 & 95.0\\
+  9.0 & 348.0 & 92.5\\
+  9.1 & 350.0 & 89.5\\
+  9.2 & 353.0 & 88.0\\
+  9.3 & 356.5 & 84.5\\
+  9.4 & 359.0 & 83.0\\
+  9.5 & 363.5 & 81.0\\
+  9.6 & 367.0 & 78.5\\
+  9.7 & 369.0 & 76.0\\
+  9.8 & 370.5 & 74.0\\
+  9.9 & 375.0 & 72.0\\
+  10.0 & 375.5 & 68.5\\
+  \bottomrule
+  \end{tabular}
+  \label{tab:comp}
+\end{table}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{content/data/Transmission.pdf}
+  \caption{Die Transmission in abhängig von $\lambda$, außerdem wurde eine Regressions Gerade erstellt.}
+  \label{fig:trans}
+\end{figure}
+
+\FloatBarrier
+\subsection{Berechnung der Comptonwellenlänge}
+Um nun die Comptonwellenlänge zu berechnen, wurde wie im letzten Teil des Abschnitts \ref{sec:Durchführung} beschrieben, die Intensität der Strahlung drei weitere Male gemessen.
+Ein Mal ohne jegliche Absorber, im folgenden ist diese $I_0$, ein weiter Mal mit Absorber zwischen Röhre und Streuer, diese wird $I_1$ genannt und mit einem Absorber zwischen Streuer und Zählrohr hier $I_2$.
+Die Comptonwellenlänge ergibt sich wie in \ref{sec:Theorie} beschrieben aus der Differenz zwischen $\lambda_2$ und $\lambda_1$.
+Um die Wellenlängen zu erhalten stellen wir die Ausgleichgerade nach $\lambda$ um.
+Nun berechnen wir aus den Intensität die verschiedenen Transmissionswerte $T_1$ und $T_2$ für die unbekannten Wellenlängen $\lambda_1$ und $\lambda_2$.
+Diese ergeben sich, wie oben bereits beschrieben aus dem Verhältnis $T = \frac{I_0}{I_\text{N}}$.
+So erhalten wir
+\begin{align*}
+  T_1 & = 0.432 \\
+  T_2 & = 0.374 \\
+\end{align*}
+Diese Werte setzten wir in die umgestellte Ausgleichsgerade ein und erhalten die Werte
+\begin{align*}
+  \lambda_1 &= \SI{51.8(14)}{\pico\meter}\\
+  \lambda_2 &= \SI{55.7(14)}{\pico\meter}\\
+\end{align*}
+Aus der Differenz der beiden Werte ergibt sich schließlich die Comptonwellenlänge
+\begin{align*}
+  \lambda_\text{C} &= \SI{3.91(7)}{\pico\meter}
+\end{align*}
