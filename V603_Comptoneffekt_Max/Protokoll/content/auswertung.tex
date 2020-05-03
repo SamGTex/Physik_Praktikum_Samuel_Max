@@ -8,7 +8,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \caption{Die aufgenommen Intensitäten der Röntgenröhre nach Reflexion an einem LiF-Kristall [Teil 1].}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{\second}}$\\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$\\
   \midrule
   8.0 & 323.0 \\
   8.1 & 316.0\\
@@ -43,7 +43,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   10.9 & 409.0\\
   11.0 & 414.0\\
@@ -78,7 +78,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   13.8 & 286.0  \\
   13.9 & 285.0  \\
@@ -118,7 +118,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \caption{Die aufgenommen Intensitäten der Röntgenröhre nach Reflexion an einem LiF-Kristall [Teil 2].}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   16.6 & 211.0  \\
   16.7 & 206.0  \\
@@ -153,7 +153,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   19.5 & 148.0\\
   19.6 & 149.0\\
@@ -188,7 +188,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha$ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
   \midrule
   22.4 & 4128.0\\
   22.5 & 5050.0\\
@@ -224,6 +224,7 @@ Zunächst wurde das Emissionsspektrum der Röntgenröhre gemessen, die dabei auf
 \FloatBarrier
 
 Um die charakteristischen Linien des Spektrums besser erkennen zu können wurden die Werte in der Abbildung \ref{fig:emission} aufgetragen.
+Zur Erstellung des Plots und aller weiteren Plots wurde das Python Plugin matplotlib \cite{matplotlib} genutzt.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{content/data/Emission.pdf}
@@ -247,12 +248,18 @@ Durch die Rechnung kann die Energie der $K_\beta$ und $K_\alpha$ Linie bestimmt 
   E(K_\beta) & = \SI{1.4282e-15}{\joule}\\
   E(K_\alpha) &= \SI{1.2886e-15}{\joule}\\
 \end{align*}
-%Ab hier nummer 2 also T(lambda) und so 
+Die hier angegebenen Unsicherheiten wurden mit dem Python Plugin uncertainties \cite{uncertainties} berechnet.
+Dieses nutzt zur Berechnung der Fehler die Gauß'sche Fehlerfortpflanzungs Formel
+\begin{equation*}
+  \Delta y = \frac{\delta y}{\delta x_1} \cdot \Delta x_1 + ....
+\end{equation*}
+
+%Ab hier nummer 2 also T(lambda) und so  
 
 \FloatBarrier
 
 \subsection{Bestimmung der Transmissionsfunktion}
-Die Werte in Tabelle \ref{tab:comp} ergeben sich wenn wie im Abschnitt \ref{sec:Durchführung} beschrieben, der Kristall auf $7\si{\degree}$ eingestellt wird und schrittweise nach jeder Messung bis auf $10\si{\degree}$ erhöht wird.
+Die Werte in Tabelle \ref{tab:comp} ergeben sich, wie im Abschnitt \ref{sec:Durchführung} beschrieben, wenn der Kristall auf $7\si{\degree}$ eingestellt wird und schrittweise nach jeder Messung bis auf $10\si{\degree}$ erhöht wird.
 Dabei sind die Messwerte der Messung ohne Absorber in der mittleren Spalte $N_0$ und die mit Absorber in der rechten Spalte $N_\text{Al}$ zu finden.
 Die Messwerte können anschließen mit der Gleichung \eqref{eq:intens} in eine Intensität umgerechnet werden.
 Aus dem Verhältnis der Intensität
@@ -267,6 +274,7 @@ Dabei ergibt sich für die Steigung $a$ und für den Startwert $b$ die Werte
   a & =  \SI{-0.01461(25)}{\frac{1}{\pico\meter}} \\
   b & =   \SI{1.189(16)}{} \\
 \end{align*}
+Zur Berechnung der Regressionsgerade wurde das Python Plugin scipy \cite{scipy} genutzt.
 \begin{table}
   \centering
   \caption{Die aufgenommenen Messwerte, bei Messung mit Absorber und ohne Absorber.}
@@ -320,16 +328,16 @@ Dabei ergibt sich für die Steigung $a$ und für den Startwert $b$ die Werte
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{content/data/Transmission.pdf}
-  \caption{Die Transmission in abhängig von $\lambda$, außerdem wurde eine Regressions Gerade erstellt.}
+  \caption{Die Transmission in abhängig von $\lambda$, außerdem wurde eine Regressionsgerade erstellt.}
   \label{fig:trans}
 \end{figure}
 
 \FloatBarrier
 \subsection{Berechnung der Comptonwellenlänge}
 Um nun die Comptonwellenlänge zu berechnen, wurde wie im letzten Teil des Abschnitts \ref{sec:Durchführung} beschrieben, die Intensität der Strahlung drei weitere Male gemessen.
-Ein Mal ohne jegliche Absorber, im folgenden ist diese $I_0$, ein weiter Mal mit Absorber zwischen Röhre und Streuer, diese wird $I_1$ genannt und mit einem Absorber zwischen Streuer und Zählrohr hier $I_2$.
+Ein Mal ohne jegliche Absorber, im folgenden ist diese $I_0$, ein weiteres Mal mit Absorber zwischen Röhre und Streuer, diese wird $I_1$ genannt und mit einem Absorber zwischen Streuer und Zählrohr hier $I_2$.
 Die Comptonwellenlänge ergibt sich wie in \ref{sec:Theorie} beschrieben aus der Differenz zwischen $\lambda_2$ und $\lambda_1$.
-Um die Wellenlängen zu erhalten stellen wir die Ausgleichgerade nach $\lambda$ um.
+Um die Wellenlängen zu erhalten stellen wir die Funktion der Ausgleichgerade nach $\lambda$ um.
 Nun berechnen wir aus den Intensität die verschiedenen Transmissionswerte $T_1$ und $T_2$ für die unbekannten Wellenlängen $\lambda_1$ und $\lambda_2$.
 Diese ergeben sich, wie oben bereits beschrieben aus dem Verhältnis $T = \frac{I_0}{I_\text{N}}$.
 So erhalten wir
