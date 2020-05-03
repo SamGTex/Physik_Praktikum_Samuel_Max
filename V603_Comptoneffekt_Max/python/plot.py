@@ -17,7 +17,16 @@ def rad(theta):
 def welle(alpha):
     E = cn.c * cn.h /(2 *d * np.sin(alpha))
     return E
-    
+
+#literaturwerte der wellenlängen von Ka und Kb
+ka = 1.54178 * 10**-10 
+kb = 1.39217 * 10**-10
+
+#umrechung der wellenlänge in ernergie
+def umrechnung(x):
+    return cn.c *cn.h / x
+print('Energie der Ka Linie nach Lit: ', umrechnung(ka), 'Energie der Kb Linie nach Lit: ', umrechnung(kb))
+
 bbox = dict(boxstyle="round", fc="0.8")
 #E = c / lamda * h
 
