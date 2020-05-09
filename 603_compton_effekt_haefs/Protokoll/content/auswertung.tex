@@ -2,10 +2,11 @@
 \label{sec:Auswertung}
 %Aufgabe 1
 \subsection{Aufnahme eines Emissionsspektrum}
+\label{sec:spektrum}
 In Tab. \ref{tab:spektrum1} und \ref{tab:spektrum2} ist das gemessene Emissionsspektrum aufgelistet.
 Die Daten wurden bei einer Integrationszeit von $t=\SI{10}{\second}$ pro Winkel aufgenommen.
-Die Beschleunigungsspannung beträgt $U=\SI{35}{\kilo\volt}$ und $I=\SI{1}{\milli\ampere}$ und die Gitterkonstante $d_\text{LiF}=\SI{201.4}{\pico\metre}$.
-
+Die Beschleunigungsspannung beträgt $U=\SI{35}{\kilo\volt}$, der Emissionsstrom $I=\SI{1}{\milli\ampere}$ und die Gitterkonstante $d_\text{LiF}=\SI{201.4}{\pico\metre}$.
+\\
 Die gemessenen Daten sind in Abb. \ref{fig:spektrum} graphisch dargestellt.
 Tritt das Photon in das Coulombfeld vom Atom ein, so wird es verlangsamt (siehe Bremsberg).
 Die charakteristischen Linien entsprechen dem veränderten Energie-Niveau der Elektronen.
@@ -39,6 +40,7 @@ und für die $K_\beta$-Linie \cite{klinie}
 \end{equation*}
 %Aufgabe 2.1
 \subsection{Bestimmung der Transmission}
+\label{sec:transmission}
 Die Zählrate wird in $\Delta\alpha=\SI{0.1}{\degree}$-Schritten mit Aluminum-Absorber $N_\text{Al}$ und ohne $N_0$ gemessen.
 Die Messwerte sind in Tab. \ref{tab:al} aufgeführt.
 Es wurde eine Integrationszeit von $t=\SI{200}{\second}$ verwendet.
@@ -49,9 +51,9 @@ Die Messunsicherheit berechnet sich nach
 Für die folgenden Fehlerrechnungen wird das Plugin uncertainties \cite{uncertainties} verwendet.
 Die Wellenlänge $\lambda$ ergibt sich sofort aus dem Winkel $\theta$ (\autoref{eqn:lambdaalpha}).
 Nach Beachtung der Totzeit des Geiger-Müller-Zählrohrs von $t=\SI{90}{\micro\second}$, ergeben sich die korrigierten Zählraten $I_\text{Al}$, $I_0$ \ref{eqn:totzeit}.
-Die Transmission ergibt sich nach
+Die Transmission berechnet sich nach
 \begin{equation*}
-    T = \frac{I_\text{Al}}{I_0}
+    T = \frac{I_\text{Al}}{I_0} .
 \end{equation*}
 \\
 Mithilfe einer linearen Ausgleichsrechnung
@@ -76,6 +78,7 @@ Die Messdaten und die Ausgleichsgerade sind in der Abb. \ref{fig:trans} dargeste
 
 %Aufgabe 2.2
 \subsection{Bestimmung der Compton-Wellenlänge}
+\label{sec:compton}
 Die folgenden Zählraten wurden gemessen:
 \begin{equation*}
     I_0 = \SI{2731}{\text{Impulse}}
