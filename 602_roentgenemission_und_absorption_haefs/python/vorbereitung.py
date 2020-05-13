@@ -20,20 +20,20 @@ print('lam =',lam_zn)
 print('theta =',np.degrees(theta_zn))
 print('sigma =',sig_zn)
 
-#Ge
-Z_Ge = 32
-E_Ge = 11.1031 *1000 #eV
-lam_Ge = h*c/E_Ge
-theta_Ge = np.arcsin(lam_Ge/(2*d))
-sig_Ge = Z_Ge - np.sqrt(E_Ge/R_inf - alpha**2 * Z_Ge**4 / 4)
+#Ga
+Z_Ga = 31
+E_Ga = 10.37 *1000 #eV
+lam_Ga = h*c/E_Ga
+theta_Ga = np.arcsin(lam_Ga/(2*d))
+sig_Ga = Z_Ga - np.sqrt(E_Ga/R_inf - alpha**2 * Z_Ga**4 / 4)
 
 print('----------------------------')
-print('Ge:')
-print('Z =',Z_Ge)
-print('E_K =',E_Ge)
-print('lam =',lam_Ge)
-print('theta =',np.degrees(theta_Ge))
-print('sigma =',sig_Ge)
+print('Ga:')
+print('Z =',Z_Ga)
+print('E_K =',E_Ga)
+print('lam =',lam_Ga)
+print('theta =',np.degrees(theta_Ga))
+print('sigma =',sig_Ga)
 
 #Br
 Z_Br = 35
