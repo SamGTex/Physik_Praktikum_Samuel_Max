@@ -19,11 +19,22 @@ theta, N = np.genfromtxt('data/Emissionsspektrum.dat', delimiter=',', unpack=Tru
 
 print('kb peak:',20.2,1599.0,'lambda =','1.39*10^-10m', 'E = h*c/lambda = ', '1.4282*10^-15J')
 print('ka peak:',22.5,5050.0,'lambda =','1.54*10^-10m', 'E = h*c/lambda = ', '1.2887*10^-15J')
-
+z = 29
+n=1
+m=2
+l=3
 Emax_b = 1.4282*10**(-15) #J
 Emax_a = 1.2887*10**(-15) #J
+EK_abs = 8987.9 * cn.e
+R_inf = 13.6 * cn.e
+sigma_1 = -np.sqrt(EK_abs/R_inf) + z 
+sigma_2 = z - ((m/n)**2 * (z-sigma_1)**2 - Emax_a*m**2 /R_inf )**(1/2)
+sigma_3 = z - ((l/n)**2 * (z-sigma_1)**2 - Emax_b*l**2 /R_inf )**(1/2)
+
+print('abschirmkonstanten : sigma 1 ,', sigma_1, ' sigma2 ,', sigma_2, ' sigma 3 , ', sigma_3, ' und sigma gabriel', 'nan')
 
 #beta-linie theta=x und N=y
+
 x_max1=20.2
 y_max1=1599
 x1=20
