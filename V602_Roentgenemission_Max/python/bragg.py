@@ -14,9 +14,10 @@ theta , N = np.genfromtxt('data/Bragg.dat', delimiter=',', unpack=True)
 
 print('Maximum bei :', 28.2,  218.0)
 
+plt.grid()
 plt.xlabel(r'$\theta \,/\, \degree$')
 plt.ylabel(r'$N \,/\, \frac{Imp}{s}$')
-plt.plot(theta,N,'.',label='Emissionsspektrum')
+plt.plot(theta,N,'.',label='Messwerte')
 plt.legend(loc='best',)
 plt.savefig('absorption1.pdf')
 plt.show()

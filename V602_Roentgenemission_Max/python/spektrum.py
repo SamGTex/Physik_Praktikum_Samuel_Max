@@ -84,7 +84,8 @@ x_B1 = np.array([x_b1, x_b2])
 
 #x werte der zweiten halbwertsgerade
 x_B2 = np.array([x_b3, x_b4])
-
+print('Halbwertsbreite links, ', abs(x_b1-x_b2))
+print('Halbwertsbreite rechts, ', abs(x_b3- x_b4))
 
 
 #energien berechnen
@@ -110,6 +111,7 @@ bbox = dict(boxstyle="round", fc="0.8")
 #plot
 plt.xlabel(r'$\theta \,/\, \degree$')
 plt.ylabel(r'$N \,/\, \frac{Imp}{s}$')
+plt.grid()
 plt.plot(theta,N,'k.',label='Messwerte')
 plt.plot(x_1,a1*x_1+b1,'r--',label='Näherung')
 plt.plot(x_2,a2*x_2+b2,'r--')
