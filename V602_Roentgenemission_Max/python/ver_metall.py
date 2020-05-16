@@ -159,7 +159,7 @@ b = ufloat(popt[1], fehler[1][1])
 
 #Rydbergenergie ausgeben
 print('Rydbergenergie ', a**2 / cn.e)
-
+print('a, ', a, 'b, ', b)
 #plot der ausgleichsgeraden
 plt.xlabel('Ordnungszahl Z')
 plt.ylabel(r'$\sqrt{E_k}\, / \, \sqrt{J}$')
