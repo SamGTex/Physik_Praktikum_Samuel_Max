@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Bragg-Bedingung}
-Zunächst wurde wie in Bereich \ref{sec:bragg} bereits beschrieben, wird Zunächst die Bragg-Bedingung überprüft.
+Zunächst wurde wie in Bereich \ref{sec:bragg} bereits beschrieben, die Bragg-Bedingung überprüft.
 Dafür wird der Kristall und das Rohr entsprechend positioniert wodurch die Messwerte in Tabelle \ref{tab:bragg} aufgenommen wurde.
 Wie zu erkennen ist liegt das Maximum der Impulse pro Sekunde bei einem Winkel von $\theta = 28.2 \si{\degree} $ wobei $N = 218.0 \frac{\text{Imp}}{\si{\second}}$ ist.
 Die Werte sind zudem in der Grafik \ref{fig:bragg} aufgetragen worden.
@@ -98,12 +98,11 @@ bestimmen.
 Aus diesen lässt sich nun eine Energiedifferenz $\Delta E_\text{FWHM}$ berechnen mit der anschließend das Auflösungsvermögen ermittelt werden kann.
 Dafür werden mithilfe der Gleichung \eqref{eq:bragg} und \eqref{eq:eng}, die beiden Halbwertsbreite zunächst in Wellenlängendifferenzen und dann in die entsprechenden Energiedifferenz umgerechnet.
 Nun kann durch die Division der Maximalen Energie der Linie $E_\text{K}$ und der Energiedifferenz $\Delta E_\text{FWHM}$ das zuvor genannt Auflösungsvermögen bestimmt werden.
-Dies liegt bei den gegebnen Messwerten bei 
+Dies liegt bei den gegebenen Messwerten bei 
 \begin{align*}
     A_\beta &= 48.5054 \\
     A_\alpha &=  43.0748. \\
 \end{align*}
-\\\\
 Zusätzlich wurden die Abschrimkonstanten $\sigma_1$ bis $\sigma_3$ bestimmt.
 Dafür wurde die Gleichung
 \begin{equation*}
@@ -112,21 +111,21 @@ Dafür wurde die Gleichung
 \end{equation*}
 nach $\sigma_1$ umgestellt.
 Zusätzlich musste der Wert für $E_\text{K,abs}$ recherchiert werden, da dieser mit gegebenen Versuchsaufbau nicht zu ermitteln ist.
-Der Literaturwert aus Quelle \cite{xray} beträgt $E_\text{K,abs} = 8.9789 \si{kilo\eV}$. 
+Der Literaturwert aus Quelle \cite{xray} beträgt $E_\text{K,abs} = 8.9789 \si{\kilo\eV}$. 
 So ergibt sich ergibt sich für die Abschrimkonstante der Wert $\sigma_1 = 3.2925$.
 Aus diesem Wert kann mit Hilfe von
 \begin{equation*}
-  E_\text{K,\alpha} = R_\infty (z-\sigma_1)^2 - R_\infty \frac{1}{2^2}(z-\sigma_2)^2,
+  E_{\text{K},\alpha} = R_\infty (z-\sigma_1)^2 - R_\infty \frac{1}{2^2}(z-\sigma_2)^2,
 \end{equation*}
 der Wert der Abschrimkonstante $\sigma_2 = 12.3331$ bestimmt werden.
-Dabei ist $E_\text{K,\alpha} = \SI{1.2887e-15}{\joule}$ die maximale Energie der Strahlung der $K_\alpha$-Linie.
-Zuletzt wird $sigma_3$, aus den beiden bereits berechneten Abschrimkonstanten errechnet.
+Dabei ist $E_{\text{K},\alpha} = \SI{1.2887e-18}{\joule}$ die maximale Energie der Strahlung der $K_\alpha$-Linie.
+Zuletzt wird $\sigma_3$, aus den beiden bereits berechneten Abschrimkonstanten errechnet.
 Dafür wird die Gleichung 
 \begin{equation*}
-  E_\text{K,\beta} = R_\infty (z-\sigma_1)^2 - R_\infty \frac{1}{3}(z-\sigma_3)^2
+  E_{\text{K},\beta} = R_\infty (z-\sigma_1)^2 - R_\infty \frac{1}{3}(z-\sigma_3)^2
 \end{equation*}
 genutzt.
-Hier ist $E_\text{K,\beta} = \SI{1.4282e-15}{\joule}$ die maximale Energie der Strahlung der $K_\beta$-Linie.
+Hier ist $E_{\text{K},\beta} = \SI{1.4282e-18}{\joule}$ die maximale Energie der Strahlung der $K_\beta$-Linie.
 Die Werte der drei Abschrimkonstanten sind demnach 
 \begin{align*}
 \sigma_1 =& 3.2925 \\
@@ -146,7 +145,7 @@ Die Werte der drei Abschrimkonstanten sind demnach
   \caption{Die aufgenommen Intensitäten der Röntgenröhre nach Reflexion an einem LiF-Kristall [Teil 1].}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$\\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{\text{Imp}/\si{\second}}$\\
   \midrule
   8.0 & 323.0 \\
   8.1 & 316.0\\
@@ -181,7 +180,7 @@ Die Werte der drei Abschrimkonstanten sind demnach
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{\text{Imp}/\si{\second}}$ \\
   \midrule
   10.9 & 409.0\\
   11.0 & 414.0\\
@@ -216,7 +215,7 @@ Die Werte der drei Abschrimkonstanten sind demnach
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{\text{Imp}/\si{\second}}$ \\
   \midrule
   13.8 & 286.0  \\
   13.9 & 285.0  \\
@@ -256,7 +255,7 @@ Die Werte der drei Abschrimkonstanten sind demnach
   \caption{Die aufgenommen Intensitäten der Röntgenröhre nach Reflexion an einem LiF-Kristall [Teil 2].}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{\text{Imp}/\si{\second}}$ \\
   \midrule
   16.6 & 211.0  \\
   16.7 & 206.0  \\
@@ -291,7 +290,7 @@ Die Werte der drei Abschrimkonstanten sind demnach
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{\text{Imp}/\si{\second}}$ \\
   \midrule
   19.5 & 148.0\\
   19.6 & 149.0\\
@@ -326,7 +325,7 @@ Die Werte der drei Abschrimkonstanten sind demnach
   \end{tabular}
   \begin{tabular}[t]{cc}
   \toprule
-  $\alpha \,/\, \si{\degree} $ & $\frac{N}{Imp/\si{\second}}$ \\
+  $\alpha \,/\, \si{\degree} $ & $\frac{N}{\text{Imp}/\si{\second}}$ \\
   \midrule
   22.4 & 4128.0\\
   22.5 & 5050.0\\
@@ -374,23 +373,23 @@ Nun wurde aus den Werten, der Messwert herarausgesucht, welcher am nächsten an 
 Mit Hilfe des so ermittelten $\theta$-Wertes kann die Absorptionsenergie $E_\text{K,abso}$ berechnet werden.
 So ergeben sich die folgenden Absorptionsenergieen
 \begin{align*}
-Zink & = \SI{1.5381e-15}{\J} \\
-Gallium & = \SI{1.6491e-15 }{\J}\\
-Brom & = \SI{2.1596e-15 }{\J} \\
-Rubidium & = \SI{2.4115e-15}{\J} \\
-Strontium & = \SI{2.5615e-15}{\J}  \\
-Zirkonium & = \SI{2.8399e-15}{\J}.  \\
+E_\text{Zink} & = \SI{1.5381e-18}{\J} \\
+E_\text{Gallium} & = \SI{1.6491e-18 }{\J}\\
+E_\text{Brom} & = \SI{2.1596e-18 }{\J} \\
+E_\text{Rubidium} & = \SI{2.4115e-18}{\J} \\
+E_\text{Strontium} & = \SI{2.5615e-18}{\J}  \\
+E_\text{Zirkonium} & = \SI{2.8399e-18}{\J}.  \\
 \end{align*}
 Aus diesen lassen sich widerum die jeweiligen Abschrimkonstanten ermitteln.
 Dies geschieht mit Glechung \eqref{eq:enkkante}.
 Die Abschrimkonstanten der Metalle sind folgende
 \begin{align*}
-  Zink & = 3.6345   \\
-  Gallium & = 3.7135 \\
-  Brom & = 3.8365 \\
-  Rubidium & = 4.1091 \\
-  Strontium & = 4.1202\\ 
-  Zirkonium & = 4.3729.\\
+  \sigma_\text{Zink} & = 3.6345   \\
+  \sigma_\text{Gallium} & = 3.7135 \\
+  \sigma_\text{Brom} & = 3.8365 \\
+  \sigma_\text{Rubidium} & = 4.1091 \\
+  \sigma_\text{Strontium} & = 4.1202\\ 
+  \sigma_\text{Zirkonium} & = 4.3729.\\
 \end{align*}
 Zur Bestimmmung der Rydbergenergie wurden nun die gewurzelte Energie der $K$-Kante in Abhängigkeit von der Ordnungszahl geplottet.
 Dieser Plott ist in Abbildung \ref{fig:ausgleich} zu sehen.
@@ -398,10 +397,10 @@ Um nun $R_\infty$ zu bestimmen wurden die Werte durch eine Regressionsgerade ang
 Die Regressionsgerade wurde nach dem Muster $f(x) = ax+b$ erstellt.
 Zum erstellen der Gerade wurde das Python Plugin scipy \cite{scipy} genutzt.
 Die beiden Konstanten $a$ und $b$ konnten so ermittelt werden und haben einen Wert von 
-\begin{align}
+\begin{align*}
   a =& \SI{1.413(11)e-09}{\sqrt{\J}}\\
   b=& \SI{-3.2(4)e-09}{\sqrt{\J}}.\\
-\end{align}
+\end{align*}
 Die Rydbergenergie lässt sich nun aus dem Quadrat von $a$ bestimmen und beträgt $R_\infty = \SI{12.47(20)}{\eV}$.
 
 
