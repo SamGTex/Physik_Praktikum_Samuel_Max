@@ -1,2 +1,58 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+\subsection{Bragg-Bedinung}
+Die Überprüfung der Bragg-Bedinung ergibt, dass diese $0.2\si{\degree}$ von der theoretischen Lage abweicht.
+Die experimentell Bestimmte Lage befindet sich bei $\theta_\text{exp} = 28.2\si{\degree}$ wohingegen die theoretische bei $\theta_\text{theo}= 28\si{\degree}$ liegt.
+Dies entspricht einer Abweichung von $0.7\%$.
+
+\subsection{Emissionsspektrum der Cu-Röhre}
+Zur Ermittlung der maximalen Energie des Bremsberges hätte eine größere Winkelspanne abgedeckt werden müssen, daher konnte diese nicht bestimmt werden.
+
+\subsection{Absorptionsspektren}
+In der Tabelle \ref{tab:absorption} sind die berechneten Absorptionsenergien und Abschrimkonstanten sowie die recherchierten Literaturwerte aufgelistet.
+Die Abweichung von experimentellem Wert zum Literaturwerten sind in Tabelle \ref{tab:abweichung} zu finden.
+Die berechnete Rydbergenergie $R_{\infty,\text{exp}}= \SI{12.47(20)}{\eV}$ weicht von dem Wert welcher in der Literatur gegeben ist $R_\infty = \SI{13.6}{\eV}$ um $8.3\%$ ab.
+Die Abweichung sind den experimentellen Umständen entsprechend.
+Sie könnten noch geringer ausfallen, wäre der Aufbau besser vor äußerer Strahlung geschützt und wären nicht so viele Näherungen gemacht worden.
+Besonders durch die Verbesserung der Bragg-Bedingung hätte ein besseres Ergebnis erziehlt werden können.
+
+\begin{table}
+    \centering
+    \caption{Abweichungen der berechneten Werte zum Literaturwert}
+    \begin{tabular}{c c c}
+        \toprule
+        Element & $\Delta E\,/\,\si{\percent}$ & $ \Delta\sigma \,/\, \% $ \\
+        \midrule
+        Zn & 0.51 & 1.68 \\
+        Ga & 0.74 & 2.77 \\
+        Br & 0.06 & 0.51 \\
+        Rb & 0.97 & 4.06 \\
+        Sr & 0.69 & 3.00 \\
+        Zr & 1.51 & 6.84 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:abweichung}
+\end{table}
+
+
+\begin{table}
+    \centering
+    \caption{Ergebnisse und Literaturwerte der Absorptionsenergie und der Abschirmkonstante.\cite{xray}}
+    \sisetup{
+        table-format=2.2
+    }
+    \begin{tabular}{c S[table-format=1.0] S S S S}
+        \toprule
+        Element & $Z$ & $\frac{E}{10^{-18}\si{\J}}$ & $\frac{E_\text{Lit}}{10^{-18}\si{\J}}$ & $\sigma$ & $\sigma_\text{Lit}$ \\
+        \midrule
+        Zn & 30 & 1.5381 & 1.5461 & 3.63 & 3.57 \\
+        Ga & 31 & 1.6491 & 1.6614 & 3.71 & 3.61 \\
+        Br & 35 & 2.1596 & 2.1581 & 3.83 & 3.85 \\
+        Rb & 37 & 2.4115 & 2.4353 & 4.10 & 3.94 \\
+        Sr & 38 & 2.5615 & 2.5795 & 4.12 & 4.00 \\
+        Zr & 40 & 2.8399 & 2.8839 & 4.37 & 4.09 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:absorption}
+\end{table}
+
