@@ -3,6 +3,7 @@
 
 %Bragg
 \subsection{Überprüfung der Bragg-Bedingung}
+\label{sec:bragg}
 Die gemessenen Daten (Tab. \ref{tab:bragg}) sind in der Abb. \ref{fig:bragg2} graphisch dargestellt.
 \begin{figure}
     \centering
@@ -22,6 +23,7 @@ für den Einfallswinkel $\theta_\text{ein}=\SI{14}{\degree}$ .
 
 %Emissionsspektrum
 \subsection{Analyse eines Emissionsspektrums der Kupfer-Röntgenröhre}
+\label{sec:emission}
 Die Messdaten zum Emissionsspektrum der Kupfer-Röntgenröhre befinden sich in Tab. \ref{tab:spektrum1}.
 In Abb. \ref{fig:emission} sind die Daten graphisch dargestellt.
 \begin{figure}
@@ -39,8 +41,13 @@ Die charakteristischen Linien befinden sich bei
 \end{align*}
 Die maximale Energie an den charakteristischen Linien, ergibt sich aus der Bragg-Bedingung \eqref{eqn:lambdaalpha} und der Energie $E = \frac{hc}{\lambda}$:
 \begin{align*}
-    E_{K,\beta} = \SI{1.43e-15}{\joule} \\
-    E_{K,\alpha} = \SI{1.29e-15}{\joule}
+    E_{K,\beta, exp} = \SI{1.43e-15}{\joule} \\
+    E_{K,\alpha, exp} = \SI{1.29e-15}{\joule}
+\end{align*}
+Die Theoriewerte \cite{energies} liegen bei
+\begin{align*}
+    E_{K,\beta, th} = \SI{1.427e-15}{\joule} \\
+    E_{K,\alpha, th} = \SI{1.289e-15}{\joule} .
 \end{align*}
 Um den $K_\alpha$, $K_\beta$-Linien befinden sich wenige Messwerte, so dass nicht direkt die Halbwertsbreite bestimmt werden kann.
 Zur Annäherung werden Geraden verwendet, welche die nächsten beiden Messwerte zur Halbwertsbreite verbinden.
@@ -65,6 +72,7 @@ Mithilfe der Absorptionsenergie $E_\text{abs} = \SI{8.9789}{\kilo\electronvolt}$
 
 %Absorption
 \subsection{Analyse der Absorptionsspektren}
+\label{sec:absorption}
 Zum Schluss werden die Absorptionsspektren von 6 Elementen untersucht.
 Zuerst sind die Theoriewerte \cite{k_kante} in Tab. \ref{tab:theorie} aufgeführt.
 \begin{table}
@@ -99,7 +107,6 @@ Die Abschirmkonstanten \eqref{eqn:abschirm_k} ergeben sich aus der Ordnungszahl 
 \\
 Die berrechneten Daten befinden sich für die jeweiligen Elemente in Tab. \ref{tab:erg_elemente}.
 In den Abb. \ref{fig:elemente} sind die Daten graphisch dargestellt.
-Konstanten wie $R_\infty$, $\alpha$, $c$ \cite{konst} und $d$ \cite[3]{anleitung} werden der Literatur entnommen.
 \begin{table}
     \centering
     \begin{tabular}{c|ccccccc}
