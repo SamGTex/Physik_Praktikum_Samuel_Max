@@ -5,7 +5,6 @@ from scipy.optimize import curve_fit
 from scipy.interpolate import interp1d
 from scipy.signal import find_peaks
 
-
 theta, N = np.genfromtxt('data/EmissionCu.dat', delimiter=',', unpack=True)
 
 plt.xlabel(r'$\theta \,/\, \degree$')
