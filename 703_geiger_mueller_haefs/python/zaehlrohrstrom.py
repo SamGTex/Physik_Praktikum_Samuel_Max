@@ -8,8 +8,8 @@ from uncertainties import ufloat
 #Werte
 U, I = np.genfromtxt('data/Zaehlrohrstrom.dat', delimiter=',', unpack=True)
 t = 60 #s
+I_err = uarray(I,0.05) * 10**(-6)
 I = I * 10**(-6) #A
-I_err = uarray(I,0.01*I)
 N_n = np.array([9837,9995,10264,10151,10184,10253,10493,11547])
 N = uarray(N_n,np.sqrt(N_n)) / t #Imp/s
 e0 = 1.602176462*10**(-19) #C

@@ -24,6 +24,7 @@ b = ufloat(params[1],uncertainties[1])
 
 lin_U = np.linspace(np.min(U_ger),np.max(U_ger),100)
 print('Ausgleichsgerade: a =',a,', b =',b)
+print('Steigung:',(N_fkt(100,a,b)-b)*100/(b),'%/100V')
 
 #plots
 plt.xlabel(r'$U \,/\, V$')
