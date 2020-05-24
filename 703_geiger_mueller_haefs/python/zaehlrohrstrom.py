@@ -16,7 +16,7 @@ e0 = 1.602176462*10**(-19) #C
 
 #Rechnungen
 Z = I_err/(e0*N)
-print(Z)
+print(Z*10**(-9), 'nano/Imp')
 
 #Ausgleichsgerade
 def f(I,a,b):

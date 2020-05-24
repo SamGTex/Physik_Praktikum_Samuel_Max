@@ -28,7 +28,7 @@ print('Steigung:',(N_fkt(100,a,b)-b)*100/(b),'%/100V')
 
 #plots
 plt.xlabel(r'$U \,/\, V$')
-plt.ylabel(r'$N \,/\, \frac{Imp}{60 s}$')
+plt.ylabel(r'$N \,/\, \frac{Imp}{s}$')
 plt.plot(U,unp.nominal_values(N_err),'bo',label='Messwerte')
 plt.errorbar(U,unp.nominal_values(N_err),yerr=unp.std_devs(N_err), fmt='c,',label='Messfehler')
 plt.plot(lin_U, N_fkt(lin_U,a.n,b.n), 'r-', label='Ausgleichsgerade')
