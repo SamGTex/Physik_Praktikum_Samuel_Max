@@ -116,7 +116,7 @@ E_Ryd_stron = F_Ryd_stron * cn.h
 E_Ryd_zirk = F_Ryd_zirk * cn.h
 
 #Energien ausgeben
-print ('Energieen an den K Kanten: Zink :', Ek_zink, 'Gallium :', Ek_gall, 'Brom :', Ek_brom, 'Rubidium :', Ek_rubi, 'Strontium :', Ek_stron, 'Zirkonium', Ek_zirk, '\n')
+print ('Energieen an den K Kanten: Zink :', Ek_zink/cn.e, 'Gallium :', Ek_gall/cn.e, 'Brom :', Ek_brom/cn.e, 'Rubidium :', Ek_rubi/cn.e, 'Strontium :', Ek_stron/cn.e, 'Zirkonium', Ek_zirk/cn.e, '\n')
 #Abschirmkonstanten ausgeben
 print ('Abschrimkonstanten an den K Kanten: Zink :', sigma_zink, 'Gallium :', sigma_gall, 'Brom :', sigma_brom, 'Rubidium :', sigma_rubi, 'Strontium :', sigma_stron, 'Zirkonium', sigma_zirk,'\n')
 #Rydbergenrgieen ausgeben
@@ -159,7 +159,7 @@ b = ufloat(popt[1], fehler[1][1])
 
 #Rydbergenergie ausgeben
 print('Rydbergenergie ', a**2 / cn.e)
-print('a, ', a, 'b, ', b)
+print('a, ', a/cn.e, 'b, ', b/cn.e)
 #plot der ausgleichsgeraden
 plt.xlabel('Ordnungszahl Z')
 plt.ylabel(r'$\sqrt{E_k}\, / \, \sqrt{J}$')

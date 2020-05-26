@@ -92,17 +92,17 @@ print('Halbwertsbreite rechts, ', abs(x_b3- x_b4))
 #linke (erste) energie diff
 E_1 = cn.c * cn.h / wave(x_B1)
 E_b = E_1[0] - E_1[1]
-print('Energie diff links: ', E_b)
+print('Energie diff links: ', E_b/cn.e)
 
 #zweite (rechte) energie diff
 E_2 = cn.c * cn.h / wave(x_B2)
 E_a = E_2[0] - E_2[1]
-print('Energie diff rechts: ', E_a)
+print('Energie diff rechts: ', E_a/cn.e)
 
 #Aufloesungsvermögen
 A_a = Emax_a/ E_a
 A_b = Emax_b/ E_b
-
+print('Emax alpha = ', Emax_a/cn.e, 'Emax beta = ', Emax_b/cn.e)
 print('Auflösungsvermögen vom linkem peak: ', A_a)
 print('Auflösungsvermögen vom rechtem Peak: ', A_b)
 #aussehen des plots
