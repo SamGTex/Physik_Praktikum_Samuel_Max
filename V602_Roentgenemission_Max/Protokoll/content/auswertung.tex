@@ -82,7 +82,7 @@ Der Ablauf der Messung ist im Abschnitt \ref{sec:emission} zu sehen.
 Die Werte wurden zudem in Grafik \ref{fig:emis} aufgetragen.
 Die gemessenen Impulse pro Sekunde wurden dabei in Abhängigkeit vom Winkel $\theta$ aufgetragen.
 Der Bremsberg, sowie die $K_\alpha$ und $K_\beta$-Linie wurden markiert.
-Zudem wurde die Halbwertsbreite ($FWHM$) angenähert.
+Zudem wurde die Halbwertsbreite ($\Delta \theta$) angenähert.
 Dafür wurden bei jedem Peak die Werte ausgewählt, die am nächsten an der Hälfte des Maximums des entsprechenden Ordinaten-Wertes liegen.
 Darauf wurden die zwei Werte dessen $\theta$ Wert kleiner als der des Maximums ist, durch eine Gerade verbunden.
 Das selbe geschah mit den Werten dessen $\theta$ Wert größer dem des Maximums ist.
@@ -105,7 +105,7 @@ Dafür werden mithilfe der Gleichung \eqref{eq:bragg} und \eqref{eq:eng}, die be
 Die berechneten Energie sind
 \begin{align*}
     \Delta E_{\Delta\theta, \alpha} &= 165.825\si{\eV}\\
-    \Delta E_{\Delta\theta, \beta}  &= 206.945\si{\eV}\\
+    \Delta E_{\Delta\theta, \beta}  &= 206.945\si{\eV}.\\
 \end{align*}
 Nun kann durch die Division der Maximalen Energie der Linie $E_\text{K}$ und der Energiedifferenz $\Delta E_{\Delta\theta}$ das zuvor genannt Auflösungsvermögen bestimmt werden.
 Dies liegt bei den gegebenen Messwerten bei 
@@ -114,12 +114,7 @@ Dies liegt bei den gegebenen Messwerten bei
     A_\alpha &=  43.0748. \\
 \end{align*}
 Zusätzlich wurden die Abschrimkonstanten $\sigma_1$ bis $\sigma_3$ bestimmt.
-Dafür wurde die Gleichung
-\begin{equation*}
-  E_\text{K,abs} = R_\infty (z-\sigma_1)^2
-  \label{eq:sigma1}
-\end{equation*}
-nach $\sigma_1$ umgestellt.
+Dafür wurde wird das Moseley'sche Gesetz \eqref{eqn:moseley} nach $\sigma$ umgestellt.
 Zusätzlich musste der Wert für $E_\text{K,abs}$ recherchiert werden, da dieser mit gegebenen Versuchsaufbau nicht zu ermitteln ist.
 Der Literaturwert aus Quelle \cite{xray} beträgt $E_\text{K,abs} = 8.9789 \si{\kilo\eV}$. 
 So ergibt sich ergibt sich für die Abschrimkonstante der Wert $\sigma_1 = 3.2925$.
@@ -128,14 +123,14 @@ Aus diesem Wert kann mit Hilfe von
   E_{\text{K},\alpha} = R_\infty (z-\sigma_1)^2 - R_\infty \frac{1}{2^2}(z-\sigma_2)^2,
 \end{equation*}
 der Wert der Abschrimkonstante $\sigma_2 = 12.3331$ bestimmt werden.
-Dabei ist $E_{\text{K},\alpha} = \SI{1.2887e-18}{\joule}$ die maximale Energie der Strahlung der $K_\alpha$-Linie.
+Dabei ist $E_{\text{K},\alpha} = \SI{8043.43}{\eV}$ die maximale Energie der Strahlung der $K_\alpha$-Linie.
 Zuletzt wird $\sigma_3$, aus den beiden bereits berechneten Abschrimkonstanten errechnet.
 Dafür wird die Gleichung 
 \begin{equation*}
   E_{\text{K},\beta} = R_\infty (z-\sigma_1)^2 - R_\infty \frac{1}{3}(z-\sigma_3)^2
 \end{equation*}
 genutzt.
-Hier ist $E_{\text{K},\beta} = \SI{1.4282e-18}{\joule}$ die maximale Energie der Strahlung der $K_\beta$-Linie.
+Hier ist $E_{\text{K},\beta} = \SI{8914.12}{\eV}$ die maximale Energie der Strahlung der $K_\beta$-Linie.
 Die Werte der drei Abschrimkonstanten sind demnach 
 \begin{align*}
 \sigma_1 =& 3.2925 \\
@@ -411,8 +406,8 @@ Aus dem Moseley'schen Gesetz \eqref{eqn:moseley} und der linearen Ausgleichsrech
 ergeben sich die beiden Konstanten $a$ und $b$.
 Diese haben einen Wert von 
 \begin{align*}
-  a =& \SI{8.82(7)e9}{\sqrt{\eV}}\\
-  b=& \SI{-1.97(25)e9}{\sqrt{\eV}}.\\
+  a =& \SI{3.531(28)}{\sqrt{\eV}}\\
+  b=& \SI{-7.9(10)}{\sqrt{\eV}}.\\
 \end{align*}
 Die Rydbergenergie lässt sich nun aus dem Quadrat von $a$ bestimmen und beträgt $R_\infty = \SI{12.47(20)}{\eV}$.
 

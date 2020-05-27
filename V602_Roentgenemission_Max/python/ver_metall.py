@@ -159,13 +159,13 @@ b = ufloat(popt[1], fehler[1][1])
 
 #Rydbergenergie ausgeben
 print('Rydbergenergie ', a**2 / cn.e)
-print('a, ', a/cn.e, 'b, ', b/cn.e)
+print('a, ', a/np.sqrt(cn.e), 'b, ', b/np.sqrt(cn.e))
 #plot der ausgleichsgeraden
 plt.xlabel('Ordnungszahl Z')
-plt.ylabel(r'$\sqrt{E_k}\, / \, \sqrt{J}$')
+plt.ylabel(r'$\sqrt{E_k}\, / \, \sqrt{eV}$')
 plt.grid()
-plt.plot(z_array, np.sqrt(ek_array), 'rx', label=r'$E_k\,\, der\,\, Stoffe$')
-plt.plot(z_array, func(z_array, popt[0], popt[1]), 'g-', label='Ausgleichsgerade')
+plt.plot(z_array, np.sqrt(ek_array)/np.sqrt(cn.e), 'rx', label=r'$E_k\,\, der\,\, Stoffe$')
+plt.plot(z_array, func(z_array, popt[0], popt[1])/np.sqrt(cn.e), 'g-', label='Ausgleichsgerade')
 plt.legend()
 plt.savefig('ausgleichsgerade.pdf')
 #plt.show()
