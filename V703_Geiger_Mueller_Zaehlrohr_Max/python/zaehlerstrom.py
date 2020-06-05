@@ -27,20 +27,21 @@ N_err = unp.uarray(N, np.sqrt(N))/60
 Z = I_err/(cn.e*N_err)
 #print('Z: ', Z)
 
-popt, pcov = curve_fit(func, I, unp.nominal_values(Z), sigma=unp.std_devs(Z),p0=(10**15, 10**15))
+popt, pcov = curve_fit(func, U_I, unp.nominal_values(Z), sigma=unp.std_devs(Z),p0=(10**15, 10**15))
 fehler = np.sqrt(np.diag(pcov))
 a = ufloat(popt[0], fehler[0])
 b = ufloat(popt[1], fehler[1])
 
 print('Z ist gleich a also :',a,'und b ist gleich: ', b)  
 
-x = np.linspace(I[0], I[7])
-
+x = np.linspace(U_I[0], U_I[7])
+for i in range(8):
+    print(Z[i])
 #plotten
-plt.xlabel(r'$I\, / \, \mu A$')
+plt.xlabel(r'$U\, / \, \ V$')
 plt.ylabel(r'$Z\cdot10^{16}$')
 plt.grid()
-plt.errorbar(I, unp.nominal_values(Z)/10**16, yerr=unp.std_devs(Z)/10**16 , fmt='r_', label='freigesetzte Ladungen')
+plt.errorbar(U_I, unp.nominal_values(Z)/10**16, yerr=unp.std_devs(Z)/10**16 , fmt='r_', label='freigesetzte Ladungen')
 plt.plot(x, func(x, popt[0], popt[1])/10**16, 'k-', label='Ausgleichsgerade')
 plt.legend(loc='best')
 plt.savefig('zaehlstrom.pdf')

@@ -28,6 +28,12 @@ a = ufloat(popt[0], fehler[0])
 b = ufloat(popt[1], fehler[1])
 print('Steigung a des Plateau: ',a,'Startwert b: ',b)
 
+#Prozentuale Steigung berechnen
+
+a_pro = (N_err[33]/N_err[5]  -1)*100 / (640-370) *100
+print('prozentuale Steigung: ', a_pro)
+
+
 
 #plotten
 plt.xlabel(r'$U\, / \, V$')
@@ -40,8 +46,8 @@ plt.savefig('kennlinie.pdf')
 #plt.show()
 
 #Bestimmung der Totzeit mit zwei Quellen Methode Aufgabe 2
-N_tot = np.array([96041, 158479, 76518])/120
-N_tot_err = unp.uarray([N_tot, np.sqrt(N_tot)])
+N_tot = np.array([96041, 158479, 76518])
+N_tot_err = unp.uarray([N_tot, np.sqrt(N_tot)])/120
 T=(N_tot_err[0]+N_tot_err[2]-N_tot_err[1])/(2*N_tot_err[0]*N_tot_err[2])
 
 print('Totzeit T:' , T)

@@ -12,20 +12,20 @@ Die Werte mit denen die Ausgleichsgerade berechnet wurden, sind dabei die Werte 
 Zur Bestimmung der Qualität des Zählrohrs wurde nun die Steigung des Plateaus mithilfe der zuvor genannten Ausgleichsgeraden angenähert.
 Dazu wurde diese nach dem Muster 
 \begin{equation*}
-  f(x) = ax +b 
+  N(U)=aU+b
 \end{equation*} 
 erstellt.
 Die Wert der Steigung $a$ und der Wert $b$ sind dabei
 \begin{align*}
-  a &= \SI{1.16(22)}{\frac{\text{Imp}}{\weber}} \\
-  b &= \SI{9.58(11)e03}{\frac{\text{Imp}}{\second}}\\
+  a &= \SI{1.16(22)}{\frac{\text{Imp}}{\V}} \\
+  b &= \SI{9.58(11)e03}{\text{Imp}}.\\
 \end{align*}
-Die Fehler bei der Rechnung und allen folgenden wurden mit dem python Plugin uncertainties \cite{uncertainties} berechnet.
-Dieses nutzt die Gausschen-Fehlerfortpflanzungsformel 
-\begin{equation*}
-  \Delta y = \sqrt{\frac{\partial y}{\partial x_1}\Delta x_1+...}.
-\end{equation*}
-
+Die relative Steigung kann durch
+\begin{align*}
+    \Delta N_\text{rel} &= \left( \frac{N(U=\SI{640}{\volt})}{N(U=\SI{370}{\volt})} - 1 \right) \cdot \frac{\SI{100}{\volt}}{(640-370)\:\si{\volt}} \cdot 100 \\
+             &= \SI{1.7(5)}{\percent\per100\volt}
+\end{align*}
+bestimmt werden.
 \begin{figure}
   \centering
   \includegraphics[width=0.6\textwidth]{content/data/kennlinie.pdf}
@@ -102,19 +102,23 @@ aufgenommen.
 Der Prozess der Messung ist in Abschnitt \ref{subsec:tot} beschrieben worden.
 Mit diesen Werten kann mit Hilfe von Gleichung \eqref{eq:totzeit} die Totzeit $T$ des Geiger-Müller-Zählrohrs bestimmt werden.
 Bei dem genutzten Zählrohr lässt sich die Totzeit auf 
-\begin{align*}
-  T = \SI{0.11(5)}{\milli\second}
-\end{align*}
+\begin{equation*}
+    T = \SI{115+-4}{\micro\second} \, .
+\end{equation*}
 bestimmten.
 Zudem wurde versucht die Totzeit durch ablesen an einem Osziloskop zu bestimmen.
-Dies gelang nicht, da das Bild des Osziloskop unbrauchbar ist.
+Die Peaks sind auf dem Bild nicht gut zu erkennen, dennoch lässt sich die Totzeit durch diese Methode auf
+\begin{equation*}
+  T \approx 100 \si{\micro\second}
+\end{equation*}
+bestimmen.
 \FloatBarrier
 \subsection{Freigesetzte Ladung pro eingefallenem Teilchen}
-Zur Berechnung der Freigesetzte Ladung pro eingefallenem Teilchen wurde während der Messung der Impulse, in Abschnitt \ref{subsec:charak} beschrieben, auch die Stromstärke $I$ am Geiger-Müller-Zählrohr gemessen.
+Zur Berechnung der freigesetzten Ladung pro eingefallenem Teilchen wurde während der Messung der Impulse, in Abschnitt \ref{subsec:charak} beschrieben, auch die Stromstärke $I$ am Geiger-Müller-Zählrohr gemessen.
 Die gemessenen Stromstärken sind in der Tabelle \ref{tab:strom} zusammen mit den jeweilgen Impulswerten zu sehen.
 Aus diesen lassen sich mit der Gleichung \eqref{eq:z} die Zahl $Z$ berechnen, welche angibt wie viele Ladungen durch ein einfallendes Teilchen freigesetzt wurden.
 Aus den berechneten Werten wurde im folgenden ein Plot erstellt, dieser ist in Abbildung \ref{fig:z} zu sehen.
-Die Regressionsgerade wurde nach dem Schema $f(x)=ax+b$ erstellt.
+Die Regressionsgerade wurde nach dem Schema $f(x)=Ua+b$ erstellt.
 Der Wert der Steigung $a$ entspricht dabei der gesuchten Zahl $Z$.
 Die Werte für $a$ und $b$ entsprechen
 \begin{align*}
@@ -126,18 +130,18 @@ Also entspricht die Freigesetzte Ladung pro eingefallenem Teilchen $Z = \SI{3.24
 \begin{table}
   \centering
   \caption{Die gemessenen Stromstärken zu den passenden Impulswerten.}
-  \begin{tabular}[t]{cc}
+  \begin{tabular}[t]{ccccc}
     \toprule
-    $I \, /\, \si{\A}$ & $N \,/\, \frac{\text{Imp}}{\si{60\second}}$\\
+    $U\,/\, \si{V} $ &$I \, /\, \si{\A}$ & $N \,/\, \frac{\text{Imp}}{\si{60\second}}$& $Z\cdot\SI{e16}{}$ & $\Delta Z\cdot\SI{e16}{}$\\
     \midrule
-    0.3 & 9837 \\
-    0.4 & 9995 \\
-    0.7 & 10264 \\
-    0.8 & 10151 \\
-    1.0 & 10184 \\
-    1.3 & 10253 \\
-    1.4 & 10493 \\
-    1.8 & 11547 \\
+    350 & 0.3 & 9837  & 1.14 & 0.19 \\
+    400 & 0.4 & 9995  & 1.50 & 0.19 \\
+    450 & 0.7 & 10264 & 2.55 & 0.18  \\
+    500 & 0.8 & 10151 & 2.95 & 0.19  \\
+    550 & 1.0 & 10184 & 3.68 & 0.19  \\
+    600 & 1.3 & 10253 & 4.75 & 0.19  \\
+    650 & 1.4 & 10493 & 5.00 & 0.18  \\
+    700 & 1.8 & 11547 & 5.84 & 0.17  \\
     \bottomrule
     \end{tabular}
   \label{tab:strom}
@@ -146,6 +150,6 @@ Also entspricht die Freigesetzte Ladung pro eingefallenem Teilchen $Z = \SI{3.24
 \begin{figure}
   \centering
   \includegraphics[width=0.6\textwidth]{content/data/zaehlstrom.pdf}
-  \caption{Die Zahl der freigesetzten Ladungen pro Teilchen $Z$ aufgetragen gegen den Strom $I$.}
+  \caption{Die Zahl der freigesetzten Ladungen pro Teilchen $Z$ aufgetragen gegen die Spannung $U$.}
   \label{fig:z}
 \end{figure}
