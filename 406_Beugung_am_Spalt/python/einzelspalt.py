@@ -14,7 +14,8 @@ import scipy.constants as cn
 x, I_dun, I = (np.genfromtxt('data/einzelspalt.csv', delimiter=', ', unpack=True))
 
 #CurveFit
-def f()
+def f():
+
 params, cov = curve_fit(f, x, I-I_dun)
 
 
