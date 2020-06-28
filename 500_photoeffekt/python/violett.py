@@ -23,7 +23,7 @@ print('U_g =', -b/a)
 
 #Plots
 plt.xlabel(r'$U \,/\, V$')
-plt.ylabel(r'$I \,/\, mA$')
+plt.ylabel(r'$\sqrt{I} \,/\, m\sqrt{A}$')
 plt.plot(U, np.sqrt(I)*10**3, 'rx', label='Messwerte')
 plt.plot(U_lin, f(U_lin,a.n,b.n)*10**3, 'b-', label='Lineare Ausgleichsrechnung')
 plt.legend()
