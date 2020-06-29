@@ -13,25 +13,41 @@ import scipy.constants as cn
 #einlesen der Werte x-Ort des Messgerät, I_dun dunkelStrom, I strom mit laser
 x, I_dun, I = (np.genfromtxt('data/einzelspalt.csv', delimiter=', ', unpack=True))
 
-#CurveFit
-def f(A_0, b, x):
-    (A_0 * b *633*10**-9 /x) *np.sin(np.pi*b*x/633*10**-9)
+#Umrechnen in SI
+x = x*10**-3 - 25.75*10**-3 + 10**-10 #um division durch null zu verhindern
+l = 0.85
+phi = x/l
+I_0 = (I-I_dun)*10**-9
+b = 0.1*10**-3
+a=4
 
-#params, cov = curve_fit(f, x, I-I_dun, p0=[0.1, 50])
-#print('werte der ausgleichsrechung', params)
-intervall = np.linspace(0, 50, 1000)
 
-#plotten
-plt.xlabel(r'$x\, / \, mm$')
-plt.ylabel(r'$I\,/\,nA$')
+
+#Funktion
+def B(x, a, b):
+    return a * (b/np.sin(x))**2 * np.sin(np.sin(x)/b)**2
+
+#Ausgleichsrechung
+prms, pcov = curve_fit(B ,phi,I_0, p0 = (8, 0.1))
+print(prms[0], prms[1])
+print('b= ', 633*10**-9/ (np.pi*prms[1] ))
+print(pcov)
+
+#Theoriekurve
+
+phi_plot = np.linspace(phi[0], phi[50], 5000)
+b_th = 633*10**-9/ np.pi / b 
+print(b_th)
+B_theory = 4*np.sin(1/b_th*np.sin(phi_plot))**2 / (b_th*np.sin(phi_plot))**2
+#print(B_theory[5])
+#Plotten
+
+plt.plot(phi, I_0*10**9,  'r.', label = 'Messwerte-Einzelspalt')
+plt.plot(phi_plot, B(phi_plot, prms[0], prms[1])*10**9, 'b-', label='Ausgleichsrechung')
+plt.plot(phi_plot, B_theory/np.max(B_theory)*10**3.9, color = 'green', label = 'Theorie-Einzelspalt')
+plt.xlabel(r'$\varphi \;/\; rad$')
+plt.ylabel(r'$I \; /\; nA$')
 plt.grid()
-#plt.errorbar(U, N, yerr=unp.std_devs(N_err) , fmt='r_', label='Impulse')
-#plt.plot(x, I-I_dun, 'kx', label='Ausgleichsgerade')
-#plt.plot(intervall, f(params[0], params[1], intervall))
-plt.plot(x[:19], I[:19]-I_dun[:19], 'kx', label='Messwerte ohne Dunkelstrom')
-plt.plot(x[38:], I[38:]-I_dun[38:], 'kx', label='Messwerte ohne Dunkelstrom')
-plt.plot(x[19:36], I[19:36]-I_dun[19:36], 'kx', label='Messwerte ohne Dunkelstrom')
-plt.legend(loc='best')
-
+plt.legend()
+plt.savefig('data/einzelspalt.pdf')
 plt.show()
-plt.savefig('kennlinie.pdf')
