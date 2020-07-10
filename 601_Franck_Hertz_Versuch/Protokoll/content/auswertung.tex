@@ -1,4 +1,44 @@
 \section{Auswertung}
-\label{sec:Auswertung}
+\subsection{Differentielle Energieverteilung}
+Der Dampfdruck $p_\text{sät}$ und die mittlere freie Weglänge $\bar{w}$ ergeben sich aus der verwendeten Temperatur (siehe Tab. \ref{tab:weglaenge}). %ref
+Der Abstand $a$ zwischen Kathode und Beschleunigungselektrode beträgt $\SI{1}{\centi\metre}$.
+Das Verhältnis $\frac{\bar{w}}{a}$ soll $1000 - 4000$ kleiner als $a$ sein, damit eine ausreichende Stoßwahrscheinlichkeit gegeben ist.
+\begin{table}
+    \centering
+    \begin{tabular}{cccc}
+        \toprule
+        Temperatur $\,/\, \si{\kelvin}$ & $p_\text{sät} \,/\, \si{\milli\bar}$ & $\bar{w} \,/\, \si{cm}$ & $\frac{a}{\bar{w}}$ \\
+        \midrule
+        $300.65$ & $0.0064$ & $0.45$ & $2.22$ \\
+        $413.15$ & $3.25$ & $8.91 \cdot 10^{-4}$ & $1122.33$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{Der Sättigungsdampfdruck $p_\text{sät}$, die mittlere freie Weglänge $\bar{w}$ und das Verhältnis $\frac{a}{\bar{w}}$ für die Gefäßtemperatur $T$.}
+    \label{tab:weglaenge}
+\end{table}
 
-%Siehe \autoref{fig:plot}!
+In Tab. \ref{tab:messwerte_raumtemperatur} befinden sich die gemessenen Werte bei Raumtemperatur ($T=\SI{300.65}{\kelvin}$) und in Tab. \ref{tab:messwerte_140} die Messwerte bei einer Gefäßtemperatur $T=\SI{413.15}{\kelvin}$.
+Die Beschleunigungsspannung wird konstant bei $U_B = \SI{11}{\volt}$ gehalten.
+\begin{table}
+    \centering
+    \csvreader[tabular=cc,
+    head=false,
+    table head= $U_a \,/\, \si{\volt}$ & $I_a \,/\, \si{\nano \ampere}$ \\
+    \midrule,
+    late after line= \\]
+    {content/data/raumtemperatur.csv}{1=\eins, 2=\zwei}{$\num{\eins}$ & $\num{\zwei}$}
+    \caption{Der gemessene Auffängerstrom $I_a$ in Abhängigkeit der Bremsspannung $U_a$ bei konstanter Beschleunigungsspannung $U_B = \SI{11}{\volt}$ und Temperatur $T = \SI{300.65}{\kelvin}$.}
+    \label{tab:messwerte_raumtemperatur}  
+\end{table}
+
+\begin{table}
+    \centering
+    \csvreader[tabular=cc,
+    head=false,
+    table head= $U_a \,/\, \si{\volt}$ & $I_a \,/\, \si{\nano \ampere}$ \\
+    \midrule,
+    late after line= \\]
+    {content/data/140_grad.csv}{1=\eins, 2=\zwei}{$\num{\eins}$ & $\num{\zwei}$}
+    \caption{Der gemessene Auffängerstrom $I_a$ in Abhängigkeit der Bremsspannung $U_a$ bei konstanter Beschleunigungsspannung $U_B = \SI{11}{\volt}$ und Temperatur $T = \SI{413.15}{\kelvin}$.}
+    \label{tab:messwerte_140}  
+\end{table}
