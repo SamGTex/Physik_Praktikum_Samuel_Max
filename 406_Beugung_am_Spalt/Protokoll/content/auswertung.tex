@@ -3,28 +3,29 @@
 \subsection{Einzelspalt}
 Die aufgenommenen Messwerte zum Einzelspalt sind in der Tabelle \ref{tab:einzel} zu finden.
 Zunächst wird die Position des Intensitätsmessgeräts $x$ in den Winkel $\phi$ umgerechnet.
-Dafür wird $x$ zunächst um $x_0=  25.75\si{\milli\meter}$ verschoben.
-Darauf wird eine Kleinwinkelnäherung
+Dafür wird $x$ zunächst um $x_0=  \SI{25.75}{\milli\meter}$ verschoben.
+Daraufhin wird eine Kleinwinkelnäherung
 \begin{equation*}
     \phi \approx \tan{\phi} = \frac{x-x_0}{L}
 \end{equation*}
-durchgeführt, $L=0.85\si{\meter}$ entspricht hierbei dem Abstand von Spalt und Schirm.
-Außerdem wird die der Dunkelstrom $I_\text{dun}$ von dem gemessenen Strom $I$ subtrahiert, da der Dunkelstrom nicht in die Auswertung mit einfließen soll.
+durchgeführt.
+Die Größe $L=\SI{0.85}{\metre}$ entspricht hierbei dem Abstand von Spalt zum Schirm.
+Außerdem wird der Dunkelstrom $I_\text{dun}$ von dem gemessenen Strom $I$ subtrahiert, da der Dunkelstrom nicht in die Auswertung mit einfließen soll.
 Nun wird eine Ausgleichsrechnung mit der Gleichung \ref{eqn:beugungsfigur_parallel} durchgeführt.
-Die Parameter $A_0$ und $b$ wurden dabei mit den Python Paket scipy \cite{scipy} berechnet.
+Die Parameter $A_0$ und $b$ werden mithilfe des Python Paket scipy \cite{scipy} berechnet.
 Sie entsprechen den Werten
 \begin{align*}
     A_0 &= \SI{8.154e-6}{}\\ 
-    p_1 &= \frac{\lambda}{\pi b} = \SI{1.683}{\milli\meter}.
+    p_1 &= \frac{\lambda}{\pi b} = \SI{1.683}{\milli\meter} \, .
 \end{align*}
 Durch den Fitparameter kann nun die Spaltbreite $b$ bestimmt werden, sie beträgt $b = 0.1197 \si{\milli\meter}$.
-Die Funktionen der Ausgleichsrechung wird zusammen mit den Messwerten sowie dem theoretischem Verlauf in Abbildung \ref{fig:einzel} dargestellt.
-Zur Erstellung der Plots wurden die Python Pakete numpy \cite{numpy} und matplotlib \cite{matplotlib} genutzt.
+Die Funktionen der Ausgleichsrechung wird zusammen mit den Messwerten sowie dem theoretischen Verlauf in Abbildung \ref{fig:einzel} dargestellt.
+Zur Erstellung der Plots werden die Python Pakete numpy \cite{numpy} und matplotlib \cite{matplotlib} genutzt.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/einzelspalt.pdf}
-    \caption{Die Messwerte in Abhängigkeit von \phi, sowie der theoretische Verlauf und die durch Ausgleichsrechnung bestimmte Funktion.}
+    \caption{Die Messwerte in Abhängigkeit von $\phi$, sowie der theoretische Verlauf und die durch eine Ausgleichsrechnung bestimmte Funktion.}
     \label{fig:einzel}
 \end{figure}
 
@@ -100,31 +101,30 @@ Zur Erstellung der Plots wurden die Python Pakete numpy \cite{numpy} und matplot
 \end{table}
 \FloatBarrier
 \subsection{Doppelspalt}
-Die Werte die bei der Messung des Interfernzmusters des Doppelspalts aufgenommen wurden sind in der Tabelle \ref{tab:doppel} zu finden.
+Die Messwerte zum Interferenzmuster des Doppelspalts befinden sich in Tabelle \ref{tab:doppel}.
 Auch hier wird der Dunkelstrom $I_\text{dun}$ vom Strom $I$ subtrahiert.
 $\phi$ wird wieder durch eine Kleinwinkelnäherung bestimmt.
-Bei der Berechung des Winkels wurde $x_0 = 26 \si{\milli\meter}$ gewählt, sodass das Maximum bei $\phi = 0$ liegt.
-Der Abstand zwischen Blende und Schirm wurde gemessen und beträgt $L = 85 \si{\centi\meter}$.
-Nun wird wie zuvor zum Einzelspalt, auch für den Doppelspalt eine Ausgleichsrechung durchgeführt.
+Bei der Berechung des Winkels wird $x_0 = 26 \si{\milli\meter}$ gewählt, sodass das Maximum bei $\phi = 0$ liegt.
+Der Abstand zwischen Blende und Schirm beträgt $L = \SI{85}{\centi\meter}$.
+Nun wird wie zuvor beim Einzelspalt, auch für den Doppelspalt eine Ausgleichsrechung durchgeführt.
 Diese wird mithilfe der Gleichung \ref{eqn:beugungsfigur_doppel} angefertigt.
 Die Fitparameter
 \begin{align*}
 p_1 &= \frac{\lambda}{\pi b} = 0.00241\\
 p_2 &= \pi \frac{s}{\lambda} = 160.23067 \\
 \end{align*}
-wurden wieder mit dem Python Paket scipy berechnet
-Zusätzlich wird eine theoretischer Verlauf berechnet.
-Der theoretische Verlauf, die Fit-Funktion und die Messwerte wurden anschließend in Abbildung \ref{fig:doppel} zusammengetragen.
+werden mit dem Python Paket scipy \cite{scipy} bestimmt.
+Der theoretische Verlauf, die Fit-Funktion und die Messwerte sind in Abbildung \ref{fig:doppel} zusammengetragen.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/doppelspalt.pdf}
-    \caption{Die Messwerte in Abhängigkeit von \phi, sowie der theoretische Verlauf und die durch Ausgleichsrechnung bestimmte Funktion.}
+    \caption{Die Messwerte in Abhängigkeit von $\phi$, sowie der theoretische Verlauf und die durch eine Ausgleichsrechnung bestimmte Funktion.}
     \label{fig:doppel}
 \end{figure}
-Aus den Fitparametern ergibt sich für die Breite des Spaltes $b$ und die Abstand der beiden Spalten zueinander $g$ als
+Aus den Fitparametern ergibt sich für die Breite des Spaltes $b$ und der Abstand der beiden Spalten zueinander $g$
 \begin{align*}
     b &= 0.82515\si{\milli\meter}\\
-    g &= -0.79287 \si{\milli\meter} \\
+    g &= -0.79287 \si{\milli\meter} \, .
 \end{align*}
 Der Abstand $g$ lässt sich durch $g = \frac{p_2\lambda}{\pi} -b$ berechnen.
 
