@@ -6,8 +6,7 @@ I_A=I_A*10**(-12) #A
 U_dif = (U_a[1:]-U_a[:16])
 I_dif = (I_A[1:]-I_A[:16])
 steigung = np.abs(I_dif/U_dif)
-print(U_dif)
-print(I_dif)
+print(steigung*10**12) #pA/V
 plt.xlabel(r'$U_A \,/\, V$')
 plt.ylabel(r'$|\frac{\Delta U_A}{\Delta I_A}| \,/\, \frac{V}{A}$')
 plt.grid()
