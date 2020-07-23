@@ -38,6 +38,7 @@ Aus der gemessenen Frequenz $\nu_\text{g}$ und der Grundfrequenz der Sonde $\nu_
     \Delta \nu = \left| \nu_\text{g}-\nu_\text{S} \right|
 \end{equation*}
 berechnet. Diese Frequenz wird nun in Abbildung \ref{fig:doppler} graphisch gegen die Umdrehungsgeschwindigkeit der Pumpe aufgetragen.
+Der Plot und die folgenden Plots wurde mit dem Python Paket matplotlib \cite{matplotlib} erstellt.
 Dabei wird die Frequenzdifferenz jeweils durch $\cos{\alpha}$, den cosinus des Prismenwinkels geteilt.
 
 \begin{figure}
@@ -106,7 +107,7 @@ Daür wird zunächst die Strecke $s_\text{prism}$ subtrahiert die der Schall im 
 $c_\text{prism}$ enspricht dabei der Schallgeschwindigkeit im Prisma.
 Daraufhin wird mit dem Weg-Zeit-Gesetzt
 \begin{equation*}
-l = c_\text{liquid} s,
+l = c_\text{liquid} \cdot s,
 \end{equation*}
 die Messtiefe $s$, mithilfe der Schallgeschwindigkeit $c_\text{liquid}$ in der Flüssigkeit, in eine Distanz $l$ in $\si{\milli\meter}$ umgerechnet.
 Gegen diese wird nun die Streuintensität $I$ und die maximale Frequenz $f_\text{max}$ graphisch aufgetragen.
