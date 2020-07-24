@@ -1,16 +1,16 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Die Messwerte welche im ersten Teil der Experiments aufgenommen wurden sind in Tabelle \ref{tab:doppler} zu finden.
-Dafür wurde die Frequenz, des reflektierten Schalls, unter Variation des Prismenwinkel und der Umdrehungsgeschwindigkeit der Pumpe gemessen.
-Da die Einstellung $\si{\frac{\litre}{\minute}}$ nicht an der gegebenen Pumpe vorgenommen werden konnte wurde zum aufnehmen der Werte die Einstellung $rpm$ genutzt.
-Aus diesem Grund wird von nun an mit dieser Einheit gerechnet.
+Die Messwerte welche im ersten Teil des Experiments aufgenommen wurden sind in Tabelle \ref{tab:doppler} zu finden.
+Dafür wurde die Frequenz des reflektierten Schalls unter Variation des Einstellwinkels und der Umdrehungsgeschwindigkeit gemessen.
+Die verwendete Pumpe lies keine direkte Einstellung der Fließgeschwindigkeit zu.
+Stattdessen wird als Maß die Umdrehungen pro Minute der Pumpe ($rpm$) verwendet.
 
 \begin{table}
     \centering
     \begin{tabular}{ccc}
     \toprule
-    $\text{Prismenwinkel}/\SI{}{\degree}$ & $N/rpm$ &  $f/\SI{}{\Hz}$ \\
+    $\text{Prismenwinkel}/\SI{}{\degree}$ & $N/rpm$ &  $\nu_\text{g}/\SI{}{\Hz}$ \\
     \midrule
     15 & 2020 & 78      \\
     15 & 3000 & 145     \\
@@ -29,31 +29,30 @@ Aus diesem Grund wird von nun an mit dieser Einheit gerechnet.
     45 & 5000 & 1090    \\
     \bottomrule
     \end{tabular}
-    \caption{Die gemessenen Frequenzen in Abhängigkeit vom Prismenwinkel und der Umdrehungsgeschwindigkeit der Pumpe.}
+    \caption{Die gemessenen Frequenzen in Abhängigkeit des Prismenwinkel und der Umdrehungen pro Minute der Pumpe.}
     \label{tab:doppler}
 \end{table}
 
-Aus der gemessenen Frequenz $\nu_\text{g}$ und der Grundfrequenz der Sonde $\nu_\text{S}$ wird eine Frequenzdifferenz durch
+Aus der gemessenen Frequenz $\nu_\text{g}$ und der Grundfrequenz der Sonde $\nu_\text{S}$ ergibt sich die Frequenzdifferenz
 \begin{equation*}
-    \Delta \nu = \left| \nu_\text{g}-\nu_\text{S} \right|
+    \Delta \nu = \left| \nu_\text{g}-\nu_\text{S} \right| \, .
 \end{equation*}
-berechnet. Diese Frequenz wird nun in Abbildung \ref{fig:doppler} graphisch gegen die Umdrehungsgeschwindigkeit der Pumpe aufgetragen.
-Der Plot und die folgenden Plots wurde mit dem Python Paket matplotlib \cite{matplotlib} erstellt.
-Dabei wird die Frequenzdifferenz jeweils durch $\cos{\alpha}$, den cosinus des Prismenwinkels geteilt.
+Das Verhältnis $\frac{\Delta \nu}{\cos \alpha}$ ist in Abbildung \ref{fig:doppler} graphisch gegen die Umdrehungsgeschwindigkeit der Pumpe aufgetragen.
+Alle Plots wurde mit dem Python-Paket matplotlib \cite{matplotlib} erstellt.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{content/data/doppler.pdf}
-    \caption{Die aufgenommenen Frequenz aufgetragen gegen die Umdrehungsgeschwindigkeit der Punmpe.}
+    \caption{Die aufgenommenen Frequenzen aufgetragen gegen die Umdrehungsgeschwindigkeit der Pumpe.}
     \label{fig:doppler}
 \end{figure}
 
 \FloatBarrier
 
-Im nächsten Teil des Experiments wurde die Streuintensität $I$ sowie die maximale Frequenz $f_\text{max}$ des refelktierten Schalls in Abhängigkeit von der Messtiefe der Schallsonde gemessen.
+Im nächsten Teil des Experiments wurde die Streuintensität $I$ sowie die maximale Frequenz $f_\text{max}$ des reflektierten Schalls in Abhängigkeit der Messtiefe der Schallsonde gemessen.
 Dafür wurden an der Sonde verschiedene Messtiefen in $\si{\micro\second}$ eingestellt.
-Die so aufgenommnen Werte sind in Tabelle \ref{tab:depth} zu finden.
-In dem linken Teil der Tabelle sind dabei die Messwerte für eine Umdrehungsgeschwindigkeit $N$ von $\SI{3880}{rpm}$ zu sehen und im rechtem Teil der Tabelle die Messwerte für $\SI{6000}{rpm}$.
+Die so aufgenommenen Werte sind in Tabelle \ref{tab:depth} zu finden.
+In dem linken Teil der Tabelle sind dabei die Messwerte für eine Umdrehungsgeschwindigkeit von $N = \SI{3880}{rpm}$ zu sehen und im rechtem Teil der Tabelle die Messwerte für $N = \SI{6000}{rpm}$.
 
 \begin{table}
     \centering
@@ -95,24 +94,23 @@ In dem linken Teil der Tabelle sind dabei die Messwerte für eine Umdrehungsgesc
     19.0 & 260 & 1200       \\
     \bottomrule
     \end{tabular}
-    \caption{Die Streuintensität und die maximale Frequenz des reflektierten Schalls in abhängigkeit der Messtiefe. Die Messwerte der linke Tabelle wurden bei $\SI{3880}{rpm}$ gemessen, die der rechten bei $\SI{6000}{rpm}$}
+    \caption{Die Streuintensität und die maximale Frequenz des reflektierten Schalls in Abhängigkeit der Messtiefe. Die Messwerte der linken Tabelle wurden bei $N = \SI{3880}{rpm}$ gemessen, die der rechten bei $N = \SI{6000}{rpm}$}
     \label{tab:depth}
 \end{table}
 
-Für eine graphische Auftragung der Messwerte wird zunächst die Messtiefe $s$ von $\si{\micro\second}$ in $\si{\milli\meter}$ umgerechnet.
-Daür wird zunächst die Strecke $s_\text{prism}$ subtrahiert die der Schall im Prisma zurücklegt.
+Für eine graphische Auftragung der Messwerte wird zunächst aus der Messtiefe $s$ in $\si{\micro\second}$ die Messtiefe in $\si{\milli\meter}$ berechnet.
+Daür wird zunächst die Strecke $s_\text{prism}$ subtrahiert, die der Schall im Prisma zurücklegt.
 \begin{equation*}
  s_\text{liquid} = s - \frac{s_\text{prism}}{c_\text{prism}}
 \end{equation*}
-$c_\text{prism}$ enspricht dabei der Schallgeschwindigkeit im Prisma.
+$c_\text{prism}$ entspricht dabei der Schallgeschwindigkeit im Prisma.
 Daraufhin wird mit dem Weg-Zeit-Gesetzt
 \begin{equation*}
 l = c_\text{liquid} \cdot s,
 \end{equation*}
 die Messtiefe $s$, mithilfe der Schallgeschwindigkeit $c_\text{liquid}$ in der Flüssigkeit, in eine Distanz $l$ in $\si{\milli\meter}$ umgerechnet.
 Gegen diese wird nun die Streuintensität $I$ und die maximale Frequenz $f_\text{max}$ graphisch aufgetragen.
-Dabei sind die Abbildung für $N = \SI{3880}{rpm}$ und $N = \SI{6000}{rpm}$ getrennt.
-Die graphisch aufgetragenen Messwerte für $N = \SI{3880}{rpm}$ sind in Abbildung \ref{fig:3880} zu sehen, die für $N = \SI{6000}{rpm}$ sind in der Graphik \ref{fig:6000} zu finden.
+Die graphisch aufgetragenen Messwerte sind für $N = \SI{3880}{rpm}$ in Abbildung \ref{fig:3880} und für $N = \SI{6000}{rpm}$ in Abbildung \ref{fig:6000} zu finden.
 
 \begin{figure}
     \centering
