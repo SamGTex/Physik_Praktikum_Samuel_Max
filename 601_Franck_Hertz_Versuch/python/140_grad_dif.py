@@ -10,6 +10,7 @@ print(steigung*10**12) #pA/V
 plt.xlabel(r'$U_A \,/\, V$')
 plt.ylabel(r'$|\frac{\Delta U_A}{\Delta I_A}| \,/\, \frac{V}{A}$')
 plt.grid()
-plt.plot(U_a[:16],steigung,'rx')
+plt.plot(U_a[:16],steigung,'rx',label='Messwerte')
+plt.legend()
 plt.savefig('build/140_grad_dif.pdf')
 plt.show()

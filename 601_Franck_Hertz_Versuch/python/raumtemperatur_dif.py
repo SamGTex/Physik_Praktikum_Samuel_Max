@@ -10,6 +10,7 @@ print(steigung*10**9) #nA/V
 plt.xlabel(r'$U_a \,/\, V$')
 plt.ylabel(r'$|\frac{\Delta U_a}{\Delta I_a}| \,/\, \frac{V}{A}$')
 plt.grid()
-plt.plot(U_a[:12],steigung,'rx')
+plt.plot(U_a[:12],steigung,'rx',label='Messwerte')
+plt.legend()
 plt.savefig('build/raumtemperatur_dif.pdf')
 plt.show()
