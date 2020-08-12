@@ -109,13 +109,53 @@ kann die Gleichung zu
 umgeschrieben werden.
 Diese Gelichung kann nun nach einigen Umformungen integriert werden woraus sich schließlich das Lungmuir-Schottkysche Raumladungsgesetzt
 \begin{equation*}
-    j = \frac{4F^{3/2}}{9a^2}\epsilon_0 \sqrt{2e/m} 
+    j = \frac{4F^{3/2}}{9a^2}\epsilon_0 \sqrt{2e/m}
+    \label{eqn:j}
 \end{equation*}
 ergibt.
-Der Verlauf von Potential, Feldstärke und Raumladungsdichte in anhängigkeit von x ist in Abbildung \ref{fig:ort_raum_feld} zu sehen.
+Der Verlauf von Potential, Feldstärke und Raumladungsdichte in Abhängigkeit von x ist in Abbildung \ref{fig:ort_raum_feld} zu sehen.
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{content/data/Verlauf.png}
     \caption{Ortsabhängigkeit}
     \label{fig:ort_raum_feld}
 \end{figure}
+
+\subsection{Anlaufstrom}
+Es ist zu beobachten, dass selbst wenn kein Potential anliegt ein Strom fließt.
+Dies geht nicht aus der Gleichung \eqref{eqn:j} hervor, da der Grund für diesen Strom die kinetische Energie der Elektron im Metall ist.
+Der Strom, welcher so zustande kommt wird Anlaufstrom genannt.
+So können alle Elektronen die eine Energie
+\begin{equation*}
+    E > \ne + e\phi
+\end{equation*}
+aus dem Material austreten und bei genügend hohem $E$ sogar gegen ein kleines Gegenfeld anlaufen und die Anode erreichen.
+Da zusätzlich meistens die Anode aus einem anderen Metall als die Kathode besteht, weist sie eine andere Austrittsarbeit $\phi_\text{A}$ auf.
+Daraus folgt das nur Elektronen deren Energie größer als die Summe $e\phi_\text{A}+eF$ bei der Anode ankommen.
+Dies wird in Grafik \ref{fig:potential} veranschaulicht.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{content/data/potential.png}
+    \caption{Potentialverhältnisse einer Anode und einer Kathode die aus Metallen mit verschiedenen Austrittsarbeiten bestehen. Entnommen aus \cite[8]{anleitung}.}
+    \label{fig:potential}
+\end{figure}
+Aus diesem Zusammenhang kann nun eine Gelichung für die Anlaufstromstärke $j(V)$ aufgestellt werden
+\begin{equation*}
+    j(V) = j_0 \symup{e}^{-e\frac{\phi_\text{A}+V}{kT}}
+\end{equation*}
+
+\subsection{Kennlinie}
+Aus den drei Bereichen Anlaufstrom, Raumladungsgebiet und Sättingstrom lässt scih nun die Kennlinie der Hochvakuumdiode zusammenstellen.
+Ihr Verlauf ist in Abbildung \ref{fig:kennlinie} zu sehen.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{content/data/kennlinie.png}
+    \caption{Die Kennlinie einer Hochvakuumdiode, dabei wird der Diodenstrom in Abhängigkiet von der angelegten Spannung aufgetragen. Bild entnommen aus \cite[9]{anleitung}.}
+    \label{fig:kennlinie}
+\end{figure}
+Dabei wird der Diodenstrom in Abhängigkeit von der angelegten Spannung aufgetragen.
+Wie zu sehen ist kann die Kennlinie in die zuvor genannten Bereiche unterteilt werden.
+Der Bereich des Anlaufstroms kennzeichnet sich durch den exponentiellen Zusammenhang zwischen $U$ und $I$ aus.
+Der Darauf folgende Bereich das Raumladungsgebiet wird durch die Richardson-Gleichung \eqref{eqn:stromdichte} beschrieben.
+Da aber die Richardson-Gleichung nicht für beliebig hohe Anodenspannungen gültig ist, strebt die Kennlinie bei einer gewissen Anodenspannung einem Sättigungswert entgegen.
+So entsteht das Sättigungsstromgebiet.
