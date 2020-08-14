@@ -10,7 +10,7 @@ import scipy.constants as cn
 from uncertainties import ufloat
 #from uncertainties import unumpy as unp
 b, g, B = (np.genfromtxt('data/abbildungsgesetzt.csv', delimiter=', ', unpack=True))
-
+G = 3
 def schnittpunkt(g1,b1,g2,b2):
     t = b2*(g1-g2)/(g1*b2-g2*b1)
     s_x = g1-t*g1
@@ -25,25 +25,28 @@ for i in range(0,n):
     s_x = np.append(s_x,s_x_i)
     s_y = np.append(s_y,s_y_i)
 
-#print(b, g, B)
+V = B/G
+V_mean = ufloat( np.mean(V), stats.sem(V))
+V_2 = b/g 
+V_2_mean = ufloat(np.mean(V_2), stats.sem(V_2))
+print('Abbildungsmassstab V: ', V_mean)
+print('Abbildungsmassstab V_2', V_2_mean)
+print('Abbweichung der Abbildungsmasstäbe :' , np.abs(V_mean-V_2_mean))
 c = 1/b + 1/g
-print(c)
+#print(c)
 f = 1/c
 print(f)
+print('Mittelwert der Brennweiten', np.mean(f) , stats.sem(f))
+f_mean = ufloat(np.mean(f), stats.sem(f))
+print('Abbweichung ', 15- f_mean)
 b_plot = np.array([0, b])
 g_plot = np.array([g, 0])
 
 s_x_mean = ufloat(np.mean(s_x),stats.sem(s_x))
 s_y_mean = ufloat(np.mean(s_y),stats.sem(s_y))
 print('Schwerppunkt der Brennweiten', s_x_mean, s_y_mean)
+print('Abbweichung der Schwerpunkte ', 15- s_x_mean, 15- s_y_mean)
 
-#def a(x1, x2, y1, y2):
-#    return (y2-y1)/(x2-x1)
-#def f(a,x,b):
-#    return a*x+b
-#a = a(0, g, b, 0)
-#for i in range(5):
-#    plt.plot(0, [f(a[i], 0, b[i])], 'r-', label='Messwerte')
 for i in range(0,g.size):
     plt.plot([g[i],0],[0,b[i]], 'k-', linewidth=0.5)
 

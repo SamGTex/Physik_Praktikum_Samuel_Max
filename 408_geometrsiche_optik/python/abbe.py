@@ -33,6 +33,9 @@ b_b = ufloat(params_b[1],np.absolute(pcov_b[1][1])**0.5)
 # Abstand der Hauptebenen
 d = b_b - b_g
 
+print('Abbe für g: a: ', a_g,'b: ', b_g)
+print('Abbe für b: a: ', a_b,'b: ', b_b)
+print('Abstand Hauptebene: ', d)
 
 ## Plot g'
 print("Plot nach Abbe für g")
