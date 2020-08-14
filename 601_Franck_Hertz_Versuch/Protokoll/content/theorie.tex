@@ -9,9 +9,9 @@ Durch die Stöße können die Elektronen genug Energie zugeführt bekommen, um i
 Das Elektron, welches dabei für den Stoß genutzt wurde, verliert dabei den Teil der Energie, die das andere Elektron aufgenommen hat.
 Für das freie Elektron bedeutet, dass dies nun eine kleinere kinetische Energie hat.
 Die genaue Energie kann durch 
-\begin{equation*}
+\begin{equation}
     \frac{m_\text{e} v_0^2}{2} - \frac{m_\text{e}v_\text{after}^2}{2} = E_1 - E_0
-\end{equation*} 
+\end{equation} 
 berechnet werden. $m_\text{e}$ entspricht dabei der Ruhemasse eines Elektrons, $v_0$ der Geschwindigkiet vor dem Stoß und $v_\text{after}$ der Geschwindigkeit des Elektrons nach dem Stoß.
 \\\\
 Der schematische Aufbau des Franck-Hertz Versuchs ist in Abbildung \ref{fig:schematischeraufbau} zu sehen.
@@ -35,23 +35,25 @@ Die genau kinetische Energie nach dem Durchlaufen der Beschleunigungsstrecke ent
 wobei $U_\text{B}$ der angelegten Spannung und $e$ der Elementarladung entspricht.
 $v_\text{z}$ ist die Geschwindigkeit des Elektrons in $z$-Richtung, diese muss nach der Beschleunigung groß genug sein um das Gegenfeld zwischen Beschleunigungselektrode und Auffängerelektrode zu überwinden.
 Es erreichen also nur Elektronen die Auffängerelektrode dessen Energie die Ungleichung
-\begin{equation*}
-    \frac{m_\text{e} v_\text{z}^2}{2} \geq eU_\text{A} 
-\end{equation*}
+\begin{equation}
+    \frac{m_\text{e} v_\text{z}^2}{2} \geq eU_\text{A}
+    \label{2}
+\end{equation}
 erfüllen.
 Nun sind aber nicht nur Elektronen in der Röhre, sondern auch Hg-Atome.
 Ist die Energie des freien Elektrons zu niedrig um das Hg-Atom anzuregen, so kommt es zum elasischen Stoß.
 Dabei wird die Energie 
-\begin{equation*}
+\begin{equation}
     \Delta E = \frac{4m_\text{e}\, M_\text{Hg}}{\left (m_\text{e} + M_\text{Hg} \right )^2} E
-\end{equation*}
+    \label{3}
+\end{equation}
 übertragen.
 Die Energie ist aber aufgrund der sehr unterschielichen Masse von Elektron und Hg-Atom vernachlässigbar gering.
 Allerdings führt der Stoß teilweise zu starken Richtungsänderungen der Flugbahn des Elektrons.
-Wenn das Elektron aber eine ausreichend große Energie aufweist um das Hg-Atom anzuregen, kann es zum unelastischen Stoß kommen.
-Dabei übetrgägt es genau die Energie $E_1 - E_0$, die nötig ist um das Atom anzuregen.
+Wenn das Elektron aber eine ausreichend große Energie aufweist, um das Hg-Atom anzuregen, kann es zum unelastischen Stoß kommen.
+Dabei übetrgägt es genau die Energie $E_1 - E_0$, die nötig ist, um das Atom anzuregen.
 Nach kurzer Zeit fällt das Elektron des angeregeten Atoms wieder in den Grundzustand zurück und emittiert ein Photon entsprechender Energie.
-Da die freien Elektronen bei diesem Prozess einen Großteil ihrer Energie verlieren, haben sie im Allgemeinen nicht mehr die nötige Energie um das Elektrischefeld zwischen Beschleunigungselektrode und Auffängerelektrode zu überwinden.
+Da die freien Elektronen bei diesem Prozess einen Großteil ihrer Energie verlieren, haben sie im Allgemeinen nicht mehr die nötige Energie, um das elektrische Feld zwischen Beschleunigungselektrode und Auffängerelektrode zu überwinden.
 Dadurch lösen weniger Elektroden einen Strom $I_\text{A}$ an der Auffängerelektrode aus.
 Ein schematischer Verlauf, bei dem der Strom $I_\text{A}$ in Abbhängigkeit der Bescheunigungsspannung $U_\text{B}$ aufgetragen worden ist, wird in Abbildung \ref{fig:spannungsverlauf} gezeigt.
 \begin{figure}
@@ -67,7 +69,9 @@ Das $n$ gibt dabei an wie viele mal die Energie der Elektronen der Anregungsener
 Für eine vollständige Energieabgabe an das Atom muss $n$ also ganzzahlig sein.
 \\\\
 In der Realität sieht die Franck-Hertz-Kurve allerdings etwas abgerundeter aus, da nicht alle Elektronen die gleiche Energie aufweisen.
+Die Energieverteilung der Elektronen folgt viel mehr einer Poisson VErteilung.
 Zudem hat das Kontaktpotenial einen Einfluss auf die Kurve.
+Durch dieses wird die Kurve gestaucht.
 Da die Austrittsarbeit $\Phi_\text{G}$ des Glühdrahts wesentlich geringer ist als die der Beschleunigungselektrode $\Phi_\text{B}$ weisen sie ein Potentialgefälle auf.
 Dieses ist graphisch in Abbildung \ref{fig:potential} verdeutlicht worden.
 \begin{figure}
